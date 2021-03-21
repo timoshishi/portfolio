@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyles from './components/GlobalStyles';
 import { lightTheme, darkTheme } from './styles/themes';
 import useDarkMode from './hooks/useDarkMode';
+import Home from './views/Home';
 
 const Wrapper = styled.h1`
   color: ${({ theme }) => theme.color};
@@ -19,6 +20,7 @@ const App = () => {
         <GlobalStyles />
         <Wrapper>Hello World</Wrapper>
         <button onClick={themeToggler}>Toggle theme</button>
+        <Home />
       </ThemeProvider>
     </React.Fragment>
   );
