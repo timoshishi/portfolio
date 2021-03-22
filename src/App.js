@@ -5,20 +5,14 @@ import { lightTheme, darkTheme } from './styles/themes';
 import useDarkMode from './hooks/useDarkMode';
 import Home from './views/Home';
 
-const Wrapper = styled.h1`
-  color: ${({ theme }) => theme.color};
-  background: ${({ theme }) => theme.background};
-`;
-
 const App = () => {
   const [isDarkTheme, themeToggler] = useDarkMode();
-  const themeMode = isDarkTheme ? darkTheme : lightTheme;
+  const themeMode = !isDarkTheme ? darkTheme : lightTheme;
 
   return (
     <React.Fragment>
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
-        <Wrapper>Hello World</Wrapper>
         <button onClick={themeToggler}>Toggle theme</button>
         <Home />
       </ThemeProvider>
