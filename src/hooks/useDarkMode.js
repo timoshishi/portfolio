@@ -10,7 +10,7 @@ const useDarkMode = () => {
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem('darkTheme');
-    localTheme && setDarkTheme(localTheme);
+    localTheme && setDarkTheme(Boolean(localTheme));
   }, []);
 
   return [isDarkTheme, toggleTheme];

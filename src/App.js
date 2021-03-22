@@ -5,6 +5,7 @@ import { lightTheme, darkTheme } from './styles/themes';
 import useDarkMode from './hooks/useDarkMode';
 import Home from './views/Home';
 import ThemeToggle from './components/ThemeToggle';
+
 const Wrapper = styled.div`
   height: 100vh;
   width: 100vw;
@@ -18,7 +19,7 @@ const App = () => {
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
         <Wrapper>
-          <ThemeToggle toggleTheme={toggleTheme} />
+          <ThemeToggle toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
           <Home isDarkTheme={isDarkTheme} />
         </Wrapper>
       </ThemeProvider>

@@ -9,10 +9,8 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin: 1rem;
-  position: relative;
   height: 100vh;
   width: 100vw;
-  position: relative;
 `;
 const Home = ({ isDarkTheme }) => {
   return (
