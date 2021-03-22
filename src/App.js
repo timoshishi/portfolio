@@ -14,7 +14,7 @@ const App = () => {
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
         <button onClick={themeToggler}>Toggle theme</button>
-        <Home />
+        <Home isDarkTheme={isDarkTheme} />
       </ThemeProvider>
     </React.Fragment>
   );

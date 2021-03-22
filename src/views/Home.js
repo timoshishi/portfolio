@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import IntroWords from '../components/IntroWords';
 const Wrapper = styled.div`
@@ -11,15 +12,16 @@ const Wrapper = styled.div`
   height: 100vh;
   width: 100vh;
 `;
-const Home = (props) => {
-  useEffect(() => {}, []);
+const Home = ({ isDarkTheme }) => {
   return (
     <Wrapper>
-      <IntroWords />
+      <IntroWords isDarkTheme={isDarkTheme} />
     </Wrapper>
   );
 };
 
-Home.propTypes = {};
+Home.propTypes = {
+  isDarkTheme: PropTypes.bool.isRequired,
+};
 
 export default Home;

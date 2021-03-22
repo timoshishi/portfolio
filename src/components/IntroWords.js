@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
+import useDarkMode from '../hooks/useDarkMode';
 import device from '../styles/mediaBreakpoints';
 
 const IntroBox = styled.div`
@@ -38,19 +39,17 @@ const Intro = styled.p`
   }
 `;
 const Period = styled.span`
-  color: ${({ theme }) =>
-    theme.background === '#15202b' ? '#1a91da' : '#FF4500'};
+  color: ${({ isDarkTheme }) => (isDarkTheme ? '#FF4500' : '#1a91da')};
 `;
 
 // const Words = styled.span`
 // `;
 
-const IntroWords = (props) => {
-  console.log(props.theme);
+const IntroWords = ({ isDarkTheme }) => {
   return (
     <IntroBox>
       <Intro>
-        hello<Period>.</Period>
+        hello<Period isDarkTheme={isDarkTheme}>.</Period>
       </Intro>
       <Intro>i am tim</Intro>
 

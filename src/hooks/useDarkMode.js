@@ -9,7 +9,6 @@ const useDarkMode = () => {
   };
 
   useEffect(() => {
-    console.log('effect');
     const localTheme = window.localStorage.getItem('darkTheme');
     localTheme && setDarkTheme(localTheme);
   }, []);
