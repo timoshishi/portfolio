@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import useDarkMode from '../hooks/useDarkMode';
 import device from '../styles/mediaBreakpoints';
 
 const IntroBox = styled.div`
@@ -33,7 +32,7 @@ const Intro = styled.p`
   line-height: 1.08em;
   font-weight: 600;
   animation-name: ${fadeIn};
-  animation-duration: 2s;
+  animation-duration: 3s;
   @media ${device.tablet} {
     font-size: 5.5rem;
   }
@@ -41,9 +40,6 @@ const Intro = styled.p`
 const Period = styled.span`
   color: ${({ isDarkTheme }) => (isDarkTheme ? '#FF4500' : '#1a91da')};
 `;
-
-// const Words = styled.span`
-// `;
 
 const IntroWords = ({ isDarkTheme }) => {
   return (
