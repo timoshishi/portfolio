@@ -4,18 +4,13 @@ import GlobalStyles from './components/GlobalStyles';
 import { lightTheme, darkTheme } from './styles/themes';
 import useDarkMode from './hooks/useDarkMode';
 import Home from './views/Home';
+import ThemeToggle from './components/ThemeToggle';
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-  position: relative;
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
 `;
 const App = () => {
-  const [isDarkTheme, themeToggler] = useDarkMode();
+  const [isDarkTheme, toggleTheme] = useDarkMode();
   const themeMode = !isDarkTheme ? darkTheme : lightTheme;
 
   return (
@@ -23,7 +18,7 @@ const App = () => {
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
         <Wrapper>
-          <button onClick={themeToggler}>Toggle theme</button>
+          <ThemeToggle toggleTheme={toggleTheme} />
           <Home isDarkTheme={isDarkTheme} />
         </Wrapper>
       </ThemeProvider>

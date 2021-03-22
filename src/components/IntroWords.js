@@ -9,17 +9,6 @@ const IntroBox = styled.div`
   width: 100%;
 `;
 
-const Hello = styled.p`
-  font-family: Open Sans;
-  align-self: flex-start;
-  font-size: 2rem;
-  letter-spacing: 0.08rem;
-  line-height: 1.08em;
-  font-weight: ${({ theme }) => (theme.background === '#15202b' ? 600 : 700)};
-  @media ${device.tablet} {
-    font-size: 6rem;
-  }
-`;
 const fadeIn = keyframes`
  0% {opacity: 0};
  100% {opacity: 1}

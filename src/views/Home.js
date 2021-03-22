@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import IntroWords from '../components/IntroWords';
+import HamburgerMenu from './HamburgerMenu';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,11 +11,13 @@ const Wrapper = styled.div`
   margin: 1rem;
   position: relative;
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
+  position: relative;
 `;
 const Home = ({ isDarkTheme }) => {
   return (
     <Wrapper>
+      <HamburgerMenu />
       <IntroWords isDarkTheme={isDarkTheme} />
     </Wrapper>
   );
