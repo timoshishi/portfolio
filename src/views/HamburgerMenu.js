@@ -1,20 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { scaleRotate as Menu } from 'react-burger-menu';
 
-const BurgerWrapper = styled.div`
-  width: 3rem;
-  height: 3rem;
-  background-color: red;
-  position: absolute;
-  top: 0;
-  left: 1rem;
-`;
-
-const HamburgerMenu = (props) => {
-  return <BurgerWrapper />;
+const HamburgerMenu = ({ children }) => {
+  return (
+    <div id='App'>
+      <Menu id='side-bar' pageWrapId={'page-wrap'} outerContainerId={'App'}>
+        <a className='menu-item' href='/'>
+          Home
+        </a>
+        <a className='menu-item' href='/burgers'>
+          Projects
+        </a>
+        <a className='menu-item' href='/pizzas'>
+          About
+        </a>
+        <a className='menu-item' href='/desserts'>
+          Contact
+        </a>
+      </Menu>
+      <div id='page-wrap'>{children}</div>
+    </div>
+  );
 };
-
-HamburgerMenu.propTypes = {};
 
 export default HamburgerMenu;

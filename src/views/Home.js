@@ -1,12 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import IntroWords from '../components/IntroWords';
+import PropTypes from 'prop-types';
+import '../styles/burgerStyles.css';
 import HamburgerMenu from './HamburgerMenu';
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin: 1rem;
   height: 100vh;
@@ -14,10 +16,11 @@ const Wrapper = styled.div`
 `;
 const Home = ({ isDarkTheme }) => {
   return (
-    <Wrapper>
-      <HamburgerMenu />
-      <IntroWords isDarkTheme={isDarkTheme} />
-    </Wrapper>
+    <HamburgerMenu>
+      <Wrapper>
+        <IntroWords isDarkTheme={isDarkTheme} />
+      </Wrapper>
+    </HamburgerMenu>
   );
 };
 
