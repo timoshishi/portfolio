@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import IntroWords from '../components/IntroWords';
-import PropTypes from 'prop-types';
 import '../styles/burgerStyles.css';
-import HamburgerMenu from './HamburgerMenu';
+import useDarkMode from '../hooks/useDarkMode';
 
 const Wrapper = styled.div`
   display: flex;
@@ -14,18 +13,13 @@ const Wrapper = styled.div`
   height: 100vh;
   width: 100vw;
 `;
-const Home = ({ isDarkTheme }) => {
+const Home = (props) => {
+  const [isDarkTheme, toggleTheme] = useDarkMode();
   return (
-    <HamburgerMenu>
-      <Wrapper>
-        <IntroWords isDarkTheme={isDarkTheme} />
-      </Wrapper>
-    </HamburgerMenu>
+    <Wrapper>
+      <IntroWords isDarkTheme={isDarkTheme} />
+    </Wrapper>
   );
-};
-
-Home.propTypes = {
-  isDarkTheme: PropTypes.bool.isRequired,
 };
 
 export default Home;

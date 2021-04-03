@@ -5,8 +5,16 @@ import { lightTheme, darkTheme } from './styles/themes';
 import useDarkMode from './hooks/useDarkMode';
 import Home from './views/Home';
 import ThemeToggle from './components/ThemeToggle';
-
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Projects from './views/Projects';
+import HamburgerMenu from './views/HamburgerMenu';
+import About from './views/About';
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 1rem;
   height: 100vh;
   width: 100vw;
 `;
@@ -18,10 +26,16 @@ const App = () => {
     <React.Fragment>
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
-        <Wrapper>
-          <ThemeToggle toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
-          <Home isDarkTheme={isDarkTheme} />
-        </Wrapper>
+        <ThemeToggle toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+        <Router>
+          <HamburgerMenu>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/projects' component={Projects} />
+              <Route path='/about' component={About} />
+            </Switch>
+          </HamburgerMenu>
+        </Router>
       </ThemeProvider>
     </React.Fragment>
   );

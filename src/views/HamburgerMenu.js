@@ -1,20 +1,20 @@
 import React from 'react';
 import { scaleRotate as Menu } from 'react-burger-menu';
-
+import { Link } from 'react-router-dom';
 const HamburgerMenu = ({ children }) => {
   return (
     <div id='App'>
       <Menu id='side-bar' pageWrapId={'page-wrap'} outerContainerId={'App'}>
-        <a className='menu-item' href='/'>
+        <Link to='/' className='menu-item'>
           Home
-        </a>
-        <a className='menu-item' href='/burgers'>
+        </Link>
+        <Link to='/projects' className='menu-item'>
           Projects
-        </a>
-        <a className='menu-item' href='/pizzas'>
+        </Link>
+        <Link to='/about' className='menu-item'>
           About
-        </a>
-        <a className='menu-item' href='/desserts'>
+        </Link>
+        <a className='menu-item' href='#contact'>
           Contact
         </a>
       </Menu>
