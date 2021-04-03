@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   width: 100vw;
 `;
 const Home = (props) => {
-  const [isDarkTheme, toggleTheme] = useDarkMode();
+  const [isDarkTheme] = useDarkMode();
   return (
     <Wrapper>
       <IntroWords isDarkTheme={isDarkTheme} />

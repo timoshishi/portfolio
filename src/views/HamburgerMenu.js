@@ -35,12 +35,12 @@ const HamburgerMenu = ({ children, isDarkTheme }) => {
           onClick={() => setMenuOpen(false)}>
           About
         </Link>
-        <a
+        <Link
           className='menu-item'
-          href='#contact'
+          to='/contact'
           onClick={() => setMenuOpen(false)}>
           Contact
-        </a>
+        </Link>
       </Menu>
       <div id='page-wrap'>{children}</div>
     </div>
