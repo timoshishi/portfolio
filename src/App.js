@@ -1,14 +1,16 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './components/GlobalStyles';
 import { lightTheme, darkTheme } from './styles/themes';
 import useDarkMode from './hooks/useDarkMode';
 import Home from './views/Home';
 import ThemeToggle from './components/ThemeToggle';
-const Wrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
-`;
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Projects from './views/Projects';
+import HamburgerMenu from './views/HamburgerMenu';
+import About from './views/About';
+import Contact from './views/Contact';
+
 const App = () => {
   const [isDarkTheme, toggleTheme] = useDarkMode();
   const themeMode = !isDarkTheme ? darkTheme : lightTheme;
@@ -17,10 +19,17 @@ const App = () => {
     <React.Fragment>
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
-        <Wrapper>
-          <ThemeToggle toggleTheme={toggleTheme} />
-          <Home isDarkTheme={isDarkTheme} />
-        </Wrapper>
+        <ThemeToggle toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+        <Router>
+          <HamburgerMenu isDarkTheme={isDarkTheme}>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/projects' component={Projects} />
+              <Route path='/about' component={About} />
+              <Route path='/contact' component={Contact} />
+            </Switch>
+          </HamburgerMenu>
+        </Router>
       </ThemeProvider>
     </React.Fragment>
   );

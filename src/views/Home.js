@@ -1,30 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import IntroWords from '../components/IntroWords';
-import HamburgerMenu from './HamburgerMenu';
+import '../styles/burgerStyles.css';
+import useDarkMode from '../hooks/useDarkMode';
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin: 1rem;
-  position: relative;
   height: 100vh;
   width: 100vw;
-  position: relative;
 `;
-const Home = ({ isDarkTheme }) => {
+const Home = (props) => {
+  const [isDarkTheme] = useDarkMode();
   return (
     <Wrapper>
-      <HamburgerMenu />
       <IntroWords isDarkTheme={isDarkTheme} />
     </Wrapper>
   );
-};
-
-Home.propTypes = {
-  isDarkTheme: PropTypes.bool.isRequired,
 };
 
 export default Home;
