@@ -23,7 +23,6 @@ const ThemeToggle = ({ toggleTheme, isDarkTheme }) => {
           onHandleColor='#1a91da'
           offColor='#6B8096'
           offHandleColor='#15202b'
-          handleDiameter={30}
           uncheckedIcon={false}
           checkedIcon={false}
           boxShadow='0px 1px 5px rgba(0, 0, 0, 0.6)'
@@ -52,8 +51,6 @@ const ThemeToggle = ({ toggleTheme, isDarkTheme }) => {
               }}
             />
           }
-          className='react-switch'
-          id='small-radius-switch'
           aria-label='toggle light dark theme'
         />
       </label>

@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { scaleRotate as Menu } from 'react-burger-menu';
 import { Link } from 'react-router-dom';
-const HamburgerMenu = ({ children }) => {
+const HamburgerMenu = ({ children, isDarkTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const styles = {
+    bmBurgerBars: {
+      background: !isDarkTheme ? '#6B8096' : '#373a47',
+      borderRadius: '2px',
+    },
+  };
   return (
     <div id='App'>
       <Menu
@@ -13,7 +18,8 @@ const HamburgerMenu = ({ children }) => {
         isOpen={menuOpen}
         onStateChange={(state) => {
           setMenuOpen(state.menuOpen);
-        }}>
+        }}
+        styles={styles}>
         <Link to='/' className='menu-item' onClick={() => setMenuOpen(false)}>
           Home
         </Link>

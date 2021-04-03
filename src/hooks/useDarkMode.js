@@ -3,7 +3,6 @@ const useDarkMode = () => {
   const [isDarkTheme, setDarkTheme] = useState(false);
 
   const toggleTheme = () => {
-    console.log('isDark', isDarkTheme);
     window.localStorage.setItem('darkTheme', !isDarkTheme);
     setDarkTheme(!isDarkTheme);
   };

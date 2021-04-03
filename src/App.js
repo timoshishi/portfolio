@@ -28,7 +28,7 @@ const App = () => {
         <GlobalStyles />
         <ThemeToggle toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
         <Router>
-          <HamburgerMenu>
+          <HamburgerMenu isDarkTheme={isDarkTheme}>
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/projects' component={Projects} />
