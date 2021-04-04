@@ -11,7 +11,7 @@ const ToggleDiv = styled.div`
   width: 3rem;
   height: 3rem;
 `;
-const ThemeToggle = ({ toggleTheme, isDarkTheme }) => {
+const ThemeToggleButton = ({ toggleTheme, isDarkTheme }) => {
   return (
     <ToggleDiv>
       <label htmlFor='small-radius-switch'>
@@ -58,8 +58,8 @@ const ThemeToggle = ({ toggleTheme, isDarkTheme }) => {
   );
 };
 
-ThemeToggle.propTypes = {
+ThemeToggleButton.propTypes = {
   toggleTheme: PropTypes.func.isRequired,
 };
 
-export default ThemeToggle;
+export default ThemeToggleButton;
