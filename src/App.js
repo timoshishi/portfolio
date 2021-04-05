@@ -17,13 +17,18 @@ const App = () => {
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
         <Router>
-          <ThemeToggleButton
-            toggleTheme={toggleTheme}
-            isDarkTheme={isDarkTheme}
-          />
-          <HamburgerMenu isDarkTheme={isDarkTheme}>
-            <Routes />
-          </HamburgerMenu>
+          {themeMode && (
+            <>
+              {' '}
+              <ThemeToggleButton
+                toggleTheme={toggleTheme}
+                isDarkTheme={isDarkTheme}
+              />
+              <HamburgerMenu isDarkTheme={isDarkTheme}>
+                <Routes />
+              </HamburgerMenu>{' '}
+            </>
+          )}
         </Router>
       </ThemeProvider>
     </React.Fragment>
