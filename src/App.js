@@ -1,12 +1,12 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './Routes';
 import { ThemeProvider } from 'styled-components';
-import GlobalStyles from './components/GlobalStyles';
 import { lightTheme, darkTheme } from './styles/themes';
 import useDarkMode from './hooks/useDarkMode';
-import ThemeToggleButton from './components/ThemeToggleButton';
-import { BrowserRouter as Router } from 'react-router-dom';
+import GlobalStyles from './components/GlobalStyles';
 import HamburgerMenu from './views/HamburgerMenu';
-import Routes from './Routes';
+import ThemeToggleButton from './components/ThemeToggleButton';
 
 const App = () => {
   const [isDarkTheme, toggleTheme] = useDarkMode();

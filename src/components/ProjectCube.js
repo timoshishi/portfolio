@@ -1,24 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SwiperCore, { EffectCube } from 'swiper';
+import SwiperCore, { EffectCube, EffectCoverflow } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/components/effect-cube/effect-cube.scss';
+import 'swiper/components/effect-coverflow/effect-coverflow.scss';
 import 'swiper/swiper.scss';
 import styled from 'styled-components';
 // import styled from 'styled-components';
 
-console.log(EffectCube);
 const SwiperWrapper = styled.div`
-  width: 30vw;
-  height: 30vh;
+  width: 80vw;
+  height: 80vh;
   position: absolute;
-  left: 50%;
+  left: 10%;
   top: 50%;
   margin-left: -150px;
+  margin-right: -150px;
   margin-top: -150px;
 `;
 const cube = {
-  minWidth: '30vw',
+  width: '30vw',
   minHeight: '30vh',
   color: 'yellow',
   display: 'flex',
@@ -42,15 +43,26 @@ const purpleCube = {
   ...cube,
   backgroundColor: 'purple',
 };
-SwiperCore.use([EffectCube]);
+
+SwiperCore.use([EffectCoverflow]);
+
 const ProjectCube = (props) => {
   return (
     <SwiperWrapper>
-      <Swiper effect='cube'>
-        {[blueCube, redCube, greenCube, purpleCube].map((cube) => {
+      <Swiper effect='coverflow' grabCursor>
+        {[
+          blueCube,
+          redCube,
+          greenCube,
+          purpleCube,
+          blueCube,
+          redCube,
+          greenCube,
+          purpleCube,
+        ].map((cube, i) => {
           console.log(cube);
           return (
-            <SwiperSlide style={cube}>
+            <SwiperSlide key={i} style={cube}>
               <div>
                 <div>HIYA</div>
               </div>

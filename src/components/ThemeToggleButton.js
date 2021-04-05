@@ -10,6 +10,7 @@ const ToggleDiv = styled.div`
   right: 2rem;
   width: 3rem;
   height: 3rem;
+  z-index: 9999;
 `;
 const ThemeToggleButton = ({ toggleTheme, isDarkTheme }) => {
   return (
