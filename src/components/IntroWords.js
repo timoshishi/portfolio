@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import redPaint from '../assets/images/red_paint.png';
 import device from '../styles/mediaBreakpoints';
+
 import PropTypes from 'prop-types';
 
 const fadeIn = keyframes`
@@ -33,15 +35,23 @@ const Period = styled.span`
 `;
 
 const IntroBox = styled.div`
-  border: 1px solid;
-  border-color: ${({ theme }) => theme.color};
-  padding: 2rem;
+  /* border: 1px solid; */
+  /* border-color: ${({ theme }) => theme.color}; */
+  padding: 1rem;
   animation-name: ${fadeIn};
   animation-duration: 3s;
+  max-height: 200px;
 `;
-
-const Intro = styled.p`
-  font-family: Open Sans;
+const IntroName = styled.p`
+  font-family: 'Eraser';
+  font-size: 4rem;
+  position: absolute;
+  z-index: 2;
+`;
+const IntroBrush = styled.img`
+  position: absolute;
+  z-index: 1;
+  opacity: 0.95;
   align-self: flex-start;
   font-size: 3.5rem;
   letter-spacing: 0.08rem;
@@ -70,11 +80,8 @@ const IntroWords = ({ isDarkTheme, theme }) => {
   return (
     <Wrapper>
       <IntroBox theme={theme}>
-        <Intro style={{ animationDuration: '2s' }}>
-          hello
-          <Period isDarkTheme={isDarkTheme}>.</Period>
-        </Intro>
-        <Intro style={{ animationDuration: '3.5s' }}>my name is tim</Intro>
+        <IntroBrush src={redPaint} />
+        <IntroName>Tim Forrest</IntroName>
       </IntroBox>
       <Line theme={theme} />
     </Wrapper>

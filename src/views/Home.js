@@ -5,6 +5,7 @@ import IntroWords from '../components/IntroWords';
 import '../styles/burgerStyles.css';
 import useDarkMode from '../hooks/useDarkMode';
 import HeroLightbulb from '../components/HeroLightbulb';
+
 const Wrapper = styled.div`
   position: relative;
   margin: 1rem;
@@ -17,8 +18,7 @@ const Home = (props) => {
   const themeContext = useContext(ThemeContext);
   return (
     <Wrapper>
-      <HeroLightbulb />
-      <IntroWords isDarkTheme={isDarkTheme} theme={themeContext} />
+      <HeroLightbulb isDarkTheme={isDarkTheme} theme={themeContext} />
     </Wrapper>
   );
 };

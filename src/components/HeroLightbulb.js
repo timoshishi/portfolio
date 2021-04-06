@@ -1,18 +1,18 @@
 import React from 'react';
-import lightbulb from '../assets/lightbulb.png';
-import waterHead from '../assets/waterhead_edit.png';
-import bulbDrops from '../assets/waterdrops.png';
+import IntroWords from './IntroWords';
+import lightbulb from '../assets/images/lightbulb.png';
+import waterHead from '../assets/images/waterhead_2.png';
+import bulbDrops from '../assets/images/waterdrops.png';
 import styled, { keyframes } from 'styled-components';
 
 const growBush = keyframes`
 0% {
-  /* height: 15%; */
-  /* left: 95% */
+  transform: scale(0.25)
+}
+25% {
   transform: scale(0.25)
 }
 100% {
-  /* height: 100%;
-  left: 90%; */
   transform: scale(1)
 }
 `;
@@ -34,15 +34,15 @@ const shake = keyframes`
 const LightbulbWrapper = styled.div`
   position: absolute;
   height: 60vh;
-  width: 60vh;
-  bottom: 10%;
-  left: 5%;
+  width: 40vw;
+  bottom: 0%;
+  left: 10%;
 `;
-const ImageBox = styled.div`
-  position: relative;
-  height: 60vh;
-  width: 60vh;
-`;
+// const ImageBox = styled.div`
+//   position: relative;
+//   height: 60vh;
+//   width: 60vw;
+// `;
 
 const BulbBush = styled.img`
   position: absolute;
@@ -58,7 +58,7 @@ const BulbHead = styled.img`
   position: absolute;
   left: 0;
   bottom: 0;
-  max-height: 60vh;
+  max-height: 95vh;
   z-index: 0;
 `;
 
@@ -75,10 +75,10 @@ const BulbDrops = styled.img`
   /* animation-iteration-count: infinite; */
 `;
 
-const HeroLightbulb = () => {
+const Hero = ({ isDarkTheme, theme }) => {
   return (
     <LightbulbWrapper>
-      <ImageBox>
+      <>
         <BulbHead src={waterHead} alt='drawing of lightbulb head' />
         <BulbBush src={lightbulb} alt='drawing of lightbulb' />
         <BulbDrops src={bulbDrops} alt='drawing of water drops' />
@@ -92,9 +92,10 @@ const HeroLightbulb = () => {
           alt='drawing of water drops'
           style={{ left: '91%' }}
         />
-      </ImageBox>
+        <IntroWords isDarkTheme={isDarkTheme} theme={theme} />
+      </>
     </LightbulbWrapper>
   );
 };
 
-export default HeroLightbulb;
+export default Hero;
