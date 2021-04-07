@@ -1,65 +1,67 @@
 import React from 'react';
-import IntroWords from './IntroWords';
-import lightbulb from '../assets/images/lightbulb.png';
-import waterHead from '../assets/images/waterhead_2.png';
-import bulbDrops from '../assets/images/waterdrops.png';
+import { lightbulb, waterHead, waterDrops, pinkSVG } from '../assets/images';
 import styled, { keyframes } from 'styled-components';
-
-const growBush = keyframes`
-0% {
-  transform: scale(0.25)
-}
-25% {
-  transform: scale(0.25)
-}
-100% {
-  transform: scale(1)
-}
-`;
-
-const shake = keyframes`
-  0% { transform: translate(1px, 1px) rotate(0deg); opacity: 1 }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); opacity: 1}
-  20% { transform: translate(-1px, 0px) rotate(1deg); opacity: 1}
-  30% { transform: translate(3px, 2px) rotate(0deg); opacity: 1}
-  40% { transform: translate(1px, -1px) rotate(1deg); opacity: 1}
-  50% { transform: translate(-1px, 2px) rotate(-1deg); opacity: 1}
-  60% { transform: translate(-3px, 1px) rotate(0deg); opacity: 1}
-  70% { transform: translate(3px, 1px) rotate(-1deg); opacity: 1}
-  80% { transform: translate(-1px, -1px) rotate(1deg); opacity: 0.2}
-  90% { transform: translate(1px, 2px) rotate(0deg); opacity: 0.1}
-  100% { transform: translate(1px, -2px) rotate(-1deg); opacity: 0}
-`;
+import { shake, growBush, growLeft, growName } from '../styles/animations';
 
 const LightbulbWrapper = styled.div`
-  position: absolute;
-  height: 60vh;
-  width: 40vw;
+  position: relative;
+  height: 100%;
+  width: 80%;
   bottom: 0%;
   left: 10%;
 `;
-// const ImageBox = styled.div`
-//   position: relative;
-//   height: 60vh;
-//   width: 60vw;
-// `;
 
-const BulbBush = styled.img`
-  position: absolute;
-  left: 65%;
-  bottom: 1.5%;
-  max-height: 50%;
-  z-index: 1;
-  animation-name: ${growBush};
-  animation-duration: 5s;
-  transform-origin: bottom;
+const Period = styled.span`
+  color: ${({ isDarkTheme }) => (!isDarkTheme ? '#FF4500' : '#1a91da')};
 `;
+const IntroNameBox = styled.div`
+  position: relative;
+  left: 35%;
+  top: 50%;
+  z-index: 2;
+`;
+const IntroName = styled.p`
+  position: absolute;
+  font-family: 'Eraser';
+  font-size: 4rem;
+  white-space: nowrap;
+  top: 55%;
+  left: 5%;
+  animation-name: ${growName};
+  animation-duration: 1s;
+  animation-direction: forwards;
+`;
+
+const PaintSwish = styled.img`
+  position: absolute;
+  top: 35%;
+  left: 32%;
+  opacity: 1;
+  max-height: 40%;
+  width: 55%;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: ${growLeft} cubic-bezier(0.85, 0.15, 0.15, 0.86) 0.1s forwards;
+  /* animation-duration: 0.3s; */
+  animation-delay: 2s;
+`;
+
 const BulbHead = styled.img`
   position: absolute;
   left: 0;
-  bottom: 0;
-  max-height: 95vh;
+  bottom: 5%;
+  max-height: 89%;
+  max-width: 70%;
+  width: auto;
   z-index: 0;
+`;
+const BulbBush = styled.img`
+  position: absolute;
+  max-height: ${`${Math.random() * (100 - 35) + 35}%`};
+  z-index: 1;
+  /* animation-name: ${growBush};
+  animation-duration: 5s;
+  transform-origin: bottom; */
 `;
 
 const BulbDrops = styled.img`
@@ -78,22 +80,14 @@ const BulbDrops = styled.img`
 const Hero = ({ isDarkTheme, theme }) => {
   return (
     <LightbulbWrapper>
-      <>
-        <BulbHead src={waterHead} alt='drawing of lightbulb head' />
-        <BulbBush src={lightbulb} alt='drawing of lightbulb' />
-        <BulbDrops src={bulbDrops} alt='drawing of water drops' />
-        <BulbDrops
-          src={bulbDrops}
-          alt='drawing of water drops'
-          style={{ left: '88%' }}
-        />
-        <BulbDrops
-          src={bulbDrops}
-          alt='drawing of water drops'
-          style={{ left: '91%' }}
-        />
-        <IntroWords isDarkTheme={isDarkTheme} theme={theme} />
-      </>
+      <BulbHead src={waterHead} alt='drawing of lightbulb head' />
+      {/* <BulbDrops src={waterDrops} alt='drawing of water drops' /> */}
+      <PaintSwish src={pinkSVG} />
+      <IntroNameBox>
+        <IntroName>
+          Tim Forrest<Period isDarkTheme={isDarkTheme}>.</Period>
+        </IntroName>
+      </IntroNameBox>
     </LightbulbWrapper>
   );
 };

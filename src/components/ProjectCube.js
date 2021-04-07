@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import SwiperCore, { EffectCube, EffectCoverflow } from 'swiper';
+// import PropTypes from 'prop-types';
+import SwiperCore, { EffectCoverflow } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/components/effect-cube/effect-cube.scss';
 import 'swiper/components/effect-coverflow/effect-coverflow.scss';

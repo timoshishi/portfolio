@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import ProjectCube from '../components/ProjectCube';
 const Wrapper = styled.div`
   display: flex;
@@ -19,6 +19,6 @@ const Projects = (props) => {
   );
 };
 
-Projects.propTypes = {};
+// Projects.propTypes = {};
 
 export default Projects;
