@@ -15,7 +15,7 @@ body {
   text-align: center;
 
   /* Prevent sidebar from showing a scrollbar on page */
-  overflow: auto;
+  overflow-x: hidden;
 }
 
 /* Individual item */
