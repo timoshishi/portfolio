@@ -1,8 +1,23 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-
+import styled from 'styled-components';
+import AboutText from '../components/AboutText';
+import TechBox from '../components/TechBox';
 const About = (props) => {
-  return <h1>ABOUT</h1>;
+  const AboutWrapper = styled.section`
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: -4px;
+    margin-left: -1rem;
+  `;
+
+  return (
+    <AboutWrapper>
+      <AboutText />
+      <TechBox />
+    </AboutWrapper>
+  );
 };
 
 // About.propTypes = {};

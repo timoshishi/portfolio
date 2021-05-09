@@ -3,14 +3,20 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Switch from 'react-switch';
 import { NightsStay, Brightness7 } from '@material-ui/icons';
-
+import device from '../styles/mediaBreakpoints';
 const ToggleDiv = styled.div`
   position: absolute;
-  top: 1rem;
-  right: 2rem;
-  width: 3rem;
-  height: 3rem;
+  top: 5%;
+  right: 10%;
+  width: 5%;
+  height: 5%;
   z-index: 9999;
+  @media ${device.laptop} {
+    top: 2rem;
+    right: 1rem;
+    width: 5%;
+    height: 5%;
+  }
 `;
 const ThemeToggleButton = ({ toggleTheme, isDarkTheme }) => {
   return (

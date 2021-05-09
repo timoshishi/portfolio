@@ -3,8 +3,8 @@ import { ThemeContext } from 'styled-components';
 import styled from 'styled-components';
 import '../styles/burgerStyles.css';
 import useDarkMode from '../hooks/useDarkMode';
-import HeroLightbulb from '../components/HeroLightbulb';
-
+import Hero from '../components/Hero';
+import About from './About';
 const Wrapper = styled.div`
   position: relative;
   margin: 1rem;
@@ -17,7 +17,8 @@ const Home = (props) => {
   const themeContext = useContext(ThemeContext);
   return (
     <Wrapper>
-      <HeroLightbulb isDarkTheme={isDarkTheme} theme={themeContext} />
+      <Hero isDarkTheme={isDarkTheme} theme={themeContext} />
+      <About />
     </Wrapper>
   );
 };
