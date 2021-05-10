@@ -49,9 +49,7 @@ const AboutWords = (props) => {
           and clean, reusable code. I work in JavaScript, Node, TypeScript and a
           three piece suit. Before embarking on my journey as a Software
           Engineer I was a chef, business owner and peripatetic lover of local
-          cuisine across the world. I'm quietly confident, naturally curious,
-          and perpetually working on improving my chops as an engineer one
-          problem at a time.
+          cuisine.
         </AboutText>
       </TextWrapper>
     </AboutPara>

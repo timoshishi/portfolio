@@ -6,8 +6,8 @@ import { NightsStay, Brightness7 } from '@material-ui/icons';
 import device from '../styles/mediaBreakpoints';
 const ToggleDiv = styled.div`
   position: absolute;
-  top: 5%;
-  right: 10%;
+  top: 1rem;
+  right: 3rem;
   width: 5%;
   height: 5%;
   z-index: 9999;
