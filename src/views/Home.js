@@ -18,7 +18,7 @@ const Home = (props) => {
   return (
     <Wrapper>
       <Hero isDarkTheme={isDarkTheme} theme={themeContext} />
-      <About />
+      <About theme={themeContext} />
     </Wrapper>
   );
 };

@@ -6,9 +6,3 @@
 body {
   background-color: '#f7ef6a';
 }
-@font-face {
-  /* font-family: 'Eraser';
-  src: local('Eraser') url('../assets/fonts/EraserRegular.ttf')
-    format('truetype'); */
-  font-family: 'Rubik', sans-serif;
-}

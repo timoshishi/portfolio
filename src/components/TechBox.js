@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
 import Card from './Card';
+import { cardInfo } from '../cardInfo';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -26,7 +27,7 @@ const CardContainer = styled.div`
   background-color: #fafafa;
   box-shadow: 0.5px 0.5px 2px 0px rgba(0, 0, 0, 0.55);
   @media ${device.laptop} {
-    width: 60%;
+    width: 90%;
   }
 `;
 
@@ -34,9 +35,9 @@ const TechBox = (props) => {
   return (
     <Wrapper>
       <CardContainer>
-        <Card />
-        <Card />
-        <Card />
+        {cardInfo.map((cardInfo) => (
+          <Card cardInfo={cardInfo} />
+        ))}
       </CardContainer>
     </Wrapper>
   );
