@@ -1,8 +1,8 @@
 import {
   designer,
   frontend,
-  cloudData,
   data,
+  cloudData,
 } from './assets/images/logos/header-logos';
 import {
   bootstrap,
@@ -53,18 +53,6 @@ export const cardInfo = [
   {
     imgSrc: data,
     title: 'Back End & Tooling',
-    /**
-  aws,
-  docker,
-  gcp,
-  mongo,
-  postgres,
-  github,
-  jest,
-  jira,
-  npm,
-  webpack,
-     */
     tech: [
       { thumb: postgres, text: 'PostgreSQL' },
       { thumb: mongo, text: 'MongoDB' },

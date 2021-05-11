@@ -35,8 +35,8 @@ const TechBox = (props) => {
   return (
     <Wrapper>
       <CardContainer>
-        {cardInfo.map((cardInfo) => (
-          <Card cardInfo={cardInfo} />
+        {cardInfo.map((cardInfo, i) => (
+          <Card cardInfo={cardInfo} key={`${cardInfo.title}_${i}`} />
         ))}
       </CardContainer>
     </Wrapper>

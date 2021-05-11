@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
+import TechItem from './TechItem';
 
 const CardWrap = styled.div`
   min-height: 20rem;
@@ -35,6 +36,12 @@ const HeaderLabel = styled.p`
     margin-bottom: 1.5rem;
   }
 `;
+const TechList = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+`;
 
 const Card = ({ cardInfo }) => {
   return (
@@ -43,6 +50,11 @@ const Card = ({ cardInfo }) => {
         <HeaderLabel>{cardInfo.title}</HeaderLabel>
         <HeaderLogo src={cardInfo.imgSrc} />
       </HeaderLogoWrapper>
+      <TechList>
+        {cardInfo.tech.map((techInfo, i) => (
+          <TechItem techInfo={techInfo} key={`${techInfo.text}_${i}`} />
+        ))}
+      </TechList>
     </CardWrap>
   );
 };
