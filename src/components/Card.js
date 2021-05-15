@@ -9,19 +9,20 @@ const CardWrap = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 0.5rem;
   @media ${device.laptop} {
     width: 30%;
   }
 `;
 const HeaderLogoWrapper = styled.div`
   margin-top: 2rem;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     margin-top: 4rem;
   }
 `;
 const HeaderLogo = styled.img`
   max-height: 3rem;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     min-height: 4rem;
     max-height: 4rem;
   }
@@ -33,7 +34,7 @@ const HeaderLabel = styled.p`
   margin-bottom: 1.5rem;
   color: ${({ theme }) => theme.color};
   font-weight: 100;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
@@ -49,7 +50,7 @@ const DescriptionWrapper = styled.div`
   align-self: center;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     width: 60%;
   }
 `;
@@ -58,7 +59,7 @@ const DescriptionText = styled.p`
     `${theme.fontSecondary}, ${theme.fontFallback}`};
   color: black;
   font-size: 1.3rem;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     font-size: 1.5rem;
   }
 `;

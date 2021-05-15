@@ -32,12 +32,14 @@ const CardContainer = styled.div`
 `;
 
 const CardDivider = styled.div`
-  height: 80%;
-  width: 0px;
-  display: none;
-  @media ${device.tablet} {
-    display: block;
-    border: 0.2px solid #d0d0d0;
+  height: 0%;
+  width: 80%;
+  border: 0.2px solid #d0d0d0;
+  margin-top: 1.5rem;
+  @media ${device.laptop} {
+    margin-top: 0rem;
+    height: 80%;
+    width: 0px;
   }
 `;
 

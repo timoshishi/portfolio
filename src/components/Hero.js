@@ -74,7 +74,10 @@ const Hero = ({ isDarkTheme, theme }) => {
         </AvatarBox>
         <CompContainer>
           <CompWrapper>
-            <Computer path={theme.text} background={theme.contrast} />
+            <Computer
+              path={theme.contrast}
+              background={theme.contrastSecondary}
+            />
           </CompWrapper>
         </CompContainer>
       </ImageContainer>

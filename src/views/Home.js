@@ -5,6 +5,7 @@ import '../styles/burgerStyles.css';
 import useDarkMode from '../hooks/useDarkMode';
 import Hero from '../components/Hero';
 import About from './About';
+import Projects from './Projects';
 const Wrapper = styled.div`
   position: relative;
   margin: 1rem;
@@ -19,6 +20,7 @@ const Home = (props) => {
     <Wrapper>
       <Hero isDarkTheme={isDarkTheme} theme={themeContext} />
       <About theme={themeContext} />
+      <Projects theme={themeContext} />
     </Wrapper>
   );
 };

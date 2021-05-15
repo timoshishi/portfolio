@@ -15,7 +15,7 @@ const AboutPara = styled.div`
 const Header = styled.p`
   font-weight: 500;
   font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
-  color: ${({ theme }) => theme.contrast};
+  color: #fafafa;
   font-size: 1.5rem;
   @media ${device.laptop} {
     font-size: 2.5rem;
@@ -26,7 +26,7 @@ const AboutText = styled.p`
   font-family: ${({ theme }) =>
     `${theme.fontSecondary}, ${theme.fontFallback}`};
   margin-top: 1rem;
-  color: ${({ theme }) => theme.contrast};
+  color: #fafafa;
   font-size: 1rem;
   margin-bottom: 1rem;
   @media ${device.laptop} {
