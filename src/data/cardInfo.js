@@ -3,7 +3,7 @@ import {
   frontend,
   data,
   // cloudData,
-} from './assets/images/logos/header-logos';
+} from '../assets/images/logos/header-logos';
 import {
   bootstrap,
   css,
@@ -25,7 +25,7 @@ import {
   // jira,
   // npm,
   // webpack,
-} from './assets/images/logos';
+} from '../assets/images/logos';
 
 export const cardInfo = [
   {
@@ -58,7 +58,7 @@ export const cardInfo = [
     imgSrc: data,
     title: 'Back End',
     description:
-      "Even the things you can't see are important. SQL, non-relational and serverless when well written can be beautiful as well.",
+      "Even the things you can't see are important. SQL, non-relational and serverless.",
     tech: [
       { thumb: postgres, text: 'PostgreSQL' },
       { thumb: mongo, text: 'MongoDB' },

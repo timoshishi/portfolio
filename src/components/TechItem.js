@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
 const TechItemWrap = styled.div`
   width: 100%;
-  margin-right: 60%;
+  margin-right: 50%;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   @media ${device.laptop} {
@@ -30,24 +30,27 @@ const TechLogo = styled.img`
 `;
 const LogoTextWrap = styled.div`
   width: 100%;
-  margin-left: 1rem;
+  margin-left: 2.3rem;
   margin-top: 0.5rem;
+  @media ${device.tablet} {
+    margin-left: 1.3rem;
+  }
 `;
 const LogoText = styled.p`
-  font-size: 1rem;
-  font-family: sans-serif;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
+  font-weight: 400;
   color: #000;
   text-align: left;
   width: 15rem;
 `;
-const TechItem = ({ techInfo }) => {
+const TechItem = ({ techInfo, theme }) => {
   return (
     <TechItemWrap>
       <TechLogoWrap>
         <TechLogo src={techInfo.thumb} />
         <LogoTextWrap>
-          <LogoText>{techInfo.text}</LogoText>
+          <LogoText theme={theme}>{techInfo.text}</LogoText>
         </LogoTextWrap>
       </TechLogoWrap>
     </TechItemWrap>
@@ -56,6 +59,7 @@ const TechItem = ({ techInfo }) => {
 
 TechItem.propTypes = {
   techInfo: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired,
 };
 
 export default TechItem;

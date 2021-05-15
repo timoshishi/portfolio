@@ -14,7 +14,7 @@ const AboutPara = styled.div`
 `;
 const Header = styled.p`
   font-weight: 500;
-  font-family: 'Rubik', sans-serif;
+  font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
   color: ${({ theme }) => theme.contrast};
   font-size: 1.5rem;
   @media ${device.laptop} {
@@ -23,7 +23,8 @@ const Header = styled.p`
 `;
 const AboutText = styled.p`
   font-weight: 300;
-  font-family: sans-serif;
+  font-family: ${({ theme }) =>
+    `${theme.fontSecondary}, ${theme.fontFallback}`};
   margin-top: 1rem;
   color: ${({ theme }) => theme.contrast};
   font-size: 1rem;
@@ -39,12 +40,12 @@ const TextWrapper = styled.div`
   }
 `;
 
-const AboutWords = (props) => {
+const AboutWords = ({ theme }) => {
   return (
     <AboutPara>
       <TextWrapper>
-        <Header>hello, i'm tim. it's nice to meet you</Header>
-        <AboutText>
+        <Header theme={theme}>hello, i'm tim. it's nice to meet you</Header>
+        <AboutText theme={theme}>
           I am a software engineer who prefers spaces over tabs, vim over Emacs
           and clean, reusable code. I work in JavaScript, Node, TypeScript and a
           three piece suit. Before embarking on my journey as a Software
@@ -56,6 +57,6 @@ const AboutWords = (props) => {
   );
 };
 
-AboutWords.propTypes = {};
+AboutWords.propTypes = { theme: PropTypes.object.isRequired };
 
 export default AboutWords;

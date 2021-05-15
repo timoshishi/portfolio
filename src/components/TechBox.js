@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
 import Card from './Card';
-import { cardInfo } from '../cardInfo';
+import { cardInfo } from '../data/cardInfo';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -41,13 +41,13 @@ const CardDivider = styled.div`
   }
 `;
 
-const TechBox = (props) => {
+const TechBox = ({ theme }) => {
   return (
     <Wrapper>
       <CardContainer>
         {cardInfo.map((cardInfo, i) => (
           <React.Fragment key={`${cardInfo.title}_${i}`}>
-            <Card cardInfo={cardInfo} />
+            <Card cardInfo={cardInfo} theme={theme} />
             {(i === 0 && <CardDivider />) || (i === 1 && <CardDivider />)}
           </React.Fragment>
         ))}
@@ -56,6 +56,6 @@ const TechBox = (props) => {
   );
 };
 
-TechBox.propTypes = {};
+TechBox.propTypes = { theme: PropTypes.object.isRequired };
 
 export default TechBox;

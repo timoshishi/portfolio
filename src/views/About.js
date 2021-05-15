@@ -15,8 +15,8 @@ const AboutWrapper = styled.section`
 const About = ({ theme }) => {
   return (
     <AboutWrapper>
-      <AboutText />
-      <TechBox />
+      <AboutText theme={theme} />
+      <TechBox theme={theme} />
     </AboutWrapper>
   );
 };
