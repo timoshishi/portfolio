@@ -12,7 +12,7 @@ const AboutPara = styled.div`
   align-items: center;
   justify-content: center;
 `;
-const Header = styled.p`
+const Header = styled.h2`
   font-weight: 500;
   font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
   color: #fafafa;
