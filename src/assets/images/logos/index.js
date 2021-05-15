@@ -17,7 +17,7 @@ import postgres from './postgres.svg';
 import react from './react.svg';
 import typescript from './typescript.svg';
 import webpack from './webpack.svg';
-import styled from './styled.png';
+import styled from './styled-components.svg';
 export {
   styled,
   aws,

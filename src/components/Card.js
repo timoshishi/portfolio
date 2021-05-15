@@ -5,7 +5,7 @@ import device from '../styles/mediaBreakpoints';
 import TechItem from './TechItem';
 
 const CardWrap = styled.div`
-  min-height: 20rem;
+  min-height: 30rem;
   width: 100%;
   display: flex;
   flex-direction: column;

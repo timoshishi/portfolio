@@ -31,12 +31,25 @@ const CardContainer = styled.div`
   }
 `;
 
+const CardDivider = styled.div`
+  height: 80%;
+  width: 0px;
+  display: none;
+  @media ${device.tablet} {
+    display: block;
+    border: 0.2px solid #d0d0d0;
+  }
+`;
+
 const TechBox = (props) => {
   return (
     <Wrapper>
       <CardContainer>
         {cardInfo.map((cardInfo, i) => (
-          <Card cardInfo={cardInfo} key={`${cardInfo.title}_${i}`} />
+          <React.Fragment key={`${cardInfo.title}_${i}`}>
+            <Card cardInfo={cardInfo} />
+            {(i === 0 && <CardDivider />) || (i === 1 && <CardDivider />)}
+          </React.Fragment>
         ))}
       </CardContainer>
     </Wrapper>
