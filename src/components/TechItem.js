@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
 const TechItemWrap = styled.div`
   width: 100%;
-  margin-right: 50%;
+  margin-right: 40%;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   @media ${device.laptop} {

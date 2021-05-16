@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import device from '../styles/mediaBreakpoints';
 import ProjectItem from '../components/ProjectItem';
 import { projectInfo } from '../data/projectInfo';
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,6 +17,7 @@ const Wrapper = styled.div`
     width: 100vw;
   }
 `;
+
 const Header = styled.h2`
   font-weight: 500;
   font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
@@ -28,11 +30,11 @@ const Header = styled.h2`
 const ProjectWrapper = styled.div`
   display: flex;
   width: 90%;
-  margin-right: 4%;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 2rem;
   @media ${device.laptop} {
+    margin-right: 4%;
     width: 80%;
     margin-top: 4rem;
   }

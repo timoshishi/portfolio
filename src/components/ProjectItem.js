@@ -4,22 +4,64 @@ import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
 
 const ProjectItemWrap = styled.div`
-  max-width: 40%;
-  min-height: 15rem;
-  border-radius: 5px;
-  background: url(${({ img }) => img});
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin: 1rem;
+  max-width: 60%;
+  max-height: 12rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-right: 40%;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+
   @media ${device.laptop} {
-    width: 25%;
+    margin: 2rem;
+    max-width: 25%;
+    &:hover {
+      transform: scale(1.8);
+    }
   }
 `;
 
+const ImageOverlay = styled.div`
+  background-color: rgba(0, 0, 0, 0.3);
+  display: block;
+  border-radius: 5px;
+  max-width: 100%;
+  max-width: 95%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 2.4%;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover {
+    opacity: 1;
+  }
+`;
+const ProjectImage = styled.img`
+  border-radius: 5px;
+  height: 100%;
+  width: auto;
+  vertical-align: top;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  @media ${device.laptop} {
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    &:after {
+    }
+  }
+`;
 const ProjectThumb = styled.img``;
 
 const ProjectItem = ({ theme, project }) => {
-  return <ProjectItemWrap img={project.image}></ProjectItemWrap>;
+  return (
+    <ProjectItemWrap>
+      <ProjectImage src={project.image} />
+      <ImageOverlay />
+    </ProjectItemWrap>
+  );
 };
 
 ProjectItem.propTypes = {

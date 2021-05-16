@@ -1,10 +1,11 @@
 import {
   coverLetter,
-  productDetail,
+  // productDetail,
   pupper,
-  twiddler,
+  // twiddler,
 } from '../assets/images/projects';
-
+import twiddler from './twiddler.png';
+import productDetail from './productDetail.png';
 export const projectInfo = [
   {
     title: 'Pupper',
