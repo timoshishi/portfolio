@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
+import ProjectImageOverlay from './ProjectImageOverlay';
 
 const ProjectItemWrap = styled.div`
   max-width: 60%;
@@ -20,23 +21,6 @@ const ProjectItemWrap = styled.div`
   }
 `;
 
-const ImageOverlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.3);
-  display: block;
-  border-radius: 5px;
-  max-width: 100%;
-  max-width: 95%;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 2.4%;
-  position: absolute;
-  opacity: 0;
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  &:hover {
-    opacity: 1;
-  }
-`;
 const ProjectImage = styled.img`
   border-radius: 5px;
   height: 100%;
@@ -59,7 +43,7 @@ const ProjectItem = ({ theme, project }) => {
   return (
     <ProjectItemWrap>
       <ProjectImage src={project.image} />
-      <ImageOverlay />
+      <ProjectImageOverlay project={project} theme={theme} />
     </ProjectItemWrap>
   );
 };

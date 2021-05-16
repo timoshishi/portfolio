@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   justify-content: center;
   width: 90vw;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   @media ${device.laptop} {
     margin-top: 5rem;
     width: 100vw;
@@ -20,9 +21,10 @@ const Wrapper = styled.div`
 
 const Header = styled.h2`
   font-weight: 500;
+  margin-right: 1rem;
   font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
   color: ${({ theme }) => theme.color};
-  font-size: 1.5rem;
+  font-size: 2rem;
   @media ${device.laptop} {
     font-size: 2.5rem;
   }
@@ -33,6 +35,7 @@ const ProjectWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 2rem;
+  margin-left: 1rem;
   @media ${device.laptop} {
     margin-right: 4%;
     width: 80%;

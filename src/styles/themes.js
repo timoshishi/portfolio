@@ -8,6 +8,7 @@ const lightTheme = {
   fontSecondary: 'Open Sans',
   fontFallback: 'sans-serif',
   color: '#363537',
+  colorSecondary: '#FAFAFA',
 };
 const darkTheme = {
   color: '#FAFAFA',
