@@ -1,18 +1,18 @@
 const lightTheme = {
   body: '#FAFAFA',
-  background: '#f7ef6a',
+  backgroundContrast: '#7510F7',
   contrast: '#7510F7',
   contrastSecondary: '#FAFAFA',
-  text: '#7510F7',
+  color: '#363537',
+  colorSecondary: '#FAFAFA',
   fontPrimary: 'Rubik',
   fontSecondary: 'Open Sans',
   fontFallback: 'sans-serif',
-  color: '#363537',
-  colorSecondary: '#FAFAFA',
 };
 const darkTheme = {
   color: '#FAFAFA',
   body: '#15202b',
+  backgroundContrast: '#7510F7',
   toggleBorder: '#6B8096',
   contrastSecondary: '#15202b',
   contrast: '#FAFAFA',

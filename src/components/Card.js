@@ -32,7 +32,7 @@ const HeaderLabel = styled.p`
   font-family: ${({ theme: { fontPrimary, fontFallback } }) =>
     `${fontPrimary}, ${fontFallback}`};
   margin-bottom: 1.5rem;
-  color: ${({ theme }) => theme.color};
+  color: #363537;
   font-weight: 100;
   @media ${device.laptop} {
     font-size: 2rem;
@@ -43,7 +43,6 @@ const TechList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
 `;
 const DescriptionWrapper = styled.div`
   width: 80%;

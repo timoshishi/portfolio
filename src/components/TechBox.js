@@ -37,7 +37,7 @@ const CardDivider = styled.div`
   margin-top: 1.5rem;
   @media ${device.laptop} {
     margin-top: 0rem;
-    height: 80%;
+    height: 600px;
     width: 0px;
   }
 `;

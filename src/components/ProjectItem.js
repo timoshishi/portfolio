@@ -37,7 +37,6 @@ const ProjectImage = styled.img`
     }
   }
 `;
-const ProjectThumb = styled.img``;
 
 const ProjectItem = ({ theme, project }) => {
   return (

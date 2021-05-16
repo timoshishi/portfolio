@@ -35,13 +35,13 @@ const TextBox = styled.div`
 `;
 const Header = styled.h3`
   font-size: 1.5rem;
-  color: ${({ theme }) => theme.colorSecondary};
+  color: #fafafa;
   font-family: ${({ theme }) => theme.fontPrimary};
   font-weight: 400;
   margin-bottom: 0.5rem;
 `;
 const ProjectDesc = styled.p`
-  color: ${({ theme }) => theme.colorSecondary};
+  color: #fafafa;
   font-family: ${({ theme }) => theme.fontSecondary};
   font-size: 0.8rem;
 `;

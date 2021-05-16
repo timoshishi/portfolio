@@ -1,5 +1,6 @@
 import {
   coverLetter,
+  sdc,
   // productDetail,
   // pupper,
   // twiddler,
@@ -36,5 +37,12 @@ export const projectInfo = [
     description:
       'E-commerce store front end interacting with a headless API utilizing React, React Router, React Bootstrap and Context ',
     githubUrl: 'https://github.com/theUndefinedTeam/product-detail',
+  },
+  {
+    title: 'System Design',
+    image: sdc,
+    description:
+      'Refactor of E-commerce microservice back end. Deployed on AWS EC2 utilizing Node, Nginx and PostgreSQL',
+    githubUrl: 'https://github.com/theSweetNothings/reviews-module',
   },
 ];
