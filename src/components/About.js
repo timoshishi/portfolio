@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import AboutText from '../components/AboutText';
+import AboutText from './AboutText';
 import PropTypes from 'prop-types';
 
-import TechBox from '../components/TechBox';
+import TechBox from './TechBox';
 const AboutWrapper = styled.section`
   width: 100vw;
   display: flex;

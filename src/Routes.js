@@ -1,9 +1,9 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from './views/Home';
-const About = lazy(() => import('./views/About'));
-const Contact = lazy(() => import('./views/Contact'));
-const Projects = lazy(() => import('./views/Projects'));
+import Home from './components/Home';
+const About = lazy(() => import('./components/About'));
+const Contact = lazy(() => import('./components/Contact'));
+const Projects = lazy(() => import('./components/Projects'));
 
 const Routes = (props) => {
   return (

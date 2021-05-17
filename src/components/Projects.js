@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import device from '../styles/mediaBreakpoints';
-import ProjectItem from '../components/ProjectItem';
+import ProjectItem from './ProjectItem';
 import { projectInfo } from '../data/projectInfo';
 
 const Wrapper = styled.div`

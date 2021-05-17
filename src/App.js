@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/themes';
 import useDarkMode from './hooks/useDarkMode';
 import GlobalStyles from './components/GlobalStyles';
-import HamburgerMenu from './views/HamburgerMenu';
+import HamburgerMenu from './components/HamburgerMenu';
 import ThemeToggleButton from './components/ThemeToggleButton';
 
 const App = () => {

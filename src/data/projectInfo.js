@@ -42,7 +42,7 @@ export const projectInfo = [
     title: 'System Design',
     image: sdc,
     description:
-      'Refactor of E-commerce microservice back end. Deployed on AWS EC2 utilizing Node, Nginx and PostgreSQL',
-    githubUrl: 'https://github.com/theSweetNothings/reviews-module',
+      "Horizontally scaled microservice's back end. Deployed on AWS EC2 utilizing Node, Nginx and PostgreSQL",
+    githubUrl: 'https://github.com/timoshishi/backend-architecture',
   },
 ];
