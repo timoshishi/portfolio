@@ -4,15 +4,13 @@ import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
 import Button from '../components/Button';
 const ImageOverlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   display: block;
   border-radius: 5px;
   max-width: 100%;
-  max-width: 85%;
+  max-width: 100%;
   top: 0;
   bottom: 0;
-  right: 0;
-  left: 7.5%;
   position: absolute;
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -36,6 +34,7 @@ const TextBox = styled.div`
 const Header = styled.h3`
   font-size: 1.5rem;
   color: #fafafa;
+  opacity: 0.9;
   font-family: ${({ theme }) => theme.fontPrimary};
   font-weight: 400;
   margin-bottom: 0.5rem;
@@ -58,8 +57,14 @@ const ProjectImageOverlay = ({ project, theme }) => {
         <Header theme={theme}>{project.title}</Header>
         <ProjectDesc theme={theme}>{project.description}</ProjectDesc>
         <ButtonBox>
-          <Button theme={theme}>Github</Button>
-          <Button theme={theme}>Website</Button>
+          <Button theme={theme} url={project.githubUrl}>
+            Github
+          </Button>
+          {project.projectUrl && (
+            <Button theme={theme} url={project.projectUrl}>
+              Website
+            </Button>
+          )}
         </ButtonBox>
       </TextBox>
     </ImageOverlay>

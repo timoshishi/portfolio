@@ -11,6 +11,7 @@ const ButtonLink = styled.a`
   color: inherit;
   transition: all 0.25s;
   border-radius: 2px;
+  text-decoration: none;
   &:hover {
     background: #4fbfa8;
     color: #ffffff;
@@ -24,9 +25,9 @@ const ButtonText = styled.p`
   font-weight: 500;
 `;
 
-const Button = ({ theme, children }) => {
+const Button = ({ theme, children, url }) => {
   return (
-    <ButtonLink>
+    <ButtonLink href={url} target='_blank'>
       <ButtonText theme={theme}>{children}</ButtonText>
     </ButtonLink>
   );

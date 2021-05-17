@@ -33,7 +33,7 @@ const ProjectWrapper = styled.div`
   display: flex;
   width: 90%;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 2rem;
   margin-left: 1rem;
   @media ${device.laptop} {

@@ -6,14 +6,14 @@ import ProjectImageOverlay from './ProjectImageOverlay';
 
 const ProjectItemWrap = styled.div`
   max-width: 60%;
-  max-height: 12rem;
+  max-height: 15rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
   margin-right: 40%;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   @media ${device.laptop} {
-    margin: 2rem;
+    margin: 1.5rem;
     max-width: 25%;
     &:hover {
       transform: scale(1.8);
@@ -24,7 +24,7 @@ const ProjectItemWrap = styled.div`
 const ProjectImage = styled.img`
   border-radius: 5px;
   height: 100%;
-  width: auto;
+  width: 100%;
   vertical-align: top;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
