@@ -18,7 +18,12 @@ import react from './react.svg';
 import typescript from './typescript.svg';
 import webpack from './webpack.svg';
 import styled from './styled-components.svg';
+import linkedin from './linkedin.svg';
+import paperPlane from './paper_plane.svg';
 export {
+  linkedin,
+  github,
+  paperPlane,
   styled,
   aws,
   bootstrap,
@@ -26,7 +31,6 @@ export {
   docker,
   express,
   gcp,
-  github,
   html,
   javascript,
   jest,

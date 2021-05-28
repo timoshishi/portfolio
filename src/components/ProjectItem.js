@@ -5,14 +5,15 @@ import device from '../styles/mediaBreakpoints';
 import ProjectImageOverlay from './ProjectImageOverlay';
 
 const ProjectItemWrap = styled.div`
-  max-width: 60%;
+  max-width: 100%;
   max-height: 15rem;
+  margin-right: 5%;
   margin-bottom: 1rem;
   margin-top: 1rem;
-  margin-right: 40%;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   @media ${device.laptop} {
+    margin-right: 40%;
     margin: 1.5rem;
     max-width: 25%;
     &:hover {

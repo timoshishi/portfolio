@@ -31,7 +31,7 @@ const Header = styled.h2`
 `;
 const ProjectWrapper = styled.div`
   display: flex;
-  width: 90%;
+  width: 100%;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 2rem;

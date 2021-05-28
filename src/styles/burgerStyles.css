@@ -1,6 +1,7 @@
 html,
 body {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 #App {
@@ -13,9 +14,6 @@ body {
 
 #page-wrap {
   text-align: center;
-
-  /* Prevent sidebar from showing a scrollbar on page */
-  overflow-x: hidden;
 }
 
 /* Individual item */
