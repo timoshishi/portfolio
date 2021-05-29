@@ -59,8 +59,7 @@ const Header = styled.h2`
 const Contact = ({ theme }) => {
   return (
     <AboutWrapper>
-      <ContactWrapper theme={theme}>
-        <a href='#contact' />
+      <ContactWrapper theme={theme} id='contact'>
         <Header>Contact</Header>
         <LogoSection>
           <LogoWrapper>

@@ -33,18 +33,18 @@ const HamburgerMenu = ({ children, isDarkTheme }) => {
         <Link to='/' className='menu-item' onClick={() => setMenuOpen(false)}>
           Home
         </Link>
-        <Link
-          to='/projects'
+        <a
+          href='#projects'
           className='menu-item'
           onClick={() => setMenuOpen(false)}>
           Projects
-        </Link>
-        <Link
-          to='/about'
+        </a>
+        <a
+          href='#about'
           className='menu-item'
           onClick={() => setMenuOpen(false)}>
           About
-        </Link>
+        </a>
         <a
           className='menu-item'
           href='#contact'

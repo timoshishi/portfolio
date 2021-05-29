@@ -44,7 +44,7 @@ const ProjectWrapper = styled.div`
 `;
 const Projects = ({ theme }) => {
   return (
-    <Wrapper>
+    <Wrapper id='projects'>
       <Header>My Recent Work</Header>
       <ProjectWrapper>
         {projectInfo.map((project, i) => (

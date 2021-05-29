@@ -7,6 +7,7 @@ import useDarkMode from './hooks/useDarkMode';
 import GlobalStyles from './components/GlobalStyles';
 import HamburgerMenu from './components/HamburgerMenu';
 import ThemeToggleButton from './components/ThemeToggleButton';
+import Home from './components/Home';
 
 const App = () => {
   const [isDarkTheme, toggleTheme] = useDarkMode();
@@ -25,7 +26,7 @@ const App = () => {
                 isDarkTheme={isDarkTheme}
               />
               <HamburgerMenu isDarkTheme={isDarkTheme}>
-                <Routes />
+                <Home />
               </HamburgerMenu>{' '}
             </>
           )}
