@@ -29,6 +29,7 @@ const Header = styled.h2`
     font-size: 2.5rem;
   }
 `;
+
 const ProjectWrapper = styled.div`
   display: flex;
   width: 100%;
@@ -42,6 +43,7 @@ const ProjectWrapper = styled.div`
     margin-top: 4rem;
   }
 `;
+
 const Projects = ({ theme }) => {
   return (
     <Wrapper id='projects'>
