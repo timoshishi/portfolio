@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   height: 100vh;
   width: 100vw;
 `;
-
+//FIXME: smooth scroll action broken
 const Home = (props) => {
   const [isDarkTheme] = useDarkMode();
   const themeContext = useContext(ThemeContext);
