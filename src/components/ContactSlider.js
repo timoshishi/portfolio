@@ -1,36 +1,61 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import {
-  linkedin,
-  github,
-  paperPlane,
-  emailLogo,
-} from '../assets/images/logos';
+import styled, { keyframes } from 'styled-components';
+import { linkedin, github } from '../assets/images/logos';
 import EmailLogo from './EmailLogo';
 import device from '../styles/mediaBreakpoints';
+
+const slideIn = keyframes`
+from {
+transform: translateX(0rem)
+}
+to {
+transform: translateX(-6rem)
+}
+`;
+
 const S = {};
 S.ContactContainer = styled.div`
   display: none;
+
   @media ${device.tablet} {
+    display: block;
+    width: 2rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    border-style: 1px solid black;
+    right: -3rem;
+    bottom: 40vh;
+    z-index: 10;
+    animation: 1s ${slideIn} ease-out 0.2s normal forwards;
+  }
+  @media ${device.laptop} {
     display: block;
     width: 3rem;
     position: fixed;
     display: flex;
     flex-direction: column;
     border-style: 1px solid black;
-    right: 3rem;
+    right: -3rem;
     bottom: 6rem;
     z-index: 10;
+    animation: 1s ${slideIn} ease-out 0.2s normal forwards;
   }
 `;
 S.LogoContainer = styled.div`
-  width: 4rem;
-  height: 4rem;
-
   border-radius: 5px;
   margin-top: 1px;
   margin-bottom: 1px;
+
+  @media ${device.tablet} {
+    width: 3rem;
+    height: 3rem;
+  }
+  @media ${device.laptop} {
+    width: 4rem;
+    height: 4rem;
+  }
   &:hover {
     transition: 0.15s;
     transform: scale(1.15);
