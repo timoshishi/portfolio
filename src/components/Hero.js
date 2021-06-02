@@ -4,8 +4,8 @@ import { avatar } from '../assets/images';
 import device from '../styles/mediaBreakpoints';
 import Computer from './Computer';
 import HeroText from './HeroText';
-
-const HeroWrapper = styled.div`
+const S = {};
+S.HeroWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
@@ -24,7 +24,7 @@ const HeroWrapper = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
+S.ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-content: space-between;
@@ -36,8 +36,8 @@ const ImageContainer = styled.div`
   z-index: 1;
 `;
 
-const Avatar = styled.img``;
-const AvatarBox = styled.div`
+S.Avatar = styled.img``;
+S.AvatarBox = styled.div`
   display: flex;
   align-content: center;
   justify-content: center;
@@ -50,13 +50,13 @@ const AvatarBox = styled.div`
   }
 `;
 
-const CompContainer = styled.div`
+S.CompContainer = styled.div`
   display: flex;
   align-content: center;
   justify-content: center;
 `;
 
-const CompWrapper = styled.div`
+S.CompWrapper = styled.div`
   max-width: 100%;
   min-width: 100%;
   @media ${device.laptop} {
@@ -66,22 +66,22 @@ const CompWrapper = styled.div`
 `;
 const Hero = ({ isDarkTheme, theme }) => {
   return (
-    <HeroWrapper>
-      <ImageContainer>
+    <S.HeroWrapper>
+      <S.ImageContainer>
         <HeroText theme={theme} />
-        <AvatarBox>
-          <Avatar src={avatar} />
-        </AvatarBox>
-        <CompContainer>
-          <CompWrapper>
+        <S.AvatarBox>
+          <S.Avatar src={avatar} />
+        </S.AvatarBox>
+        <S.CompContainer>
+          <S.CompWrapper>
             <Computer
               path={theme.contrast}
               background={theme.contrastSecondary}
             />
-          </CompWrapper>
-        </CompContainer>
-      </ImageContainer>
-    </HeroWrapper>
+          </S.CompWrapper>
+        </S.CompContainer>
+      </S.ImageContainer>
+    </S.HeroWrapper>
   );
 };
 

@@ -8,7 +8,8 @@ import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 
-const Wrapper = styled.div`
+const S = {};
+S.Wrapper = styled.div`
   position: relative;
   margin: 1rem;
   height: 100vh;
@@ -19,12 +20,12 @@ const Home = (props) => {
   const [isDarkTheme] = useDarkMode();
   const themeContext = useContext(ThemeContext);
   return (
-    <Wrapper>
+    <S.Wrapper>
       <Hero isDarkTheme={isDarkTheme} theme={themeContext} />
       <About theme={themeContext} />
       <Projects theme={themeContext} />
       <Contact theme={themeContext} />
-    </Wrapper>
+    </S.Wrapper>
   );
 };
 

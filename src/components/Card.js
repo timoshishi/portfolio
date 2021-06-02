@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
 import TechItem from './TechItem';
 
-const CardWrap = styled.div`
+const S = {};
+S.CardWrap = styled.div`
   min-height: 30rem;
   width: 100%;
   display: flex;
@@ -14,20 +15,20 @@ const CardWrap = styled.div`
     width: 30%;
   }
 `;
-const HeaderLogoWrapper = styled.div`
+S.HeaderLogoWrapper = styled.div`
   margin-top: 2rem;
   @media ${device.laptop} {
     margin-top: 4rem;
   }
 `;
-const HeaderLogo = styled.img`
+S.HeaderLogo = styled.img`
   max-height: 3rem;
   @media ${device.laptop} {
     min-height: 4rem;
     max-height: 4rem;
   }
 `;
-const HeaderLabel = styled.p`
+S.HeaderLabel = styled.p`
   font-size: 2rem;
   font-family: ${({ theme: { fontPrimary, fontFallback } }) =>
     `${fontPrimary}, ${fontFallback}`};
@@ -39,12 +40,12 @@ const HeaderLabel = styled.p`
     margin-bottom: 1.5rem;
   }
 `;
-const TechList = styled.div`
+S.TechList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
-const DescriptionWrapper = styled.div`
+S.DescriptionWrapper = styled.div`
   width: 80%;
   align-self: center;
   margin-top: 1.5rem;
@@ -53,7 +54,7 @@ const DescriptionWrapper = styled.div`
     width: 60%;
   }
 `;
-const DescriptionText = styled.p`
+S.DescriptionText = styled.p`
   font-family: ${({ theme }) =>
     `${theme.fontSecondary}, ${theme.fontFallback}`};
   color: black;
@@ -65,15 +66,15 @@ const DescriptionText = styled.p`
 
 const Card = ({ cardInfo, theme }) => {
   return (
-    <CardWrap>
-      <HeaderLogoWrapper>
-        <HeaderLabel theme={theme}>{cardInfo.title}</HeaderLabel>
-        <HeaderLogo src={cardInfo.imgSrc} />
-      </HeaderLogoWrapper>
-      <DescriptionWrapper>
-        <DescriptionText>{cardInfo.description}</DescriptionText>
-      </DescriptionWrapper>
-      <TechList>
+    <S.CardWrap>
+      <S.HeaderLogoWrapper>
+        <S.HeaderLabel theme={theme}>{cardInfo.title}</S.HeaderLabel>
+        <S.HeaderLogo src={cardInfo.imgSrc} />
+      </S.HeaderLogoWrapper>
+      <S.DescriptionWrapper>
+        <S.DescriptionText>{cardInfo.description}</S.DescriptionText>
+      </S.DescriptionWrapper>
+      <S.TechList>
         {cardInfo.tech.map((techInfo, i) => (
           <TechItem
             techInfo={techInfo}
@@ -81,8 +82,8 @@ const Card = ({ cardInfo, theme }) => {
             theme={theme}
           />
         ))}
-      </TechList>
-    </CardWrap>
+      </S.TechList>
+    </S.CardWrap>
   );
 };
 

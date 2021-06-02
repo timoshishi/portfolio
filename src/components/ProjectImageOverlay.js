@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
 import Button from '../components/Button';
-const ImageOverlay = styled.div`
+
+const S = {};
+S.ImageOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.4);
   display: block;
   border-radius: 5px;
@@ -23,7 +25,7 @@ const ImageOverlay = styled.div`
   }
 `;
 
-const TextBox = styled.div`
+S.TextBox = styled.div`
   width: 70%;
   display: flex;
   margin-top: 1rem;
@@ -31,7 +33,7 @@ const TextBox = styled.div`
   align-items: center;
   justify-content: center;
 `;
-const Header = styled.h3`
+S.Header = styled.h3`
   font-size: 1.5rem;
   color: #fafafa;
   opacity: 0.9;
@@ -39,12 +41,12 @@ const Header = styled.h3`
   font-weight: 400;
   margin-bottom: 0.5rem;
 `;
-const ProjectDesc = styled.p`
+S.ProjectDesc = styled.p`
   color: #fafafa;
   font-family: ${({ theme }) => theme.fontSecondary};
   font-size: 0.8rem;
 `;
-const ButtonBox = styled.div`
+S.ButtonBox = styled.div`
   display: flex;
   margin-top: 1.5rem;
   width: 100%;
@@ -52,11 +54,11 @@ const ButtonBox = styled.div`
 `;
 const ProjectImageOverlay = ({ project, theme }) => {
   return (
-    <ImageOverlay>
-      <TextBox>
-        <Header theme={theme}>{project.title}</Header>
-        <ProjectDesc theme={theme}>{project.description}</ProjectDesc>
-        <ButtonBox>
+    <S.ImageOverlay>
+      <S.TextBox>
+        <S.Header theme={theme}>{project.title}</S.Header>
+        <S.ProjectDesc theme={theme}>{project.description}</S.ProjectDesc>
+        <S.ButtonBox>
           <Button theme={theme} url={project.githubUrl}>
             Github
           </Button>
@@ -65,9 +67,9 @@ const ProjectImageOverlay = ({ project, theme }) => {
               Website
             </Button>
           )}
-        </ButtonBox>
-      </TextBox>
-    </ImageOverlay>
+        </S.ButtonBox>
+      </S.TextBox>
+    </S.ImageOverlay>
   );
 };
 

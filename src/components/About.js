@@ -4,7 +4,9 @@ import AboutText from './AboutText';
 import PropTypes from 'prop-types';
 
 import TechBox from './TechBox';
-const AboutWrapper = styled.section`
+
+const S = {};
+S.AboutWrapper = styled.section`
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -13,10 +15,10 @@ const AboutWrapper = styled.section`
 `;
 const About = ({ theme }) => {
   return (
-    <AboutWrapper id='about'>
+    <S.AboutWrapper id='about'>
       <AboutText theme={theme} />
       <TechBox theme={theme} />
-    </AboutWrapper>
+    </S.AboutWrapper>
   );
 };
 

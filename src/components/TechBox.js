@@ -5,7 +5,8 @@ import device from '../styles/mediaBreakpoints';
 import Card from './Card';
 import { cardInfo } from '../data/cardInfo';
 
-const Wrapper = styled.div`
+const S = {};
+S.Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -15,7 +16,7 @@ const Wrapper = styled.div`
     margin-top: -4rem;
   }
 `;
-const CardContainer = styled.div`
+S.CardContainer = styled.div`
   border: 0.5px solid grey;
   border-radius: 10px;
   display: flex;
@@ -30,7 +31,7 @@ const CardContainer = styled.div`
   }
 `;
 
-const CardDivider = styled.div`
+S.CardDivider = styled.div`
   height: 0%;
   width: 80%;
   border: 0.2px solid #d0d0d0;
@@ -44,16 +45,16 @@ const CardDivider = styled.div`
 
 const TechBox = ({ theme }) => {
   return (
-    <Wrapper>
-      <CardContainer>
+    <S.Wrapper>
+      <S.CardContainer>
         {cardInfo.map((cardInfo, i) => (
           <React.Fragment key={`${cardInfo.title}_${i}`}>
             <Card cardInfo={cardInfo} theme={theme} />
-            {(i === 0 && <CardDivider />) || (i === 1 && <CardDivider />)}
+            {(i === 0 && <S.CardDivider />) || (i === 1 && <S.CardDivider />)}
           </React.Fragment>
         ))}
-      </CardContainer>
-    </Wrapper>
+      </S.CardContainer>
+    </S.Wrapper>
   );
 };
 

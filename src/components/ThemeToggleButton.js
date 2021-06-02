@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import Switch from 'react-switch';
 import { NightsStay, Brightness7 } from '@material-ui/icons';
 import device from '../styles/mediaBreakpoints';
-const ToggleDiv = styled.div`
+
+const S = {};
+S.ToggleDiv = styled.div`
   position: absolute;
   top: 1rem;
   right: 3rem;
@@ -20,7 +22,7 @@ const ToggleDiv = styled.div`
 `;
 const ThemeToggleButton = ({ toggleTheme, isDarkTheme }) => {
   return (
-    <ToggleDiv>
+    <S.ToggleDiv>
       <label htmlFor='small-radius-switch'>
         <Switch
           checked={!isDarkTheme}
@@ -61,7 +63,7 @@ const ThemeToggleButton = ({ toggleTheme, isDarkTheme }) => {
           aria-label='toggle light dark theme'
         />
       </label>
-    </ToggleDiv>
+    </S.ToggleDiv>
   );
 };
 

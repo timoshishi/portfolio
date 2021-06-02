@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import { linkedin, github, paperPlane } from '../assets/images/logos';
 import device from '../styles/mediaBreakpoints';
 
-const AboutWrapper = styled.section`
+const S = {};
+S.AboutWrapper = styled.section`
   width: 110vw;
   background-color: #7510f7;
   width: 100vw;
@@ -13,7 +14,7 @@ const AboutWrapper = styled.section`
   margin-top: 1rem;
   margin-left: -1rem;
 `;
-const ContactWrapper = styled.div`
+S.ContactWrapper = styled.div`
   min-height: 40vh;
   display: flex;
   flex-direction: column;
@@ -21,10 +22,10 @@ const ContactWrapper = styled.div`
   margin-top: 5%;
 `;
 
-const Logo = styled.img`
+S.Logo = styled.img`
   max-height: 5rem;
 `;
-const LogoSection = styled.div`
+S.LogoSection = styled.div`
   max-height: 5rem;
   margin: 2rem;
   display: flex;
@@ -33,19 +34,19 @@ const LogoSection = styled.div`
   align-items: center;
   width: 100vh;
 `;
-const LogoWrapper = styled.div`
+S.LogoWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-const LogoLabel = styled.p`
+S.LogoLabel = styled.p`
   color: #fafafa;
   font-size: 1.8rem;
   margin-top: 0.5rem;
   font-weight: 500;
   font-family: Rubik;
 `;
-const Header = styled.h2`
+S.Header = styled.h2`
   font-weight: 500;
   font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
   color: #fafafa;
@@ -58,31 +59,31 @@ const Header = styled.h2`
 
 const Contact = ({ theme }) => {
   return (
-    <AboutWrapper>
-      <ContactWrapper theme={theme} id='contact'>
-        <Header>Contact</Header>
-        <LogoSection>
-          <LogoWrapper>
+    <S.AboutWrapper>
+      <S.ContactWrapper theme={theme} id='contact'>
+        <S.Header>Contact</S.Header>
+        <S.LogoSection>
+          <S.LogoWrapper>
             <a href='https://github.com/timoshishi' target='blank'>
-              <Logo src={github} />
-              <LogoLabel>Github</LogoLabel>
+              <S.Logo src={github} />
+              <S.LogoLabel>Github</S.LogoLabel>
             </a>
-          </LogoWrapper>
-          <LogoWrapper>
+          </S.LogoWrapper>
+          <S.LogoWrapper>
             <a href='https://www.linkedin.com/in/timfrrst/' target='blank'>
-              <Logo src={linkedin} />
+              <S.Logo src={linkedin} />
             </a>
-            <LogoLabel>LinkedIn</LogoLabel>
-          </LogoWrapper>
-          <LogoWrapper>
+            <S.LogoLabel>LinkedIn</S.LogoLabel>
+          </S.LogoWrapper>
+          <S.LogoWrapper>
             <a href='mailto:timfrrst@gmail.com' target='blank'>
-              <Logo src={paperPlane} />
+              <S.Logo src={paperPlane} />
             </a>
-            <LogoLabel>email</LogoLabel>
-          </LogoWrapper>
-        </LogoSection>
-      </ContactWrapper>
-    </AboutWrapper>
+            <S.LogoLabel>email</S.LogoLabel>
+          </S.LogoWrapper>
+        </S.LogoSection>
+      </S.ContactWrapper>
+    </S.AboutWrapper>
   );
 };
 

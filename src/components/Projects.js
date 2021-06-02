@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import device from '../styles/mediaBreakpoints';
 import ProjectItem from './ProjectItem';
 import { projectInfo } from '../data/projectInfo';
-
-const Wrapper = styled.div`
+const S = {};
+S.Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Header = styled.h2`
+S.Header = styled.h2`
   font-weight: 500;
   margin-right: 1rem;
   font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
@@ -30,7 +30,7 @@ const Header = styled.h2`
   }
 `;
 
-const ProjectWrapper = styled.div`
+S.ProjectWrapper = styled.div`
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -46,14 +46,14 @@ const ProjectWrapper = styled.div`
 
 const Projects = ({ theme }) => {
   return (
-    <Wrapper id='projects'>
-      <Header>My Recent Work</Header>
-      <ProjectWrapper>
+    <S.Wrapper id='projects'>
+      <S.Header>My Recent Work</S.Header>
+      <S.ProjectWrapper>
         {projectInfo.map((project, i) => (
           <ProjectItem theme={theme} project={project} key={project.title} />
         ))}
-      </ProjectWrapper>
-    </Wrapper>
+      </S.ProjectWrapper>
+    </S.Wrapper>
   );
 };
 

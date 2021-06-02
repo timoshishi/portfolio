@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
 import ProjectImageOverlay from './ProjectImageOverlay';
 
-const ProjectItemWrap = styled.div`
+const S = {};
+S.ProjectItemWrap = styled.div`
   max-width: 100%;
   max-height: 15rem;
   margin-right: 5%;
@@ -22,7 +23,7 @@ const ProjectItemWrap = styled.div`
   }
 `;
 
-const ProjectImage = styled.img`
+S.ProjectImage = styled.img`
   border-radius: 5px;
   height: 100%;
   width: 100%;
@@ -41,10 +42,10 @@ const ProjectImage = styled.img`
 
 const ProjectItem = ({ theme, project }) => {
   return (
-    <ProjectItemWrap>
-      <ProjectImage src={project.image} />
+    <S.ProjectItemWrap>
+      <S.ProjectImage src={project.image} />
       <ProjectImageOverlay project={project} theme={theme} />
-    </ProjectItemWrap>
+    </S.ProjectItemWrap>
   );
 };
 

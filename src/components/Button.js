@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-const ButtonLink = styled.a`
+
+const S = {};
+S.ButtonLink = styled.a`
   color: #4fbfa8;
   border: 1px solid #fafafa;
   padding-left: 0.2rem;
@@ -19,7 +21,7 @@ const ButtonLink = styled.a`
     cursor: pointer;
   }
 `;
-const ButtonText = styled.p`
+S.ButtonText = styled.p`
   color: white;
   font-family: ${({ theme }) => theme.fontSecondary};
   font-weight: 500;
@@ -27,9 +29,9 @@ const ButtonText = styled.p`
 
 const Button = ({ theme, children, url }) => {
   return (
-    <ButtonLink href={url} target='_blank'>
-      <ButtonText theme={theme}>{children}</ButtonText>
-    </ButtonLink>
+    <S.ButtonLink href={url} target='_blank'>
+      <S.ButtonText theme={theme}>{children}</S.ButtonText>
+    </S.ButtonLink>
   );
 };
 
