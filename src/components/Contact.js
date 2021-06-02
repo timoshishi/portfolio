@@ -5,7 +5,7 @@ import { linkedin, github, paperPlane } from '../assets/images/logos';
 import device from '../styles/mediaBreakpoints';
 
 const S = {};
-S.AboutWrapper = styled.section`
+S.ContactContainer = styled.section`
   width: 110vw;
   background-color: #7510f7;
   width: 100vw;
@@ -57,33 +57,46 @@ S.Header = styled.h2`
   }
 `;
 
+const linkStyle = {
+  textDecoration: 'none',
+};
+
 const Contact = ({ theme }) => {
   return (
-    <S.AboutWrapper>
+    <S.ContactContainer>
       <S.ContactWrapper theme={theme} id='contact'>
         <S.Header>Contact</S.Header>
         <S.LogoSection>
           <S.LogoWrapper>
-            <a href='https://github.com/timoshishi' target='blank'>
+            <a
+              href='https://github.com/timoshishi'
+              target='blank'
+              style={linkStyle}>
               <S.Logo src={github} />
               <S.LogoLabel>Github</S.LogoLabel>
             </a>
           </S.LogoWrapper>
           <S.LogoWrapper>
-            <a href='https://www.linkedin.com/in/timfrrst/' target='blank'>
+            <a
+              href='https://www.linkedin.com/in/timfrrst/'
+              target='blank'
+              style={linkStyle}>
               <S.Logo src={linkedin} />
+              <S.LogoLabel>LinkedIn</S.LogoLabel>
             </a>
-            <S.LogoLabel>LinkedIn</S.LogoLabel>
           </S.LogoWrapper>
           <S.LogoWrapper>
-            <a href='mailto:timfrrst@gmail.com' target='blank'>
+            <a
+              href='mailto:timfrrst@gmail.com'
+              target='blank'
+              style={linkStyle}>
               <S.Logo src={paperPlane} />
+              <S.LogoLabel>email</S.LogoLabel>
             </a>
-            <S.LogoLabel>email</S.LogoLabel>
           </S.LogoWrapper>
         </S.LogoSection>
       </S.ContactWrapper>
-    </S.AboutWrapper>
+    </S.ContactContainer>
   );
 };
 

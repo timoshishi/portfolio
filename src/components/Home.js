@@ -7,6 +7,7 @@ import Hero from '../components/Hero';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
+import ContactSlider from './ContactSlider';
 
 const S = {};
 S.Wrapper = styled.div`
@@ -21,6 +22,7 @@ const Home = (props) => {
   const themeContext = useContext(ThemeContext);
   return (
     <S.Wrapper>
+      <ContactSlider />
       <Hero isDarkTheme={isDarkTheme} theme={themeContext} />
       <About theme={themeContext} />
       <Projects theme={themeContext} />
