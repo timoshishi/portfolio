@@ -20,7 +20,9 @@ import webpack from './webpack.svg';
 import styled from './styled-components.svg';
 import linkedin from './linkedin.svg';
 import paperPlane from './paper_plane.svg';
+import emailLogo from './email-logo.svg';
 export {
+  emailLogo,
   linkedin,
   github,
   paperPlane,

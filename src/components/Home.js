@@ -22,7 +22,7 @@ const Home = (props) => {
   const themeContext = useContext(ThemeContext);
   return (
     <S.Wrapper>
-      <ContactSlider />
+      <ContactSlider theme={themeContext} />
       <Hero isDarkTheme={isDarkTheme} theme={themeContext} />
       <About theme={themeContext} />
       <Projects theme={themeContext} />

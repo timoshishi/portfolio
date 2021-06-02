@@ -27,7 +27,7 @@ S.CardContainer = styled.div`
   background-color: #fafafa;
   box-shadow: 0.5px 0.5px 2px 0px rgba(0, 0, 0, 0.55);
   @media ${device.laptop} {
-    width: 90%;
+    width: 87%;
   }
 `;
 

@@ -51,7 +51,7 @@ S.DescriptionWrapper = styled.div`
   margin-top: 1.5rem;
   margin-bottom: 2rem;
   @media ${device.laptop} {
-    width: 60%;
+    width: 80%;
   }
 `;
 S.DescriptionText = styled.p`
