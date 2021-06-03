@@ -7,7 +7,7 @@ import ProjectImageOverlay from './ProjectImageOverlay';
 const S = {};
 S.ProjectItemWrap = styled.div`
   max-width: 100%;
-  max-height: 15rem;
+  /* max-height: 15rem; */
   margin-right: 5%;
   margin-bottom: 1rem;
   margin-top: 1rem;

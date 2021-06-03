@@ -21,31 +21,6 @@ S.ContactWrapper = styled.div`
   align-items: center;
   margin-top: 5%;
 `;
-
-S.Logo = styled.img`
-  max-height: 5rem;
-`;
-S.LogoSection = styled.div`
-  max-height: 5rem;
-  margin: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vh;
-`;
-S.LogoWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-S.LogoLabel = styled.p`
-  color: #fafafa;
-  font-size: 1.8rem;
-  margin-top: 0.5rem;
-  font-weight: 500;
-  font-family: Rubik;
-`;
 S.Header = styled.h2`
   font-weight: 500;
   font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
@@ -54,6 +29,47 @@ S.Header = styled.h2`
   margin-bottom: 3rem;
   @media ${device.laptop} {
     font-size: 2.5rem;
+  }
+`;
+S.LogoSection = styled.div`
+  max-height: 15rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+  @media ${device.tablet} {
+    justify-content: space-between;
+    max-height: 5rem;
+  }
+`;
+
+S.LogoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  @media ${device.tablet} {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+`;
+
+S.Logo = styled.img`
+  max-height: 3rem;
+  @media ${device.tablet} {
+    max-height: 5rem;
+  }
+`;
+
+S.LogoLabel = styled.p`
+  color: #fafafa;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  font-family: Rubik;
+  @media ${device.tablet} {
+    font-size: 1.8rem;
   }
 `;
 

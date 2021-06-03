@@ -8,7 +8,6 @@ import github from './github.svg';
 import html from './html.svg';
 import javascript from './javascript.svg';
 import jest from './jest.svg';
-import jira from './jira.svg';
 import materialUI from './materialUi.svg';
 import mongo from './mongodb.svg';
 import node from './node.svg';
@@ -36,7 +35,6 @@ export {
   html,
   javascript,
   jest,
-  jira,
   materialUI,
   mongo,
   node,

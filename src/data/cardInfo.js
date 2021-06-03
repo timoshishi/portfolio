@@ -1,9 +1,4 @@
-import {
-  designer,
-  frontend,
-  data,
-  // cloudData,
-} from '../assets/images/logos/header-logos';
+import { designer, frontend, data } from '../assets/images/logos/header-logos';
 import {
   bootstrap,
   css,
@@ -20,11 +15,6 @@ import {
   mongo,
   postgres,
   styled,
-  // github,
-  // jest,
-  // jira,
-  // npm,
-  // webpack,
 } from '../assets/images/logos';
 
 export const cardInfo = [

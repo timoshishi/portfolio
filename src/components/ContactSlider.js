@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import { linkedin, github } from '../assets/images/logos';
 import EmailLogo from './EmailLogo';
 import device from '../styles/mediaBreakpoints';
-
+import GithubLogo from './GithubLogo';
 const slideIn = keyframes`
 from {
 transform: translateX(0rem)
