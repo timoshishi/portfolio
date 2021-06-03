@@ -1,13 +1,11 @@
 import {
   coverLetter,
   sdc,
-  // productDetail,
-  // pupper,
-  // twiddler,
+  twiddler,
+  pupper,
+  productDetail,
 } from '../assets/images/projects';
-import twiddler from './twiddler.png';
-import pupper from './pupper.png';
-import productDetail from './productDetail.png';
+
 export const projectInfo = [
   {
     title: 'Pupper',
