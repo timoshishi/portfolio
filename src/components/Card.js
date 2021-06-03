@@ -54,6 +54,7 @@ S.DescriptionWrapper = styled.div`
     width: 80%;
   }
 `;
+
 S.DescriptionText = styled.p`
   font-family: ${({ theme }) =>
     `${theme.fontSecondary}, ${theme.fontFallback}`};
