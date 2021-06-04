@@ -11,7 +11,6 @@ ReactGA.initialize('UA-198621727-1', {
     userId: 123,
   },
 }); // add your tracking id here.
-console.log('process', process.env);
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
