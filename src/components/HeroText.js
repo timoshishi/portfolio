@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
-console.log({ device });
 const S = {};
 S.Period = styled.span`
   color: ${({ isDarkTheme }) => (!isDarkTheme ? '#FF4500' : '#1a91da')};
@@ -43,7 +42,6 @@ S.SubHead = styled.p`
 `;
 
 const HeroText = ({ theme }) => {
-  console.log(theme.text);
   return (
     <S.TextBox>
       <S.HeaderText theme={theme}>

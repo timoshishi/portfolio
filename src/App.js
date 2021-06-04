@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Routes from './Routes';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/themes';
 import useDarkMode from './hooks/useDarkMode';

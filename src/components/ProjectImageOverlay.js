@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import device from '../styles/mediaBreakpoints';
 import Button from '../components/Button';
 
 const S = {};
