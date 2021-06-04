@@ -46,8 +46,8 @@ const AboutWords = ({ theme }) => {
     <S.AboutPara>
       <S.TextWrapper>
         <S.Header theme={theme}>hello, i'm tim. it's nice to meet you</S.Header>
-        <S.AboutText theme={theme}>
-          I am a software engineer who prefers spaces over tabs, vim over Emacs
+        <S.AboutText theme={theme} id='about'>
+          I am a software engineer who prefers spaces over tabs, Vim over Emacs
           and clean, reusable code. I work in JavaScript, Node, TypeScript and a
           three piece suit. Before embarking on my journey as a Software
           Engineer I was a chef, business owner and peripatetic lover of local

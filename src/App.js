@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/themes';
 import useDarkMode from './hooks/useDarkMode';
@@ -16,20 +15,18 @@ const App = () => {
     <React.Fragment>
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
-        <Router>
-          {themeMode && (
-            <>
-              {' '}
-              <ThemeToggleButton
-                toggleTheme={toggleTheme}
-                isDarkTheme={isDarkTheme}
-              />
-              <HamburgerMenu isDarkTheme={isDarkTheme}>
-                <Home />
-              </HamburgerMenu>{' '}
-            </>
-          )}
-        </Router>
+        {themeMode && (
+          <>
+            {' '}
+            <ThemeToggleButton
+              toggleTheme={toggleTheme}
+              isDarkTheme={isDarkTheme}
+            />
+            <HamburgerMenu isDarkTheme={isDarkTheme}>
+              <Home />
+            </HamburgerMenu>{' '}
+          </>
+        )}
       </ThemeProvider>
     </React.Fragment>
   );

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { scaleRotate as Menu } from 'react-burger-menu';
-import { Link } from 'react-router-dom';
 
 const HamburgerMenu = ({ children, isDarkTheme }) => {
   const styles = {
@@ -30,20 +29,23 @@ const HamburgerMenu = ({ children, isDarkTheme }) => {
           setMenuOpen(state.menuOpen);
         }}
         styles={styles}>
-        <Link to='/' className='menu-item' onClick={() => setMenuOpen(false)}>
-          Home
-        </Link>
         <a
-          href='#projects'
+          href='#home'
           className='menu-item'
           onClick={() => setMenuOpen(false)}>
-          Projects
+          Home
         </a>
         <a
           href='#about'
           className='menu-item'
           onClick={() => setMenuOpen(false)}>
           About
+        </a>
+        <a
+          href='#contact'
+          className='menu-item'
+          onClick={() => setMenuOpen(false)}>
+          Projects
         </a>
       </Menu>
       <div id='page-wrap'>{children}</div>

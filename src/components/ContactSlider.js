@@ -56,8 +56,10 @@ S.LogoContainer = styled.div`
     height: 4rem;
   }
   &:hover {
-    transition: 0.15s;
-    transform: scale(1.15);
+    transition: all 0.2s;
+    transform: scale(1.1);
+    margin-top: 3px;
+    margin-bottom: 3px;
   }
 `;
 S.Link = styled.a`

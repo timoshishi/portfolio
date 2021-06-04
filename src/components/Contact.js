@@ -39,7 +39,8 @@ S.LogoSection = styled.div`
   align-items: center;
   width: 100vh;
   @media ${device.tablet} {
-    justify-content: space-between;
+    justify-content: center;
+
     max-height: 5rem;
   }
 `;
@@ -50,15 +51,15 @@ S.LogoWrapper = styled.div`
   margin-left: 2rem;
   margin-right: 2rem;
   @media ${device.tablet} {
-    margin-left: 0rem;
-    margin-right: 0rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 `;
 
 S.Logo = styled.img`
   max-height: 3rem;
   @media ${device.tablet} {
-    max-height: 5rem;
+    max-height: 4rem;
   }
 `;
 

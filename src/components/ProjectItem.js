@@ -29,9 +29,10 @@ S.ProjectImage = styled.img`
   width: 100%;
   vertical-align: top;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.25, 1);
   @media ${device.laptop} {
     &:hover {
+      z-index: 5;
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
         0 10px 10px rgba(0, 0, 0, 0.22);
     }

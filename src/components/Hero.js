@@ -66,7 +66,7 @@ S.CompWrapper = styled.div`
 `;
 const Hero = ({ isDarkTheme, theme }) => {
   return (
-    <S.HeroWrapper>
+    <S.HeroWrapper id='home'>
       <S.ImageContainer>
         <HeroText theme={theme} />
         <S.AvatarBox>
