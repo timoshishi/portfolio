@@ -33,7 +33,7 @@ const ThemeToggleButton = ({ toggleTheme, isDarkTheme }: IProps) => {
     <S.ToggleDiv>
       <label htmlFor='small-radius-switch'>
         <Switch
-          checked={!isDarkTheme}
+          checked={isDarkTheme}
           onChange={toggleTheme}
           handleDiameter={28}
           onColor='#6B8096'

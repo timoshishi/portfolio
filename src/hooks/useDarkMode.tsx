@@ -9,12 +9,13 @@ const useDarkMode = (): [boolean, () => void] => {
   };
 
   useEffect(() => {
-    let localTheme = true;
     const res = window.localStorage.getItem('darkTheme');
     if (res !== null) {
-      localTheme = JSON.parse(res);
+      const localTheme = JSON.parse(res);
+      setDarkTheme(!localTheme);
+    } else {
+      setDarkTheme(true);
     }
-    localTheme && setDarkTheme(!localTheme);
   }, []);
 
   return [isDarkTheme, toggleTheme];

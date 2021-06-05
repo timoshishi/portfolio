@@ -9,25 +9,27 @@ import Home from './components/Home';
 
 const App = () => {
   const [isDarkTheme, toggleTheme] = useDarkMode();
-  const themeMode = !isDarkTheme ? darkTheme : lightTheme;
+  const themeMode = isDarkTheme ? darkTheme : lightTheme;
 
   return (
     <React.Fragment>
-      <ThemeProvider theme={themeMode}>
-        <GlobalStyles />
-        {themeMode && (
-          <>
-            {' '}
-            <ThemeToggleButton
-              toggleTheme={toggleTheme}
-              isDarkTheme={isDarkTheme}
-            />
-            <HamburgerMenu isDarkTheme={isDarkTheme}>
-              <Home />
-            </HamburgerMenu>{' '}
-          </>
-        )}
-      </ThemeProvider>
+      {themeMode && (
+        <ThemeProvider theme={themeMode}>
+          <GlobalStyles />
+          {themeMode && (
+            <>
+              {' '}
+              <ThemeToggleButton
+                toggleTheme={toggleTheme}
+                isDarkTheme={isDarkTheme}
+              />
+              <HamburgerMenu isDarkTheme={isDarkTheme}>
+                <Home />
+              </HamburgerMenu>{' '}
+            </>
+          )}
+        </ThemeProvider>
+      )}
     </React.Fragment>
   );
 };

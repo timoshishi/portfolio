@@ -12,17 +12,17 @@ interface MenuState extends State {
 const HamburgerMenu: React.FC<IProps> = ({ children, isDarkTheme }) => {
   const styles = {
     bmBurgerBars: {
-      background: !isDarkTheme ? '#6B8096' : '#373a47',
+      background: isDarkTheme ? '#6B8096' : '#373a47',
       borderRadius: '2px',
     },
     bmMenu: {
-      background: isDarkTheme ? '#697EFF' : '#373a47',
+      background: !isDarkTheme ? '#697EFF' : '#373a47',
     },
     bmItem: {
-      color: isDarkTheme ? '#FFF' : '#FAFAFA',
+      color: !isDarkTheme ? '#FFF' : '#FAFAFA',
     },
     bmCross: {
-      background: isDarkTheme ? '#FAFAFA' : '#888',
+      background: !isDarkTheme ? '#FAFAFA' : '#888',
     },
   };
 

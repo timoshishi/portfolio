@@ -1,21 +1,10 @@
 const styles = {
-  // bmBurgerButton: {
-  //   position: 'fixed',
-  //   width: '36px',
-  //   height: '30px',
-  //   left: '36px',
-  //   top: '36px',
-  // },
   bmBurgerBars: {
     background: '#373a47',
   },
   bmBurgerBarsHover: {
     background: '#a90000',
   },
-  // bmCrossButton: {
-  //   height: '24px',
-  //   width: '24px',
-  // },
   bmCross: {
     background: '#bdc3c7',
   },
