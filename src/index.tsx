@@ -8,7 +8,7 @@ ReactGA.initialize('UA-198621727-1', {
   debug: process.env.NODE_ENV === 'development' ? true : false,
   titleCase: false,
   gaOptions: {
-    userId: 123,
+    userId: '123',
   },
 }); // add your tracking id here.
 ReactGA.pageview(window.location.pathname + window.location.search);

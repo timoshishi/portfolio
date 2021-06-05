@@ -1,12 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { StyledComponent } from 'styled-components';
 import PropTypes from 'prop-types';
 import Switch from 'react-switch';
 import { NightsStay, Brightness7 } from '@material-ui/icons';
 import device from '../styles/mediaBreakpoints';
 
-const S = {};
-S.ToggleDiv = styled.div`
+// interface IStyled {
+//   ToggleDiv?: StyledComponent<any, any, {}, never>;
+// }
+// const S: IStyled = {};
+
+const ToggleDiv = styled.div`
   position: absolute;
   top: 1rem;
   right: 3rem;
@@ -20,9 +24,14 @@ S.ToggleDiv = styled.div`
     height: 5%;
   }
 `;
-const ThemeToggleButton = ({ toggleTheme, isDarkTheme }) => {
+type IProps = {
+  isDarkTheme: boolean;
+  toggleTheme: () => void;
+};
+
+const ThemeToggleButton = ({ toggleTheme, isDarkTheme }: IProps) => {
   return (
-    <S.ToggleDiv>
+    <ToggleDiv>
       <label htmlFor='small-radius-switch'>
         <Switch
           checked={!isDarkTheme}
@@ -63,7 +72,7 @@ const ThemeToggleButton = ({ toggleTheme, isDarkTheme }) => {
           aria-label='toggle light dark theme'
         />
       </label>
-    </S.ToggleDiv>
+    </ToggleDiv>
   );
 };
 

@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
-import { scaleRotate as Menu } from 'react-burger-menu';
+import { scaleRotate as Menu, State } from 'react-burger-menu';
 
-const HamburgerMenu = ({ children, isDarkTheme }) => {
+interface IProps {
+  isDarkTheme: boolean;
+}
+
+interface MenuState extends State {
+  menuOpen: boolean;
+}
+
+const HamburgerMenu: React.FC<IProps> = ({ children, isDarkTheme }) => {
   const styles = {
     bmBurgerBars: {
       background: !isDarkTheme ? '#6B8096' : '#373a47',
@@ -17,6 +25,7 @@ const HamburgerMenu = ({ children, isDarkTheme }) => {
       background: isDarkTheme ? '#FAFAFA' : '#888',
     },
   };
+
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div id='App'>
@@ -25,8 +34,8 @@ const HamburgerMenu = ({ children, isDarkTheme }) => {
         pageWrapId={'page-wrap'}
         outerContainerId={'App'}
         isOpen={menuOpen}
-        onStateChange={(state) => {
-          setMenuOpen(state.menuOpen);
+        onStateChange={(prevState: MenuState) => {
+          setMenuOpen(prevState.menuOpen);
         }}
         styles={styles}>
         <a
