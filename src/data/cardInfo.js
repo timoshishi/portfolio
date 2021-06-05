@@ -22,7 +22,7 @@ export const cardInfo = [
     imgSrc: designer,
     title: 'Design',
     description:
-      'I value simple content structure, clean design patterns, and thoughtful interactions.',
+      'I value simple structure, clean design patterns, and thoughtful interactions.',
     tech: [
       { thumb: css, text: 'CSS' },
       { thumb: html, text: 'HTML' },
@@ -35,7 +35,7 @@ export const cardInfo = [
     imgSrc: frontend,
     title: 'Front End',
     description:
-      'I like to code things from scratch, and enjoy bringing ideas to life in the browser.',
+      'I like to build things from scratch, and enjoy bringing ideas to life in the browser.',
     tech: [
       { thumb: javascript, text: 'JavaScript' },
       { thumb: node, text: 'NodeJS' },
@@ -48,7 +48,7 @@ export const cardInfo = [
     imgSrc: data,
     title: 'Back End',
     description:
-      "Even the things you can't see are important. SQL, non-relational and serverless.",
+      "The things you can't see are just as important. SQL, non-relational and serverless.",
     tech: [
       { thumb: postgres, text: 'PostgreSQL' },
       { thumb: mongo, text: 'MongoDB' },

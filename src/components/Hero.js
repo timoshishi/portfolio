@@ -5,6 +5,7 @@ import device from '../styles/mediaBreakpoints';
 import Computer from './Computer';
 import HeroText from './HeroText';
 const S = {};
+
 S.HeroWrapper = styled.div`
   display: flex;
   flex-direction: column;
