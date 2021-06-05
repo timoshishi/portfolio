@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
-import device from '../styles/mediaBreakpoints';
 import { IStyled, ITheme } from '../ts/interfaces/interfaces';
+import { Device } from '../ts/enums/mediaBreakpoints';
 
 const S: IStyled = {
   TechItemWrap: styled.div`
@@ -9,7 +8,7 @@ const S: IStyled = {
     margin-right: 40%;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       margin-top: 1rem;
       margin-bottom: 1rem;
       width: 70%;
@@ -34,7 +33,7 @@ const S: IStyled = {
     width: 100%;
     margin-left: 2.3rem;
     margin-top: 0.5rem;
-    @media ${device.tablet} {
+    @media ${Device.tablet} {
       margin-left: 1.3rem;
     }
   `,

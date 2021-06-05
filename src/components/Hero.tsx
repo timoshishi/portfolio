@@ -1,10 +1,9 @@
-import React from 'react';
 import styled from 'styled-components';
 import { avatar } from '../assets/images';
-import device from '../styles/mediaBreakpoints';
 import { IStyled, ITheme } from '../ts/interfaces/interfaces';
 import Computer from './Computer';
 import HeroText from './HeroText';
+import { Device } from '../ts/enums/mediaBreakpoints';
 
 const S: IStyled = {
   HeroWrapper: styled.div`
@@ -16,7 +15,7 @@ const S: IStyled = {
     width: 80%;
     margin-top: 15%;
     left: 5%;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       justify-content: flex-end;
       height: 90%;
       width: 80%;
@@ -46,7 +45,7 @@ const S: IStyled = {
     z-index: 5;
     max-height: 10%;
     margin-bottom: 10%;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       max-height: 30%;
       margin-bottom: 5%;
     }
@@ -61,7 +60,7 @@ const S: IStyled = {
   CompWrapper: styled.div`
     max-width: 100%;
     min-width: 100%;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       max-width: 50%;
       min-width: 50%;
     }

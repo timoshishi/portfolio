@@ -1,8 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import device from '../styles/mediaBreakpoints';
 import { IStyled, ITheme } from '../ts/interfaces/interfaces';
+import { Device } from '../ts/enums/mediaBreakpoints';
 
 const S: IStyled = {
   AboutPara: styled.div`
@@ -20,7 +18,7 @@ const S: IStyled = {
       `${theme.fontPrimary}, ${theme.fontFallback}`};
     color: #fafafa;
     font-size: 1.5rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       font-size: 2.5rem;
     }
   `,
@@ -32,13 +30,13 @@ const S: IStyled = {
     color: #fafafa;
     font-size: 1rem;
     margin-bottom: 1rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       font-size: 1.5rem;
     }
   `,
   TextWrapper: styled.div`
     max-width: 90%;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       max-width: 60%;
     }
   `,
@@ -63,7 +61,5 @@ const AboutWords = ({ theme }: IProps) => {
     </S.AboutPara>
   );
 };
-
-AboutWords.propTypes = { theme: PropTypes.object.isRequired };
 
 export default AboutWords;

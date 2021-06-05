@@ -1,9 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import device from '../styles/mediaBreakpoints';
 import ProjectImageOverlay from './ProjectImageOverlay';
 import { IStyled, ITheme, IProject } from '../ts/interfaces/interfaces';
+import { Device } from '../ts/enums/mediaBreakpoints';
 
 const S: IStyled = {
   ProjectItemWrap: styled.div`
@@ -14,7 +12,7 @@ const S: IStyled = {
     margin-top: 1rem;
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       margin-right: 40%;
       margin: 1.5rem;
       max-width: 25%;
@@ -31,7 +29,7 @@ const S: IStyled = {
     vertical-align: top;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.5s cubic-bezier(0.2, 0.8, 0.25, 1);
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       &:hover {
         z-index: 5;
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
@@ -55,11 +53,6 @@ const ProjectItem = ({ theme, project }: IProps) => {
       <ProjectImageOverlay project={project} theme={theme} />
     </S.ProjectItemWrap>
   );
-};
-
-ProjectItem.propTypes = {
-  theme: PropTypes.object.isRequired,
-  project: PropTypes.object.isRequired,
 };
 
 export default ProjectItem;

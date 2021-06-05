@@ -1,6 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
 interface IProps {
   path: string;
   background: string;
@@ -635,11 +632,6 @@ const Computer = ({ path, background }: IProps) => {
       </g>
     </svg>
   );
-};
-
-Computer.propTypes = {
-  path: PropTypes.string.isRequired,
-  background: PropTypes.string.isRequired,
 };
 
 export default Computer;

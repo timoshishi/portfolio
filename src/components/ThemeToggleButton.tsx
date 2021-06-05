@@ -1,10 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import Switch from 'react-switch';
 import { NightsStay, Brightness7 } from '@material-ui/icons';
-import device from '../styles/mediaBreakpoints';
 import { IStyled } from '../ts/interfaces/interfaces';
+import { Device } from '../ts/enums/mediaBreakpoints';
 
 const S: IStyled = {
   ToggleDiv: styled.div`
@@ -14,7 +12,7 @@ const S: IStyled = {
     width: 5%;
     height: 5%;
     z-index: 9999;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       top: 2rem;
       right: 1rem;
       width: 5%;
@@ -73,10 +71,6 @@ const ThemeToggleButton = ({ toggleTheme, isDarkTheme }: IProps) => {
       </label>
     </S.ToggleDiv>
   );
-};
-
-ThemeToggleButton.propTypes = {
-  toggleTheme: PropTypes.func.isRequired,
 };
 
 export default ThemeToggleButton;

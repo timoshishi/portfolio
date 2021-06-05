@@ -1,7 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
 import AboutText from './AboutText';
-import PropTypes from 'prop-types';
 import TechBox from './TechBox';
 import { ITheme } from '../ts/interfaces/interfaces';
 
@@ -25,7 +23,5 @@ const About = ({ theme }: IProps) => {
     </S.AboutContainer>
   );
 };
-
-About.propTypes = { theme: PropTypes.object.isRequired };
 
 export default About;

@@ -1,10 +1,9 @@
-import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import device from '../styles/mediaBreakpoints';
 import ProjectItem from './ProjectItem';
 import { projectInfo } from '../data/projectInfo';
 import { IStyled, ITheme } from '../ts/interfaces/interfaces';
+import { Device } from '../ts/enums/mediaBreakpoints';
+
 const S: IStyled = {
   Wrapper: styled.div`
     display: flex;
@@ -14,7 +13,7 @@ const S: IStyled = {
     width: 90vw;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       margin-top: 5rem;
       width: 100vw;
     }
@@ -27,7 +26,7 @@ const S: IStyled = {
       `${theme.fontPrimary}, ${theme.fontFallback}`};
     color: ${({ theme }) => theme.color};
     font-size: 2rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       font-size: 2.5rem;
     }
   `,
@@ -39,7 +38,7 @@ const S: IStyled = {
     justify-content: center;
     margin-top: 2rem;
     margin-left: 1rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       margin-right: 4%;
       width: 80%;
       margin-top: 4rem;
@@ -61,7 +60,5 @@ const Projects = ({ theme }: IProps) => {
     </S.Wrapper>
   );
 };
-
-Projects.propTypes = { theme: PropTypes.object.isRequired };
 
 export default Projects;

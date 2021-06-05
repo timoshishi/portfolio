@@ -1,6 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
 interface IProps {
   fill: string;
 }
@@ -59,7 +56,5 @@ const Github = ({ fill }: IProps) => {
     </svg>
   );
 };
-
-Github.propTypes = { fill: PropTypes.string.isRequired };
 
 export default Github;

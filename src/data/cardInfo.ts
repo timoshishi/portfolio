@@ -35,7 +35,7 @@ export const cardInfo = [
     imgSrc: frontend,
     title: 'Front End',
     description:
-      'I like to build things from scratch, and enjoy bringing ideas to life in the browser.',
+      'I like to build things from scratch and enjoy bringing ideas to life in the browser.',
     tech: [
       { thumb: javascript, text: 'JavaScript' },
       { thumb: node, text: 'NodeJS' },

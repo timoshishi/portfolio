@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import device from '../styles/mediaBreakpoints';
 import Card from './Card';
 import { cardInfo } from '../data/cardInfo';
 import { IStyled, ITheme } from '../ts/interfaces/interfaces';
+import { Device } from '../ts/enums/mediaBreakpoints';
 
 const S: IStyled = {
   Wrapper: styled.div`
@@ -13,7 +12,7 @@ const S: IStyled = {
     flex-direction: column;
     align-items: center;
     margin-top: -1rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       margin-top: -4rem;
     }
   `,
@@ -21,13 +20,14 @@ const S: IStyled = {
     border: 0.5px solid grey;
     border-radius: 10px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
     background-color: #fafafa;
     box-shadow: 0.5px 0.5px 2px 0px rgba(0, 0, 0, 0.55);
-    @media ${device.laptop} {
-      width: 87%;
+    @media ${Device.laptop} {
+      width: 85%;
     }
   `,
 
@@ -36,9 +36,9 @@ const S: IStyled = {
     width: 80%;
     border: 0.2px solid #d0d0d0;
     margin-top: 1.5rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       margin-top: 0rem;
-      height: 600px;
+      height: 650px;
       width: 0px;
     }
   `,
@@ -61,7 +61,5 @@ const TechBox = ({ theme }: IProps) => {
     </S.Wrapper>
   );
 };
-
-TechBox.propTypes = { theme: PropTypes.object.isRequired };
 
 export default TechBox;

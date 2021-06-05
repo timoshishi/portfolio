@@ -1,5 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Button from './Button';
 import { IProject, IStyled, ITheme } from '../ts/interfaces/interfaces';
@@ -78,11 +76,6 @@ const ProjectImageOverlay = ({ project, theme }: IProps) => {
       </S.TextBox>
     </S.ImageOverlay>
   );
-};
-
-ProjectImageOverlay.propTypes = {
-  theme: PropTypes.object.isRequired,
-  project: PropTypes.object.isRequired,
 };
 
 export default ProjectImageOverlay;

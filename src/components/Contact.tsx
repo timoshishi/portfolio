@@ -1,9 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { linkedin, github, paperPlane } from '../assets/images/logos';
-import device from '../styles/mediaBreakpoints';
 import { ITheme } from '../ts/interfaces/interfaces';
+import { Device } from '../ts/enums/mediaBreakpoints';
+
 const S = {
   ContactContainer: styled.section`
     width: 110vw;
@@ -28,7 +27,7 @@ const S = {
     color: #fafafa;
     font-size: 2rem;
     margin-bottom: 3rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       font-size: 2.5rem;
     }
   `,
@@ -39,7 +38,7 @@ const S = {
     justify-content: center;
     align-items: center;
     width: 100vh;
-    @media ${device.tablet} {
+    @media ${Device.tablet} {
       justify-content: center;
 
       max-height: 5rem;
@@ -50,14 +49,14 @@ const S = {
     flex-direction: column;
     margin-left: 2rem;
     margin-right: 2rem;
-    @media ${device.tablet} {
+    @media ${Device.tablet} {
       margin-left: 2rem;
       margin-right: 2rem;
     }
   `,
   Logo: styled.img`
     max-height: 3rem;
-    @media ${device.tablet} {
+    @media ${Device.tablet} {
       max-height: 4rem;
     }
   `,
@@ -68,7 +67,7 @@ const S = {
     margin-top: 0.5rem;
     font-weight: 500;
     font-family: Rubik;
-    @media ${device.tablet} {
+    @media ${Device.tablet} {
       font-size: 1.8rem;
     }
   `,
@@ -105,10 +104,6 @@ const Contact = ({ theme }: IProps) => {
       </S.ContactWrapper>
     </S.ContactContainer>
   );
-};
-
-Contact.propTypes = {
-  theme: PropTypes.object.isRequired,
 };
 
 export default Contact;

@@ -1,30 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import device from '../styles/mediaBreakpoints';
 import TechItem from './TechItem';
 import { IStyled, CardInfo, ITheme } from '../ts/interfaces/interfaces';
-
+import { Device } from '../ts/enums/mediaBreakpoints';
 const S: IStyled = {
   CardWrap: styled.div`
     min-height: 30rem;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
-    @media ${device.laptop} {
+    padding-bottom: 2rem;
+    @media ${Device.laptop} {
       width: 30%;
     }
   `,
   HeaderLogoWrapper: styled.div`
     margin-top: 2rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       margin-top: 4rem;
     }
   `,
   HeaderLogo: styled.img`
     max-height: 3rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       min-height: 4rem;
       max-height: 4rem;
     }
@@ -36,7 +33,7 @@ const S: IStyled = {
     margin-bottom: 1.5rem;
     color: #363537;
     font-weight: 100;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       font-size: 2rem;
       margin-bottom: 1.5rem;
     }
@@ -51,7 +48,7 @@ const S: IStyled = {
     align-self: center;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       width: 80%;
     }
   `,
@@ -60,7 +57,7 @@ const S: IStyled = {
       `${theme.fontSecondary}, ${theme.fontFallback}`};
     color: black;
     font-size: 1.3rem;
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       font-size: 1.5rem;
     }
   `,
@@ -91,11 +88,6 @@ const Card = ({ cardInfo, theme }: IProps) => {
       </S.TechList>
     </S.CardWrap>
   );
-};
-
-Card.propTypes = {
-  cardInfo: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
 };
 
 export default Card;

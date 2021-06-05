@@ -1,11 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-/**
- * 
-<?xml version='1.0' encoding='iso-8859-1'?>
-<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
- */
-
 interface IProps {
   background: string;
 }
@@ -24,7 +16,5 @@ const EmailLogo = ({ background }: IProps) => {
     </svg>
   );
 };
-
-EmailLogo.propTypes = { background: PropTypes.string.isRequired };
 
 export default EmailLogo;

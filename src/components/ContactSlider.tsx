@@ -1,10 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import { linkedin, github } from '../assets/images/logos';
 import EmailLogo from './EmailLogo';
-import device from '../styles/mediaBreakpoints';
 import { IStyled, ITheme } from '../ts/interfaces/interfaces';
+import { Device } from '../ts/enums/mediaBreakpoints';
 
 const slideIn = keyframes`
 from {
@@ -19,7 +17,7 @@ const S: IStyled = {
   ContactContainer: styled.div`
     display: none;
 
-    @media ${device.tablet} {
+    @media ${Device.tablet} {
       display: block;
       width: 2rem;
       position: fixed;
@@ -31,7 +29,7 @@ const S: IStyled = {
       z-index: 10;
       animation: 1s ${slideIn} ease-out 0.2s normal forwards;
     }
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       display: block;
       width: 3rem;
       position: fixed;
@@ -49,11 +47,11 @@ const S: IStyled = {
     margin-top: 1px;
     margin-bottom: 1px;
 
-    @media ${device.tablet} {
+    @media ${Device.tablet} {
       width: 3rem;
       height: 3rem;
     }
-    @media ${device.laptop} {
+    @media ${Device.laptop} {
       width: 4rem;
       height: 4rem;
     }
@@ -106,10 +104,6 @@ const ContactSlider = ({ theme }: IProps) => {
       </S.LogoContainer>
     </S.ContactContainer>
   );
-};
-
-ContactSlider.propTypes = {
-  theme: PropTypes.object.isRequired,
 };
 
 export default ContactSlider;
