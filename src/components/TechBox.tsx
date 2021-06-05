@@ -13,7 +13,7 @@ const S: IStyled = {
     align-items: center;
     margin-top: -1rem;
     @media ${Device.laptop} {
-      margin-top: -4rem;
+      margin-top: -2rem;
     }
   `,
   CardContainer: styled.div`

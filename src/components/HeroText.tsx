@@ -29,7 +29,8 @@ const S: IStyled = {
     }
   `,
   SubHead: styled.p`
-    font-family: sans-serif;
+    font-family: ${({ theme }) =>
+      `${theme.fontSecondary}, ${theme.fontFallback}`};
     font-size: 2rem;
     font-weight: 300;
     display: none;
@@ -48,7 +49,7 @@ const HeroText = ({ theme }: IProps) => {
   return (
     <S.TextBox>
       <S.HeaderText theme={theme}>
-        i make things<S.Period>.</S.Period>
+        i make things<S.Period style={{ color: '#FF4500' }}>.</S.Period>
       </S.HeaderText>
       <S.SubHead theme={theme}>front end, back end, full stack</S.SubHead>
     </S.TextBox>
