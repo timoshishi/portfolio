@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './styles/global.css';
+// import './styles/global.css';
 // import { reportWebVitals } from './reportWebVitals';
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-198621727-1', {

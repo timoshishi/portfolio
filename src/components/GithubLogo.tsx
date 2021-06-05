@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Github = ({ fill }) => {
+interface IProps {
+  fill: string;
+}
+const Github = ({ fill }: IProps) => {
   return (
     <svg
       version='1.1'

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { StyledComponent } from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Switch from 'react-switch';
 import { NightsStay, Brightness7 } from '@material-ui/icons';

@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const Computer = ({ path, background }) => {
+
+interface IProps {
+  path: string;
+  background: string;
+}
+
+const Computer = ({ path, background }: IProps) => {
   return (
     <svg viewBox='0 0 650 265' xmlns='http://www.w3.org/2000/svg' version='1.1'>
       <title>Group 32</title>

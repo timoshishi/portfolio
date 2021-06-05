@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import styled from 'styled-components';
 import '../styles/burgerStyles.css';
-import useDarkMode from '../hooks/useDarkMode';
 import Hero from './Hero';
 import About from './About';
 import Projects from './Projects';
@@ -18,14 +17,12 @@ const S: IStyled = {
     width: 100vw;
   `,
 };
-//FIXME: smooth scroll action broken
 const Home = () => {
-  const [isDarkTheme] = useDarkMode();
   const themeContext = useContext(ThemeContext);
   return (
     <S.Wrapper>
       <ContactSlider theme={themeContext} />
-      <Hero isDarkTheme={isDarkTheme} theme={themeContext} />
+      <Hero theme={themeContext} />
       <About theme={themeContext} />
       <Projects theme={themeContext} />
       <Contact theme={themeContext} />

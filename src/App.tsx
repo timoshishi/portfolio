@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/themes';
 import useDarkMode from './hooks/useDarkMode';
-import GlobalStyles from './components/GlobalStyles';
+import GlobalStyles from './styles/GlobalStyles';
 import HamburgerMenu from './components/HamburgerMenu';
 import ThemeToggleButton from './components/ThemeToggleButton';
 import Home from './components/Home';

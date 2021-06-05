@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import device from '../styles/mediaBreakpoints';
-import { IStyled } from '../ts/interfaces/interfaces';
+import { IStyled, ITheme } from '../ts/interfaces/interfaces';
 
 const S: IStyled = {
   Period: styled.span`
@@ -44,7 +44,7 @@ const S: IStyled = {
   `,
 };
 interface IProps {
-  theme: any;
+  theme: ITheme;
 }
 const HeroText = ({ theme }: IProps) => {
   return (
