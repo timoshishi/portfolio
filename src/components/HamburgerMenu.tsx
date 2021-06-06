@@ -2,27 +2,27 @@ import React, { useState } from 'react';
 import { scaleRotate as Menu, State } from 'react-burger-menu';
 
 interface IProps {
-  isDarkTheme: boolean;
+  theme: string;
 }
 
 interface MenuState extends State {
   menuOpen: boolean;
 }
 
-const HamburgerMenu: React.FC<IProps> = ({ children, isDarkTheme }) => {
+const HamburgerMenu: React.FC<IProps> = ({ children, theme }) => {
   const styles = {
     bmBurgerBars: {
-      background: isDarkTheme ? '#6B8096' : '#373a47',
+      background: theme === 'dark' ? '#6B8096' : '#373a47',
       borderRadius: '2px',
     },
     bmMenu: {
-      background: !isDarkTheme ? '#697EFF' : '#373a47',
+      background: theme === 'light' ? '#697EFF' : '#373a47',
     },
     bmItem: {
-      color: !isDarkTheme ? '#FFF' : '#FAFAFA',
+      color: theme === 'light' ? '#FFF' : '#FAFAFA',
     },
     bmCross: {
-      background: !isDarkTheme ? '#FAFAFA' : '#888',
+      background: theme === 'light' ? '#FAFAFA' : '#888',
     },
   };
 

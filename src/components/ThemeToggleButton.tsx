@@ -22,22 +22,22 @@ const S: IStyled = {
 };
 
 type IProps = {
-  isDarkTheme: boolean;
+  theme: string;
   toggleTheme: () => void;
 };
 
-const ThemeToggleButton = ({ toggleTheme, isDarkTheme }: IProps) => {
+const ThemeToggleButton = ({ toggleTheme, theme }: IProps) => {
   return (
     <S.ToggleDiv>
       <label htmlFor='small-radius-switch'>
         <Switch
-          checked={isDarkTheme}
+          checked={theme === 'light' ? false : true}
           onChange={toggleTheme}
           handleDiameter={28}
           onColor='#6B8096'
           onHandleColor='#1a91da'
-          offColor='#6B8096'
           offHandleColor='#15202b'
+          offColor='#6B8096'
           uncheckedIcon={false}
           checkedIcon={false}
           boxShadow='0px 1px 5px rgba(0, 0, 0, 0.6)'

@@ -11,7 +11,7 @@ export interface ITheme {
   contrast: string;
   contrastSecondary: string;
   color: string;
-  colorSecondary: string;
+  colorSecondary?: string;
   fontPrimary: string;
   fontSecondary: string;
   fontFallback: string;

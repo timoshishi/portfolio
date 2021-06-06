@@ -44,8 +44,8 @@ const S: IStyled = {
   `,
   LogoContainer: styled.div`
     border-radius: 5px;
-    margin-top: 1px;
-    margin-bottom: 1px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 
     @media ${Device.tablet} {
       width: 3rem;

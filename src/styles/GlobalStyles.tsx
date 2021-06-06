@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
   scroll-behavior: smooth;
 }
 body {
-  background: ${({ theme }: IProps) => theme.body};
+  background: ${({ theme }: IProps): string => theme.body};
   transition: all 0.50s linear;
   overflow-x: hidden;
   }

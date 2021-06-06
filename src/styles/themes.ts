@@ -10,8 +10,8 @@ const lightTheme = {
   fontFallback: 'sans-serif',
 };
 const darkTheme = {
-  color: '#FAFAFA',
   body: '#15202b',
+  color: '#FAFAFA',
   backgroundContrast: '#7510F7',
   toggleBorder: '#6B8096',
   contrastSecondary: '#15202b',
