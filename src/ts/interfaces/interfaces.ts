@@ -8,6 +8,7 @@ export interface IStyled {
 export interface ITheme {
   body: string;
   backgroundContrast: string;
+  purp: string;
   contrast: string;
   contrastSecondary: string;
   color: string;

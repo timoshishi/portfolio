@@ -4,8 +4,8 @@ import { ITheme } from '../../ts/interfaces/interfaces';
 
 const S = {
   ButtonLink: styled.a`
-    color: #4fbfa8;
-    border: 1px solid #fafafa;
+    color: #fafafa;
+    border: 1px solid #f1c40f;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
     letter-spacing: 0.05em;
@@ -15,16 +15,20 @@ const S = {
     border-radius: 2px;
     text-decoration: none;
     &:hover {
-      background: #4fbfa8;
-      color: #ffffff;
-      border-color: #4fbfa8;
+      background: #f1c40f;
+      color: #fafafa;
+      border-color: #f1c40f;
       cursor: pointer;
     }
   `,
+
   ButtonText: styled.p`
-    color: white;
+    color: #f1c40f;
     font-family: ${({ theme }) => theme.fontSecondary};
     font-weight: 500;
+    &:hover {
+      color: inherit;
+    }
   `,
 };
 interface IProps {

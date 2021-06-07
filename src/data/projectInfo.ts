@@ -19,7 +19,7 @@ export const projectInfo = [
     title: 'Write My Cover Letter',
     image: coverLetter,
     description:
-      'Global npm package to automate cover letter writing utilizing Node.js, Inquirer and Chalk',
+      'Global npm script to automate cover letter writing using Node.js',
     githubUrl: 'https://github.com/timoshishi/write-my-cover-letter',
   },
   {
