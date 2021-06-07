@@ -2,11 +2,8 @@ import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import styled from 'styled-components';
 import '../styles/burgerStyles.css';
-import Hero from './Hero';
-import About from './About';
-import Projects from './Projects';
-import Contact from './Contact';
-import ContactSlider from './ContactSlider';
+import { Hero, About, Contact, Projects } from './';
+import ContactSlider from '../components/Contact/ContactSlider';
 import { IStyled } from '../ts/interfaces/interfaces';
 
 const S: IStyled = {

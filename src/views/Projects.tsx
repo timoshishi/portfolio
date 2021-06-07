@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import ProjectItem from './ProjectItem';
+import ProjectItem from '../components/Projects/ProjectItem';
 import { projectInfo } from '../data/projectInfo';
 import { IStyled, ITheme } from '../ts/interfaces/interfaces';
 import { Device } from '../ts/enums/mediaBreakpoints';
-
 const S: IStyled = {
   Wrapper: styled.div`
     display: flex;

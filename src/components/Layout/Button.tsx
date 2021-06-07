@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ITheme } from '../ts/interfaces/interfaces';
+import { ITheme } from '../../ts/interfaces/interfaces';
 
 const S = {
   ButtonLink: styled.a`

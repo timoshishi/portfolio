@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
-import { cardInfo } from '../data/cardInfo';
-import { IStyled, ITheme } from '../ts/interfaces/interfaces';
-import { Device } from '../ts/enums/mediaBreakpoints';
+import { cardInfo } from '../../data/cardInfo';
+import { IStyled, ITheme } from '../../ts/interfaces/interfaces';
+import { Device } from '../../ts/enums/mediaBreakpoints';
 
 const S: IStyled = {
   Wrapper: styled.div`

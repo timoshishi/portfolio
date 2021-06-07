@@ -3,9 +3,9 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/themes';
 import useDarkMode from './hooks/useDarkMode';
 import GlobalStyles from './styles/GlobalStyles';
-import HamburgerMenu from './components/HamburgerMenu';
-import ThemeToggleButton from './components/ThemeToggleButton';
-import Home from './components/Home';
+import HamburgerMenu from './components/Layout/HamburgerMenu';
+import ThemeToggleButton from './components/Layout/ThemeToggleButton';
+import { Home } from './views';
 
 const App = () => {
   const [theme, themeToggler, mountedComponent] = useDarkMode();

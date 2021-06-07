@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Switch from 'react-switch';
 import { NightsStay, Brightness7 } from '@material-ui/icons';
-import { IStyled } from '../ts/interfaces/interfaces';
-import { Device } from '../ts/enums/mediaBreakpoints';
+import { IStyled } from '../../ts/interfaces/interfaces';
+import { Device } from '../../ts/enums/mediaBreakpoints';
 
 const S: IStyled = {
   ToggleDiv: styled.div`

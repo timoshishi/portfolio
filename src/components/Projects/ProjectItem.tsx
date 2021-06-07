@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ProjectImageOverlay from './ProjectImageOverlay';
-import { IStyled, ITheme, IProject } from '../ts/interfaces/interfaces';
-import { Device } from '../ts/enums/mediaBreakpoints';
+import { IStyled, ITheme, IProject } from '../../ts/interfaces/interfaces';
+import { Device } from '../../ts/enums/mediaBreakpoints';
 
 const S: IStyled = {
   ProjectItemWrap: styled.div`

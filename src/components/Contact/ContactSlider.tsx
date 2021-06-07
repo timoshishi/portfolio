@@ -1,8 +1,8 @@
 import styled, { keyframes } from 'styled-components';
-import { linkedin, github } from '../assets/images/logos';
+import { linkedin, github } from '../../assets/images/logos';
 import EmailLogo from './EmailLogo';
-import { IStyled, ITheme } from '../ts/interfaces/interfaces';
-import { Device } from '../ts/enums/mediaBreakpoints';
+import { IStyled, ITheme } from '../../ts/interfaces/interfaces';
+import { Device } from '../../ts/enums/mediaBreakpoints';
 
 const slideIn = keyframes`
 from {

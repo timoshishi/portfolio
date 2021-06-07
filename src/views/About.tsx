@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import AboutText from './AboutText';
-import TechBox from './TechBox';
+import AboutText from '../components/About/AboutText';
+import TechBox from '../components/About/TechBox';
 import { ITheme } from '../ts/interfaces/interfaces';
 
 const S = {

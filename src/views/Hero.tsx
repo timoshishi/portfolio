@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { avatar } from '../assets/images';
 import { IStyled, ITheme } from '../ts/interfaces/interfaces';
-import Computer from './Computer';
-import HeroText from './HeroText';
+import Computer from '../components/Hero/Computer';
+import HeroText from '../components/Hero/HeroText';
 import { Device } from '../ts/enums/mediaBreakpoints';
 
 const S: IStyled = {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Button from './Button';
-import { IProject, IStyled, ITheme } from '../ts/interfaces/interfaces';
+import Button from '../Layout/Button';
+import { IProject, IStyled, ITheme } from '../../ts/interfaces/interfaces';
 
 const S: IStyled = {
   ImageOverlay: styled.div`

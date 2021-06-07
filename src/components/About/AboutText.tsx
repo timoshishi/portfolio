@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { IStyled, ITheme } from '../ts/interfaces/interfaces';
-import { Device } from '../ts/enums/mediaBreakpoints';
+import { IStyled, ITheme } from '../../ts/interfaces/interfaces';
+import { Device } from '../../ts/enums/mediaBreakpoints';
 
 const S: IStyled = {
   AboutPara: styled.div`

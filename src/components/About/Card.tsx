@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import TechItem from './TechItem';
-import { IStyled, CardInfo, ITheme } from '../ts/interfaces/interfaces';
-import { Device } from '../ts/enums/mediaBreakpoints';
+import { IStyled, CardInfo, ITheme } from '../../ts/interfaces/interfaces';
+import { Device } from '../../ts/enums/mediaBreakpoints';
 const S: IStyled = {
   CardWrap: styled.div`
     min-height: 30rem;
