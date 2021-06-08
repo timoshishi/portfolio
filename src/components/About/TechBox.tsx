@@ -34,9 +34,11 @@ const S: IStyled = {
   CardDivider: styled.div`
     height: 0%;
     width: 80%;
+    margin-left: 10%;
     border: 0.2px solid #d0d0d0;
     margin-top: 1.5rem;
     @media ${Device.laptop} {
+      margin-left: 0%;
       margin-top: 0rem;
       height: 650px;
       width: 0px;

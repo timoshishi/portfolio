@@ -71,7 +71,7 @@ interface IProps {
 const ProjectItem = ({ theme, project }: IProps) => {
   return (
     <S.ProjectItemWrap>
-      {/* <S.Header>{project.title}</S.Header> */}
+      <S.Header>{project.title}</S.Header>
       <S.ProjectImage src={project.image} />
       <ProjectImageOverlay project={project} theme={theme} />
       <MobileProjectCard project={project} theme={theme} />
