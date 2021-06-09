@@ -21,6 +21,7 @@ const S: IStyled = {
     background-color: #fafafa;
     border-radius: 0px 0px 5px 5px;
     max-width: 100%;
+    max-height: 20rem;
     top: 0;
     bottom: 0;
     position: relative;
@@ -37,6 +38,7 @@ const S: IStyled = {
       position: absolute;
       &:hover {
         opacity: 1;
+        z-index: 10;
       }
     }
   `,
@@ -111,9 +113,7 @@ const ProjectImageOverlay = ({ project, theme }: IProps) => {
             <GithubLogo size='90%' />
             <S.LogoLabel>Github</S.LogoLabel>
           </S.LogoBox>
-          {/* <Button theme={theme} url={project.githubUrl}>
-            Github
-          </Button> */}
+
           {project.projectUrl && (
             <S.LogoBox href={project.projectUrl} target='blank'>
               <img src={project.projectThumb} style={{ width: '80%' }} />
