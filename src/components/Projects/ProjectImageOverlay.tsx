@@ -1,8 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { IProject, IStyled, ITheme } from '../../ts/interfaces/interfaces';
 import { Device } from '../../ts/enums/mediaBreakpoints';
-import GithubLogo from '../GithubLogo';
-
+import githublogo from './githublogo.svg';
 const heartbeat = keyframes`
 {
   0%
@@ -30,11 +29,13 @@ const S: IStyled = {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    max-height: 20rem;
+    max-height: 40rem;
+    padding-bottom: 1rem;
     @media ${Device.laptop} {
+      padding-bottom: 0rem;
       border-radius: 5px;
       opacity: 0;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.5);
       position: absolute;
       &:hover {
         opacity: 1;
@@ -66,6 +67,7 @@ const S: IStyled = {
     font-size: 0.8rem;
     text-align: left;
     @media ${Device.laptop} {
+      font-weight: 600;
       color: #fafafa;
     }
   `,
@@ -75,30 +77,56 @@ const S: IStyled = {
     margin-top: 1.5rem;
     width: 80%;
   `,
-  LogoBox: styled.a`
-    max-height: 5rem;
+  LogoBox: styled.div`
+    max-height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     animation-name: ${heartbeat};
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-duration: 1.2s;
     animation-direction: alternate;
-    align-self: flex-start;
     @media ${Device.laptop} {
+      max-height: 5rem;
       max-width: 5rem;
     }
   `,
-  LogoLabel: styled.p`
-    margin-top: -0.5rem;
+  PuppyLogoLabel: styled.p`
     color: #15202b;
-    margin-bottom: 1rem;
     @media ${Device.laptop} {
-      margin-bottom: 0rem;
+      margin-top: 0.3rem;
+      position: relative;
+      color: #fafafa;
+    }
+  `,
+  PuppyLogo: styled.img`
+    margin-top: 0.5rem;
+    width: 90%;
+    height: 90%;
+  `,
+  GHLogo: styled.img`
+    width: 85%;
+    height: 85%;
+    margin-top: 0.7rem;
+    @media ${Device.laptop} {
+      margin-top: 0rem;
+      width: 100%;
+      height: 100%;
+    }
+  `,
+  GHLogoLabel: styled.p`
+    color: #15202b;
+    margin-top: -1rem;
+    @media ${Device.laptop} {
+      margin-top: -1rem;
+      position: relative;
       color: #fafafa;
     }
   `,
 };
-
 interface IProps {
   theme: ITheme;
   project: IProject;
@@ -111,21 +139,16 @@ const ProjectImageOverlay = ({ project, theme }: IProps) => {
         <S.Header theme={theme}>{project.title}</S.Header>
         <S.ProjectDesc theme={theme}>{project.description}</S.ProjectDesc>
         <S.ButtonBox>
-          <S.LogoBox href={project.githubUrl} target='blank'>
-            <GithubLogo size='90%' />
-            <S.LogoLabel>Github</S.LogoLabel>
+          <S.LogoBox>
+            <a href={project.githubUrl} target='blank'>
+              <S.GHLogo src={githublogo} />
+              <S.GHLogoLabel>Github</S.GHLogoLabel>
+            </a>
           </S.LogoBox>
-          {/* <Button theme={theme} url={project.githubUrl}>
-            Github
-          </Button> */}
           {project.projectUrl && (
             <S.LogoBox href={project.projectUrl} target='blank'>
-              <img
-                src={project.projectThumb}
-                style={{ width: '80%' }}
-                alt='puppy'
-              />
-              <S.LogoLabel style={{ marginTop: '0rem' }}>Website</S.LogoLabel>{' '}
+              <S.PuppyLogo src={project.projectThumb} alt='puppy' />
+              <S.PuppyLogoLabel style={{}}>Website</S.PuppyLogoLabel>{' '}
             </S.LogoBox>
           )}
         </S.ButtonBox>
