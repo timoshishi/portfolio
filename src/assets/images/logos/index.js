@@ -20,7 +20,9 @@ import styled from './styled-components.svg';
 import linkedin from './linkedin.svg';
 import paperPlane from './paper_plane.svg';
 import emailLogo from './email-logo.svg';
+import pupperLogo from './pupper.svg';
 export {
+  pupperLogo,
   emailLogo,
   linkedin,
   github,

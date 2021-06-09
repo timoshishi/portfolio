@@ -1,3 +1,4 @@
+import { pupperLogo } from '../assets/images/logos';
 import {
   coverLetter,
   sdc,
@@ -14,6 +15,7 @@ export const projectInfo = [
       'Full Stack Social media app to connect humans and puppies utilizing React, Express, Node.js PostgreSQL',
     githubUrl: 'https://github.com/timoshishi/pupper',
     projectUrl: 'https://timoshishi-puppr.herokuapp.com/',
+    projectThumb: pupperLogo,
   },
   {
     title: 'Write My Cover Letter',

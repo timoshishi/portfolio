@@ -1,10 +1,10 @@
 const lightTheme = {
   body: '#FAFAFA',
+  color: '#363537',
   backgroundContrast: '#7510F7',
   contrast: '#7510F7',
   purp: '#7510F7',
   contrastSecondary: '#FAFAFA',
-  color: '#363537',
   colorSecondary: '#FAFAFA',
   fontPrimary: 'Rubik',
   fontSecondary: 'Open Sans',

@@ -33,4 +33,5 @@ export interface IProject {
   description: string;
   githubUrl: string;
   projectUrl?: string;
+  projectThumb?: string;
 }

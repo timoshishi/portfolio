@@ -1,13 +1,25 @@
-import styled from 'styled-components';
-import Button from '../Layout/Button';
+import styled, { keyframes } from 'styled-components';
 import { IProject, IStyled, ITheme } from '../../ts/interfaces/interfaces';
 import { Device } from '../../ts/enums/mediaBreakpoints';
+import GithubLogo from '../GithubLogo';
+
+const heartbeat = keyframes`
+{
+  0%
+  {
+    transform: scale( .95 );
+  }
+  100%
+  {
+    transform: scale( 1 );
+  }
+}`;
 
 const S: IStyled = {
   ImageOverlay: styled.div`
     display: block;
     background-color: #fafafa;
-    border-radius: 5px;
+    border-radius: 0px 0px 5px 5px;
     max-width: 100%;
     top: 0;
     bottom: 0;
@@ -19,6 +31,7 @@ const S: IStyled = {
     align-items: center;
     justify-content: space-around;
     @media ${Device.laptop} {
+      border-radius: 5px;
       opacity: 0;
       background-color: rgba(0, 0, 0, 0.4);
       position: absolute;
@@ -43,6 +56,7 @@ const S: IStyled = {
     margin-bottom: 0.5rem;
     display: none;
     @media ${Device.laptop} {
+      display: block;
       color: #fafafa;
     }
   `,
@@ -56,9 +70,28 @@ const S: IStyled = {
   `,
   ButtonBox: styled.div`
     display: flex;
+    justify-content: space-around;
     margin-top: 1.5rem;
-    width: 100%;
-    justify-content: space-evenly;
+    width: 80%;
+  `,
+  LogoBox: styled.a`
+    max-width: 5rem;
+    cursor: pointer;
+    animation-name: ${heartbeat};
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1.2s;
+    animation-direction: alternate;
+    align-self: flex-start;
+  `,
+  LogoLabel: styled.p`
+    margin-top: -0.5rem;
+    color: #15202b;
+    margin-bottom: 1rem;
+    @media ${Device.laptop} {
+      margin-bottom: 0rem;
+      color: #fafafa;
+    }
   `,
 };
 
@@ -74,13 +107,20 @@ const ProjectImageOverlay = ({ project, theme }: IProps) => {
         <S.Header theme={theme}>{project.title}</S.Header>
         <S.ProjectDesc theme={theme}>{project.description}</S.ProjectDesc>
         <S.ButtonBox>
-          <Button theme={theme} url={project.githubUrl}>
+          <S.LogoBox href={project.githubUrl} target='blank'>
+            <GithubLogo size='90%' />
+            <S.LogoLabel>Github</S.LogoLabel>
+          </S.LogoBox>
+          {/* <Button theme={theme} url={project.githubUrl}>
             Github
-          </Button>
+          </Button> */}
           {project.projectUrl && (
-            <Button theme={theme} url={project.projectUrl}>
-              Website
-            </Button>
+            <S.LogoBox href={project.projectUrl} target='blank'>
+              <img src={project.projectThumb} style={{ width: '80%' }} />
+              <S.LogoLabel style={{ marginTop: '0rem' }}>
+                Website
+              </S.LogoLabel>{' '}
+            </S.LogoBox>
           )}
         </S.ButtonBox>
       </S.TextBox>

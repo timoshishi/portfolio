@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  text-decoration: none;
 }
 body {
   background: ${({ theme }: IProps): string => theme.body};

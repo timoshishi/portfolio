@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import ProjectImageOverlay from './ProjectImageOverlay';
 import { IStyled, ITheme, IProject } from '../../ts/interfaces/interfaces';
 import { Device } from '../../ts/enums/mediaBreakpoints';
-import MobileProjectCard from './MobileProjectCard';
+// import MobileProjectCard from './MobileProjectCard';
 
 const S: IStyled = {
   ProjectItemWrap: styled.div`
@@ -32,10 +32,9 @@ const S: IStyled = {
 
   ProjectImage: styled.img`
     width: 100%;
-    margin-top: 5px;
     vertical-align: top;
-    border-radius: 5px;
     @media ${Device.laptop} {
+      border-radius: 5px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
       width: 100%;
       margin-top: 0px;
@@ -44,14 +43,18 @@ const S: IStyled = {
   `,
 
   Header: styled.h3`
-    font-size: 1.5rem;
-    color: #363537;
+    font-size: 2rem;
+    color: black;
+    padding: 0.3rem;
     opacity: 0.9;
     font-family: ${({ theme }) => theme.fontPrimary};
     font-weight: 400;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    background: #f2f3f4;
+    height: 3rem;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
     @media ${Device.laptop} {
       display: none;
       height: 0;

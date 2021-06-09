@@ -16,7 +16,7 @@ const S: IStyled = {
     margin-top: 15%;
     @media ${Device.laptop} {
       justify-content: flex-end;
-      height: 90%;
+      height: 85vh;
       width: 100%;
       bottom: 0%;
       margin-top: 5%;
