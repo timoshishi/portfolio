@@ -30,8 +30,8 @@ const S: IStyled = {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    max-height: 20rem;
     @media ${Device.laptop} {
-      max-height: 20rem;
       border-radius: 5px;
       opacity: 0;
       background-color: rgba(0, 0, 0, 0.4);
@@ -76,7 +76,7 @@ const S: IStyled = {
     width: 80%;
   `,
   LogoBox: styled.a`
-    max-height: 6rem;
+    max-height: 5rem;
     cursor: pointer;
     animation-name: ${heartbeat};
     animation-timing-function: ease-in-out;
@@ -120,10 +120,12 @@ const ProjectImageOverlay = ({ project, theme }: IProps) => {
           </Button> */}
           {project.projectUrl && (
             <S.LogoBox href={project.projectUrl} target='blank'>
-              <img src={project.projectThumb} style={{ width: '80%' }} />
-              <S.LogoLabel style={{ marginTop: '0rem' }}>
-                Website
-              </S.LogoLabel>{' '}
+              <img
+                src={project.projectThumb}
+                style={{ width: '80%' }}
+                alt='puppy'
+              />
+              <S.LogoLabel style={{ marginTop: '0rem' }}>Website</S.LogoLabel>{' '}
             </S.LogoBox>
           )}
         </S.ButtonBox>
