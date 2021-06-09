@@ -3,7 +3,7 @@ import { IStyled, ITheme } from '../../ts/interfaces/interfaces';
 import { Device } from '../../ts/enums/mediaBreakpoints';
 
 const S: IStyled = {
-  AboutPara: styled.div`
+  AboutParaContainer: styled.div`
     min-height: 50vh;
     width: 100vw;
     background-color: #7510f7;
@@ -12,14 +12,27 @@ const S: IStyled = {
     align-items: center;
     justify-content: center;
   `,
+  TextWrapper: styled.div`
+    max-width: 90%;
+    @media ${Device.laptop} {
+      max-width: 60%;
+    }
+  `,
+  HeaderWrapper: styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  `,
   Header: styled.h2`
     font-weight: 500;
     font-family: ${({ theme }) =>
       `${theme.fontPrimary}, ${theme.fontFallback}`};
     color: #fafafa;
-    font-size: 1.5rem;
+    font-size: 2rem;
     @media ${Device.laptop} {
       font-size: 2.5rem;
+      margin-right: 0.5rem;
     }
   `,
   AboutText: styled.p`
@@ -28,16 +41,10 @@ const S: IStyled = {
       `${theme.fontSecondary}, ${theme.fontFallback}`};
     margin-top: 1rem;
     color: #fafafa;
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
     @media ${Device.laptop} {
       font-size: 1.5rem;
-    }
-  `,
-  TextWrapper: styled.div`
-    max-width: 90%;
-    @media ${Device.laptop} {
-      max-width: 60%;
     }
   `,
 };
@@ -47,9 +54,12 @@ interface IProps {
 }
 const AboutWords = ({ theme }: IProps) => {
   return (
-    <S.AboutPara>
+    <S.AboutParaContainer>
       <S.TextWrapper>
-        <S.Header theme={theme}>hello, i'm tim. it's nice to meet you</S.Header>
+        <S.HeaderWrapper>
+          <S.Header theme={theme}>hello, i'm tim. </S.Header>{' '}
+          <S.Header theme={theme}>it's nice to meet you</S.Header>
+        </S.HeaderWrapper>
         <S.AboutText theme={theme} id='about'>
           I am a software engineer who prefers spaces over tabs, Vim over Emacs
           and clean, reusable code. I work in JavaScript, Node, TypeScript and a
@@ -58,7 +68,7 @@ const AboutWords = ({ theme }: IProps) => {
           cuisine.
         </S.AboutText>
       </S.TextWrapper>
-    </S.AboutPara>
+    </S.AboutParaContainer>
   );
 };
 

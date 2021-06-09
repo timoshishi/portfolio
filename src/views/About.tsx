@@ -9,7 +9,6 @@ const S = {
     display: flex;
     flex-direction: column;
     margin-top: -4px;
-    margin-left: -1rem;
   `,
 };
 interface IProps {

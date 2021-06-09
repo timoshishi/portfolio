@@ -12,16 +12,14 @@ const S: IStyled = {
     position: relative;
     align-content: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     margin-top: 15%;
-    left: 5%;
     @media ${Device.laptop} {
       justify-content: flex-end;
       height: 90%;
-      width: 80%;
+      width: 100%;
       bottom: 0%;
-      left: 10%;
-      margin-top: 0%;
+      margin-top: 5%;
     }
   `,
 
@@ -61,8 +59,8 @@ const S: IStyled = {
     max-width: 100%;
     min-width: 100%;
     @media ${Device.laptop} {
-      max-width: 50%;
-      min-width: 50%;
+      max-width: 40%;
+      min-width: 40%;
     }
   `,
 };

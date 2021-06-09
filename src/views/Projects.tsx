@@ -8,8 +8,8 @@ const S: IStyled = {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 90vw;
+    /* justify-content: center; */
+    width: 100vw;
     margin-top: 2rem;
     margin-bottom: 2rem;
     @media ${Device.laptop} {
@@ -20,7 +20,6 @@ const S: IStyled = {
 
   Header: styled.h2`
     font-weight: 500;
-    margin-right: 1rem;
     font-family: ${({ theme }) =>
       `${theme.fontPrimary}, ${theme.fontFallback}`};
     color: ${({ theme }) => theme.color};
@@ -36,9 +35,7 @@ const S: IStyled = {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 2rem;
-    margin-left: 1rem;
     @media ${Device.laptop} {
-      margin-right: 4%;
       width: 80%;
       margin-top: 4rem;
     }

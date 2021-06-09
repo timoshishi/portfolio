@@ -9,8 +9,6 @@ import { IStyled } from '../ts/interfaces/interfaces';
 const S: IStyled = {
   Wrapper: styled.div`
     position: relative;
-    margin: 1rem;
-    height: 100vh;
     width: 100vw;
   `,
 };
