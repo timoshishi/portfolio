@@ -31,6 +31,7 @@ const S: IStyled = {
     align-items: center;
     justify-content: space-around;
     @media ${Device.laptop} {
+      max-height: 20rem;
       border-radius: 5px;
       opacity: 0;
       background-color: rgba(0, 0, 0, 0.4);
@@ -75,7 +76,7 @@ const S: IStyled = {
     width: 80%;
   `,
   LogoBox: styled.a`
-    max-width: 5rem;
+    max-height: 6rem;
     cursor: pointer;
     animation-name: ${heartbeat};
     animation-timing-function: ease-in-out;
@@ -83,6 +84,9 @@ const S: IStyled = {
     animation-duration: 1.2s;
     animation-direction: alternate;
     align-self: flex-start;
+    @media ${Device.laptop} {
+      max-width: 5rem;
+    }
   `,
   LogoLabel: styled.p`
     margin-top: -0.5rem;
