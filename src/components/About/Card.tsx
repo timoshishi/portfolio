@@ -15,6 +15,7 @@ const S: IStyled = {
   `,
   HeaderLogoWrapper: styled.div`
     margin-top: 2rem;
+    max-height: 20rem;
     @media ${Device.laptop} {
       margin-top: 4rem;
     }

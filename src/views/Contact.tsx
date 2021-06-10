@@ -5,15 +5,16 @@ import { Device } from '../ts/enums/mediaBreakpoints';
 
 const S = {
   ContactContainer: styled.section`
-    width: 110vw;
-    background-color: #7510f7;
     width: 100vw;
+    background-color: #7510f7;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 4rem;
   `,
   ContactWrapper: styled.div`
-    min-height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,30 +78,28 @@ interface IProps {
 }
 const Contact = ({ theme }: IProps) => {
   return (
-    <S.ContactContainer>
-      <S.ContactWrapper theme={theme} id='contact'>
-        <S.Header>Contact</S.Header>
-        <S.LogoSection>
-          <S.LogoWrapper>
-            <a href='https://github.com/timoshishi' target='blank'>
-              <S.Logo src={github} />
-              <S.LogoLabel>Github</S.LogoLabel>
-            </a>
-          </S.LogoWrapper>
-          <S.LogoWrapper>
-            <a href='https://www.linkedin.com/in/timfrrst/' target='blank'>
-              <S.Logo src={linkedin} />
-              <S.LogoLabel>LinkedIn</S.LogoLabel>
-            </a>
-          </S.LogoWrapper>
-          <S.LogoWrapper>
-            <a href='mailto:timfrrst@gmail.com' target='blank'>
-              <S.Logo src={paperPlane} />
-              <S.LogoLabel>email</S.LogoLabel>
-            </a>
-          </S.LogoWrapper>
-        </S.LogoSection>
-      </S.ContactWrapper>
+    <S.ContactContainer id='contact'>
+      <S.Header>Contact</S.Header>
+      <S.LogoSection>
+        <S.LogoWrapper>
+          <a href='https://github.com/timoshishi' target='blank'>
+            <S.Logo src={github} />
+            <S.LogoLabel>Github</S.LogoLabel>
+          </a>
+        </S.LogoWrapper>
+        <S.LogoWrapper>
+          <a href='https://www.linkedin.com/in/timfrrst/' target='blank'>
+            <S.Logo src={linkedin} />
+            <S.LogoLabel>LinkedIn</S.LogoLabel>
+          </a>
+        </S.LogoWrapper>
+        <S.LogoWrapper>
+          <a href='mailto:timfrrst@gmail.com' target='blank'>
+            <S.Logo src={paperPlane} />
+            <S.LogoLabel>email</S.LogoLabel>
+          </a>
+        </S.LogoWrapper>
+      </S.LogoSection>
     </S.ContactContainer>
   );
 };
