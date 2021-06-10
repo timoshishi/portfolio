@@ -77,7 +77,7 @@ const S: IStyled = {
   LogoContainer: styled.div`
     display: flex;
     justify-content: space-around;
-    margin-top: 1.5rem;
+    margin-top: 0rem;
     width: 80%;
   `,
   LogoBox: styled.div`
@@ -99,8 +99,8 @@ const S: IStyled = {
   `,
   PuppyLogoLabel: styled.p`
     color: #15202b;
+    margin-top: -0.3rem;
     @media ${Device.laptop} {
-      margin-top: 0.3rem;
       position: relative;
       color: #fafafa;
     }
@@ -108,13 +108,18 @@ const S: IStyled = {
   PuppyLogo: styled.img`
     margin-top: 0.4rem;
     max-height: 4.2rem;
-  `,
-  GHLogo: styled.img`
-    max-width: 5.3rem;
-    margin-top: -0.1rem;
     @media ${Device.laptop} {
       margin-top: 0.5rem;
-      max-width: 5rem;
+      max-width: 4rem;
+      max-height: 4.8rem;
+    }
+  `,
+  GHLogo: styled.img`
+    max-width: 5.2rem;
+    margin-top: 0rem;
+    @media ${Device.laptop} {
+      margin-top: 0.5rem;
+      max-width: 4.5rem;
       max-height: 4.8rem;
     }
   `,
@@ -122,7 +127,7 @@ const S: IStyled = {
     color: #15202b;
     margin-top: -1rem;
     @media ${Device.laptop} {
-      margin-top: -0.7rem;
+      margin-top: -0.8rem;
       color: #fafafa;
       position: relative;
     }
@@ -147,9 +152,11 @@ const ProjectImageOverlay = ({ project, theme }: IProps) => {
             </a>
           </S.LogoBox>
           {project.projectUrl && (
-            <S.LogoBox href={project.projectUrl} target='blank'>
-              <S.PuppyLogo src={project.projectThumb} alt='puppy' />
-              <S.PuppyLogoLabel style={{}}>Website</S.PuppyLogoLabel>{' '}
+            <S.LogoBox>
+              <a href={project.projectUrl} target='blank'>
+                <S.PuppyLogo src={project.projectThumb} alt='puppy' />
+                <S.PuppyLogoLabel style={{}}>Website</S.PuppyLogoLabel>{' '}
+              </a>
             </S.LogoBox>
           )}
         </S.LogoContainer>
