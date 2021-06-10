@@ -103,27 +103,25 @@ const S: IStyled = {
     }
   `,
   PuppyLogo: styled.img`
-    margin-top: 0.5rem;
-    width: 90%;
-    height: 90%;
+    margin-top: 0.4rem;
+    max-height: 4.2rem;
   `,
   GHLogo: styled.img`
-    width: 85%;
-    height: 85%;
-    margin-top: 0.7rem;
+    max-width: 5.3rem;
+    margin-top: -0.1rem;
     @media ${Device.laptop} {
-      margin-top: 0rem;
-      width: 100%;
-      height: 100%;
+      margin-top: 0.5rem;
+      max-width: 5rem;
+      max-height: 4.8rem;
     }
   `,
   GHLogoLabel: styled.p`
     color: #15202b;
     margin-top: -1rem;
     @media ${Device.laptop} {
-      margin-top: -1rem;
-      position: relative;
+      margin-top: -0.7rem;
       color: #fafafa;
+      position: relative;
     }
   `,
 };
