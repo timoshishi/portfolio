@@ -1,7 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 import { IProject, IStyled, ITheme } from '../../ts/interfaces/interfaces';
 import { Device } from '../../ts/enums/mediaBreakpoints';
-import githublogo from './githublogo.svg';
+import { githublogo } from '../../assets/images/logos';
+
 const heartbeat = keyframes`
 {
   0%
@@ -45,7 +46,7 @@ const S: IStyled = {
     }
   `,
 
-  TextBox: styled.div`
+  ImageContainer: styled.div`
     width: 80%;
     display: flex;
     margin-top: 1rem;
@@ -73,7 +74,7 @@ const S: IStyled = {
       color: #fafafa;
     }
   `,
-  ButtonBox: styled.div`
+  LogoContainer: styled.div`
     display: flex;
     justify-content: space-around;
     margin-top: 1.5rem;
@@ -135,13 +136,13 @@ interface IProps {
 const ProjectImageOverlay = ({ project, theme }: IProps) => {
   return (
     <S.ImageOverlay>
-      <S.TextBox>
+      <S.ImageContainer>
         <S.Header theme={theme}>{project.title}</S.Header>
         <S.ProjectDesc theme={theme}>{project.description}</S.ProjectDesc>
-        <S.ButtonBox>
+        <S.LogoContainer>
           <S.LogoBox>
             <a href={project.githubUrl} target='blank'>
-              <S.GHLogo src={githublogo} />
+              <S.GHLogo src={githublogo} alt='github' />
               <S.GHLogoLabel>Github</S.GHLogoLabel>
             </a>
           </S.LogoBox>
@@ -151,8 +152,8 @@ const ProjectImageOverlay = ({ project, theme }: IProps) => {
               <S.PuppyLogoLabel style={{}}>Website</S.PuppyLogoLabel>{' '}
             </S.LogoBox>
           )}
-        </S.ButtonBox>
-      </S.TextBox>
+        </S.LogoContainer>
+      </S.ImageContainer>
     </S.ImageOverlay>
   );
 };

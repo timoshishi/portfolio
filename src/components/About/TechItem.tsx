@@ -24,10 +24,8 @@ const S: IStyled = {
     width: 100%;
   `,
   TechLogo: styled.img`
-    max-height: 2.5rem;
-    max-width: 2.5rem;
-    min-height: 2.5rem;
-    min-width: 2.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
   `,
   LogoTextWrap: styled.div`
     width: 100%;
@@ -56,7 +54,7 @@ const TechItem = ({ techInfo, theme }: IProps) => {
   return (
     <S.TechItemWrap>
       <S.TechLogoWrap>
-        <S.TechLogo src={techInfo.thumb} />
+        <S.TechLogo src={techInfo.thumb} alt={techInfo.text} />
         <S.LogoTextWrap>
           <S.LogoText theme={theme}>{techInfo.text}</S.LogoText>
         </S.LogoTextWrap>

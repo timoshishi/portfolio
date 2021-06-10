@@ -15,8 +15,6 @@ const S: IStyled = {
     @media ${Device.laptop} {
       top: 2rem;
       right: 1rem;
-      width: 5%;
-      height: 5%;
     }
   `,
 };

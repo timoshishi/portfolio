@@ -21,7 +21,9 @@ import linkedin from './linkedin.svg';
 import paperPlane from './paper_plane.svg';
 import emailLogo from './email-logo.svg';
 import pupperLogo from './pupper.svg';
+import githublogo from './githublogo.svg';
 export {
+  githublogo,
   pupperLogo,
   emailLogo,
   linkedin,

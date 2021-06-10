@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import ProjectImageOverlay from './ProjectImageOverlay';
 import { IStyled, ITheme, IProject } from '../../ts/interfaces/interfaces';
 import { Device } from '../../ts/enums/mediaBreakpoints';
-// import MobileProjectCard from './MobileProjectCard';
 
 const S: IStyled = {
   ProjectItemWrap: styled.div`
@@ -72,9 +71,8 @@ const ProjectItem = ({ theme, project }: IProps) => {
   return (
     <S.ProjectItemWrap>
       <S.Header>{project.title}</S.Header>
-      <S.ProjectImage src={project.image} />
+      <S.ProjectImage src={project.image} alt={project.title} />
       <ProjectImageOverlay project={project} theme={theme} />
-      {/* <MobileProjectCard project={project} theme={theme} /> */}
     </S.ProjectItemWrap>
   );
 };

@@ -11,7 +11,6 @@ const S = {
     letter-spacing: 0.05em;
     transition: all 0.25s;
     border-radius: 2px;
-    text-decoration: none;
     height: 2.5rem;
     width: 7rem;
     display: flex;
@@ -27,7 +26,6 @@ const S = {
       color: inherit;
       transition: all 0.25s;
       border-radius: 2px;
-      text-decoration: none;
       &:hover {
         background: #f1c40f;
         color: #fafafa;

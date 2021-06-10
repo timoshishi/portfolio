@@ -62,9 +62,7 @@ const S: IStyled = {
       margin-bottom: 3px;
     }
   `,
-  Link: styled.a`
-    text-decoration: none;
-  `,
+  Link: styled.a``,
   Logo: styled.img`
     width: 100%;
   `,
@@ -89,7 +87,7 @@ const ContactSlider = ({ theme }: IProps) => {
       </S.LogoContainer>
       <S.LogoContainer>
         <S.Link href='https://www.linkedin.com/in/timfrrst' target='blank'>
-          <S.Logo src={linkedin} />
+          <S.Logo src={linkedin} alt='linkedin' />
         </S.Link>
       </S.LogoContainer>
       <S.LogoContainer
@@ -99,7 +97,7 @@ const ContactSlider = ({ theme }: IProps) => {
           padding: '3px',
         }}>
         <S.Link href='https://www.github.com/timoshishi' target='blank'>
-          <S.Logo src={github} />
+          <S.Logo src={github} alt='github' />
         </S.Link>
       </S.LogoContainer>
     </S.ContactContainer>

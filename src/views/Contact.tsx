@@ -83,19 +83,19 @@ const Contact = ({ theme }: IProps) => {
       <S.LogoSection>
         <S.LogoWrapper>
           <a href='https://github.com/timoshishi' target='blank'>
-            <S.Logo src={github} />
+            <S.Logo src={github} alt='github' />
             <S.LogoLabel>Github</S.LogoLabel>
           </a>
         </S.LogoWrapper>
         <S.LogoWrapper>
           <a href='https://www.linkedin.com/in/timfrrst/' target='blank'>
-            <S.Logo src={linkedin} />
+            <S.Logo src={linkedin} alt='linkedin' />
             <S.LogoLabel>LinkedIn</S.LogoLabel>
           </a>
         </S.LogoWrapper>
         <S.LogoWrapper>
           <a href='mailto:timfrrst@gmail.com' target='blank'>
-            <S.Logo src={paperPlane} />
+            <S.Logo src={paperPlane} alt='email' />
             <S.LogoLabel>email</S.LogoLabel>
           </a>
         </S.LogoWrapper>

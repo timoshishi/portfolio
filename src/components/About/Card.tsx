@@ -73,7 +73,7 @@ const Card = ({ cardInfo, theme }: IProps) => {
     <S.CardWrap>
       <S.HeaderLogoWrapper>
         <S.HeaderLabel theme={theme}>{cardInfo.title}</S.HeaderLabel>
-        <S.HeaderLogo src={cardInfo.imgSrc} />
+        <S.HeaderLogo src={cardInfo.imgSrc} alt={cardInfo.title} />
       </S.HeaderLogoWrapper>
       <S.DescriptionWrapper>
         <S.DescriptionText>{cardInfo.description}</S.DescriptionText>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { avatar } from '../assets/images';
+import { avatar } from '../assets/images/hero';
 import { IStyled, ITheme } from '../ts/interfaces/interfaces';
 import Computer from '../components/Hero/Computer';
 import HeroText from '../components/Hero/HeroText';
@@ -73,7 +73,7 @@ const Hero = ({ theme }: IProps) => {
       <S.ImageContainer>
         <HeroText theme={theme} />
         <S.AvatarBox>
-          <S.Avatar src={avatar} />
+          <S.Avatar src={avatar} alt='tim avatar' />
         </S.AvatarBox>
         <S.CompContainer>
           <S.CompWrapper>
