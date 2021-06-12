@@ -1,19 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { IProject, IStyled, ITheme } from '../../ts/interfaces/interfaces';
 import { Device } from '../../ts/enums/mediaBreakpoints';
-import { githublogo } from '../../assets/images/logos';
-
-const heartbeat = keyframes`
-{
-  0%
-  {
-    transform: scale( .95 );
-  }
-  100%
-  {
-    transform: scale( 1 );
-  }
-}`;
+import LinkBox from './LinkBox';
 
 const S: IStyled = {
   ImageOverlay: styled.div`
@@ -49,10 +37,9 @@ const S: IStyled = {
   ImageContainer: styled.div`
     width: 80%;
     display: flex;
-    margin-top: 1rem;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   `,
   Header: styled.h3`
     font-size: 1.5rem;
@@ -74,64 +61,6 @@ const S: IStyled = {
       color: #fafafa;
     }
   `,
-  LogoContainer: styled.div`
-    display: flex;
-    justify-content: space-around;
-    margin-top: 0rem;
-    width: 80%;
-  `,
-  LogoBox: styled.div`
-    max-height: 7rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    animation-name: ${heartbeat};
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 1.2s;
-    animation-direction: alternate;
-    @media ${Device.laptop} {
-      max-height: 5rem;
-      max-width: 5rem;
-    }
-  `,
-  PuppyLogoLabel: styled.p`
-    color: #15202b;
-    margin-top: -0.3rem;
-    @media ${Device.laptop} {
-      position: relative;
-      color: #fafafa;
-    }
-  `,
-  PuppyLogo: styled.img`
-    margin-top: 0.4rem;
-    max-height: 4.2rem;
-    @media ${Device.laptop} {
-      margin-top: 0.5rem;
-      max-width: 4rem;
-      max-height: 4.8rem;
-    }
-  `,
-  GHLogo: styled.img`
-    max-width: 5.2rem;
-    margin-top: 0rem;
-    @media ${Device.laptop} {
-      margin-top: 0.5rem;
-      max-width: 4.5rem;
-      max-height: 4.8rem;
-    }
-  `,
-  GHLogoLabel: styled.p`
-    color: #15202b;
-    margin-top: -1rem;
-    @media ${Device.laptop} {
-      margin-top: -0.8rem;
-      color: #fafafa;
-      position: relative;
-    }
-  `,
 };
 interface IProps {
   theme: ITheme;
@@ -144,22 +73,7 @@ const ProjectImageOverlay = ({ project, theme }: IProps) => {
       <S.ImageContainer>
         <S.Header theme={theme}>{project.title}</S.Header>
         <S.ProjectDesc theme={theme}>{project.description}</S.ProjectDesc>
-        <S.LogoContainer>
-          <S.LogoBox>
-            <a href={project.githubUrl} target='blank'>
-              <S.GHLogo src={githublogo} alt='github' />
-              <S.GHLogoLabel>Github</S.GHLogoLabel>
-            </a>
-          </S.LogoBox>
-          {project.projectUrl && (
-            <S.LogoBox>
-              <a href={project.projectUrl} target='blank'>
-                <S.PuppyLogo src={project.projectThumb} alt='puppy' />
-                <S.PuppyLogoLabel style={{}}>Website</S.PuppyLogoLabel>{' '}
-              </a>
-            </S.LogoBox>
-          )}
-        </S.LogoContainer>
+        <LinkBox project={project} />
       </S.ImageContainer>
     </S.ImageOverlay>
   );
