@@ -69,9 +69,11 @@ const S: IStyled = {
   `,
   GHLogoLabel: styled.p`
     color: #15202b;
-    margin-top: -2rem;
+    margin-top: -0.8rem;
+    margin-bottom: 0.2rem;
     @media ${Device.laptop} {
       margin-top: -0.7rem;
+
       color: #fafafa;
       position: relative;
     }
