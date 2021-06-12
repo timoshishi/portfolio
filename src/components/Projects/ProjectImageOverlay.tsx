@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { IProject, IStyled, ITheme } from '../../ts/interfaces/interfaces';
 import { Device } from '../../ts/enums/mediaBreakpoints';
 import LinkBox from './LinkBox';
