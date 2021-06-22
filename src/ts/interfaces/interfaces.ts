@@ -6,6 +6,7 @@ export interface IStyled {
 }
 
 export interface ITheme {
+  type: string;
   body: string;
   backgroundContrast: string;
   purp: string;
@@ -34,4 +35,11 @@ export interface IProject {
   githubUrl: string;
   projectUrl?: string;
   projectThumb?: string;
+}
+
+export interface ITestimonial {
+  name: string;
+  photoUrl: string;
+  text: string;
+  position: string;
 }

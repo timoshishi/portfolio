@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ITheme } from '../ts/interfaces/interfaces';
 import { Device } from '../ts/enums/mediaBreakpoints';
-import FooterLogos from '../components/Contact/FooterLogos';
+import FooterLogos from '../components/Footer/FooterLogos';
 
 const S = {
   ContactContainer: styled.section`
@@ -81,6 +81,14 @@ const S = {
   opacity: 0.7;
   font-size: 1rem;
   font-weight: 300;
+  `,
+  Mantra: styled.p`
+    color: #fafafa;
+      font-family: ${({ theme }) =>
+      `${theme.fontSecondary}, ${theme.fontFallback}`};
+  opacity: 0.7;
+  font-size: 1.5rem;
+  font-weight: 300;
   `
 };
 
@@ -90,6 +98,7 @@ interface IProps {
 const Contact = ({ theme }: IProps) => {
   return (
     <S.ContactContainer id='contact'>
+      <S.Mantra>Living, learning, & leveling up one day at a time.</S.Mantra>
       <FooterLogos />
       <S.Copyright>Handcrafted by me © 2021</S.Copyright>
     </S.ContactContainer>

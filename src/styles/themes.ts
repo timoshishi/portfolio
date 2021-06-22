@@ -1,4 +1,5 @@
 const lightTheme = {
+  type: 'light',
   body: '#FAFAFA',
   color: '#363537',
   backgroundContrast: '#7510F7',
@@ -11,6 +12,7 @@ const lightTheme = {
   fontFallback: 'sans-serif',
 };
 const darkTheme = {
+  type: 'dark',
   body: '#15202b',
   color: '#FAFAFA',
   backgroundContrast: '#7510F7',

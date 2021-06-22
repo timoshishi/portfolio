@@ -8,24 +8,47 @@ const S: IStyled = {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    background-color: ${({ theme }) => theme.type === 'light' ? theme.purp : theme.body};
     width: 100vw;
     margin-top: 2rem;
     margin-bottom: 2rem;
     @media ${Device.laptop} {
-      margin-top: 5rem;
+      margin-top: 20rem;
       width: 100vw;
     }
   `,
-
+  ProjectInfoBox: styled.div`
+    display: flex;
+    flex-direction: column;
+    color: #FAFAFA;
+    background-color: ${({theme})  => theme.type === 'light' ? 'rgb(20, 28, 58)' : theme.purp};
+    border-radius: 1rem;
+    @media ${Device.tablet} {
+      padding: 4rem;
+      position: relative;
+      margin-top: -10rem;
+      width: 40%;
+    }
+  `,
   Header: styled.h2`
     font-weight: 500;
     font-family: ${({ theme }) =>
       `${theme.fontPrimary}, ${theme.fontFallback}`};
-    color: ${({ theme }) => theme.color};
+    /* color: ${({ theme }) => theme.color}; */
     font-size: 2rem;
     @media ${Device.laptop} {
       font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  `,
+  AboutWork: styled.p`
+    font-weight: 500;
+    font-family: ${({ theme }) =>
+      `${theme.fontSecondary}, ${theme.fontFallback}`};
+    /* color: ${({ theme }) => theme.color}; */
+    font-size: 2rem;
+    @media ${Device.laptop} {
+      font-size: 1.5rem;
     }
   `,
 
@@ -47,7 +70,11 @@ interface IProps {
 const Projects = ({ theme }: IProps) => {
   return (
     <S.Wrapper id='projects'>
+      <S.ProjectInfoBox>
       <S.Header>My Recent Work</S.Header>
+      <S.AboutWork>Sometimes I build things for productivity, sometimes I build them just for kicks, sometimes for a little bit of both. No matter what, I always build to level up.</S.AboutWork>
+
+      </S.ProjectInfoBox>
       <S.ProjectWrapper>
         {projectInfo.map((project, i) => (
           <ProjectItem theme={theme} project={project} key={project.title} />

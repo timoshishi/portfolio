@@ -2,8 +2,8 @@ import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import styled from 'styled-components';
 import '../styles/burgerStyles.css';
-import { Hero, About, Footer, Projects } from './';
-import ContactSlider from '../components/Contact/ContactSlider';
+import { Hero, About, Footer, Projects, Testimonials } from './';
+import ContactSlider from '../components/Layout/ContactSlider';
 import { IStyled } from '../ts/interfaces/interfaces';
 
 const S: IStyled = {
@@ -20,6 +20,7 @@ const Home = () => {
       <Hero theme={themeContext} />
       <About theme={themeContext} />
       <Projects theme={themeContext} />
+      <Testimonials theme={themeContext} />
       <Footer theme={themeContext} />
     </S.Wrapper>
   );
