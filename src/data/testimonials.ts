@@ -12,7 +12,7 @@ const testimonials: ITestimonial[] = [
   {
     name: 'Kelvin Davis',
     photoUrl: kelvin_profile,
-    text: `I had the great pleasure of working alongside Tim as a student of Hack Reactor's Software Engineering immersive. In addition to working together on several two day "sprint" projects, I also had the opportunity of building a Front End capstone project in a team with Tim In both cases, John was enthusiastic and hardworking and our team was greatly enhanced by his presence. He has a strong work ethic and the ability to learn new technologies and apply them to creative and innovative projects. 100% sure the company that adds Tim Forest to there team will be getting A+ engineer and person.`,
+    text: '...Tim has a strong work ethic and the ability to learn new technologies and apply them to creative and innovative projects. 100% sure the company that adds Tim Forest to there team will be getting A+ engineer and person.',
     position: 'Software Engineer at POINT380'
   },
   {
