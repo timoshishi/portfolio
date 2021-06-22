@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { linkedin, github, paperPlane } from '../assets/images/logos';
 import { ITheme } from '../ts/interfaces/interfaces';
 import { Device } from '../ts/enums/mediaBreakpoints';
 import FooterLogos from '../components/Contact/FooterLogos';
