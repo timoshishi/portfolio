@@ -4,7 +4,6 @@ import { IStyled, ITheme, ITestimonial } from '../ts/interfaces/interfaces'
 import TestimonialCard from '../components/Testimonials/TestimonialCard'
 import styled from 'styled-components'
 import { Device } from '../ts/enums/mediaBreakpoints'
-import { SettingsInputAntennaTwoTone } from '@material-ui/icons'
 interface IProps {
   theme: ITheme
 }
@@ -33,9 +32,9 @@ setTestimonial(testimonials[step])
   return (
     <S.Container>
 
-    <h1>
+    <h2>
       TESTIMONIALS
-    </h1>
+    </h2>
       <p>People I've worked with have said some nice things...</p>
       <S.CardContainer>
         <TestimonialCard testimonial={testimonial} theme={theme} step={step} setStep={setStep}/>

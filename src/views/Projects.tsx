@@ -27,14 +27,13 @@ const S: IStyled = {
       padding: 4rem;
       position: relative;
       margin-top: -10rem;
-      width: 40%;
+      width: 60%;
     }
   `,
   Header: styled.h2`
     font-weight: 500;
     font-family: ${({ theme }) =>
       `${theme.fontPrimary}, ${theme.fontFallback}`};
-    /* color: ${({ theme }) => theme.color}; */
     font-size: 2rem;
     @media ${Device.laptop} {
       font-size: 2.5rem;
@@ -45,7 +44,6 @@ const S: IStyled = {
     font-weight: 500;
     font-family: ${({ theme }) =>
       `${theme.fontSecondary}, ${theme.fontFallback}`};
-    /* color: ${({ theme }) => theme.color}; */
     font-size: 2rem;
     @media ${Device.laptop} {
       font-size: 1.5rem;

@@ -1,4 +1,4 @@
-import React, { SetStateAction } from 'react'
+import React from 'react'
 import { IStyled, ITestimonial, ITheme } from '../../ts/interfaces/interfaces'
 import styled from 'styled-components'
 import { Device } from '../../ts/enums/mediaBreakpoints'
@@ -8,32 +8,36 @@ interface SliderProps {
 }
 const S: IStyled = {
   Container: styled.div`
-  width: 25%;
+  margin-top: 5rem;
+  width: 70%;
+  min-height: 40rem;
   margin-left: 2rem;
   margin-right: 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   `,
-  ProfileImage: styled.img`
-  max-height: 100px;
-  `,
   TestimonialName: styled.p`
   @media ${Device.tablet} {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: ${({theme}) => `${theme.fontPrimary}, ${theme.fontFallback}`}
   }
   `,
+  ProfileImage: styled.img`
+  max-height: 150px;
+  margin-top: 2rem;
+  `,
   TextBox: styled.div`
-  width: 70%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1rem;
  `,
   TestimonialText: styled.p`
     @media ${Device.tablet} {
-    font-size: 1rem;
-    line-height: 1.4rem;
+    font-size: 1.8rem;
+    text-align: left;
     font-family: ${({theme}) => `${theme.fontSecondary}, ${theme.fontFallback}`}
   }
   `,
@@ -51,6 +55,10 @@ const S: IStyled = {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  `,
+  PositionText: styled.p`
+  font-size: 1.1rem;
+  font-weight: 400;
   `
 }
 
@@ -65,13 +73,13 @@ const TestimonialCard = ({ testimonial, theme, step, setStep}: IProps) => {
   const { name, photoUrl, text, position } = testimonial
   return (
     <S.Container>
-      <S.TestimonialName theme={theme}>{name}</S.TestimonialName>
       <S.ProfileImage src={photoUrl} alt={name} />
       <S.TextBox>
       <S.TestimonialText>{text}</S.TestimonialText>
 
       </S.TextBox>
-      <p>{position}</p>
+      <S.TestimonialName theme={theme}>{name}</S.TestimonialName>
+      <S.PositionText>{position}</S.PositionText>
       <S.SliderBox>
         <S.SliderDot onClick={() => setStep(0)} current={step === 0}/>
         <S.SliderDot onClick={() => setStep(1)} current={step === 1}/>
