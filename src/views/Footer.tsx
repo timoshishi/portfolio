@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { linkedin, github, paperPlane } from '../assets/images/logos';
 import { ITheme } from '../ts/interfaces/interfaces';
 import { Device } from '../ts/enums/mediaBreakpoints';
+import FooterLogos from '../components/Contact/FooterLogos';
 
 const S = {
   ContactContainer: styled.section`
@@ -13,6 +14,9 @@ const S = {
     margin-top: 1rem;
     padding-bottom: 2rem;
     padding-top: 4rem;
+    @media ${Device.tablet} {
+      margin-top: 5rem;
+    }
   `,
   ContactWrapper: styled.div`
     display: flex;
@@ -50,14 +54,14 @@ const S = {
     margin-left: 2rem;
     margin-right: 2rem;
     @media ${Device.tablet} {
-      margin-left: 2rem;
-      margin-right: 2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
   `,
   Logo: styled.img`
     max-height: 3rem;
     @media ${Device.tablet} {
-      max-height: 4rem;
+      max-height: 3rem;
     }
   `,
 
@@ -71,6 +75,14 @@ const S = {
       font-size: 1.8rem;
     }
   `,
+  Copyright: styled.p`
+  color: #fafafa;
+      font-family: ${({ theme }) =>
+      `${theme.fontSecondary}, ${theme.fontFallback}`};
+  opacity: 0.7;
+  font-size: 1rem;
+  font-weight: 300;
+  `
 };
 
 interface IProps {
@@ -79,28 +91,8 @@ interface IProps {
 const Contact = ({ theme }: IProps) => {
   return (
     <S.ContactContainer id='contact'>
-      <S.Header>Contact</S.Header>
-      <S.LogoSection>
-        <S.LogoWrapper>
-          <a href='https://github.com/timoshishi' target='blank'>
-            <S.Logo src={github} alt='github' />
-            <S.LogoLabel>Github</S.LogoLabel>
-          </a>
-        </S.LogoWrapper>
-        <S.LogoWrapper>
-          <a href='https://www.linkedin.com/in/timfrrst/' target='blank'>
-            <S.Logo src={linkedin} alt='linkedin' />
-            <S.LogoLabel>LinkedIn</S.LogoLabel>
-          </a>
-        </S.LogoWrapper>
-        <S.LogoWrapper>
-          <a href='mailto:timfrrst@gmail.com' target='blank'>
-            <S.Logo src={paperPlane} alt='email' />
-            <S.LogoLabel>email</S.LogoLabel>
-          </a>
-        </S.LogoWrapper>
-      </S.LogoSection>
-      <p>Handcrafted by me © 2021</p>
+      <FooterLogos />
+      <S.Copyright>Handcrafted by me © 2021</S.Copyright>
     </S.ContactContainer>
   );
 };
