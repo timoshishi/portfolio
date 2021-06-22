@@ -100,6 +100,7 @@ const Contact = ({ theme }: IProps) => {
           </a>
         </S.LogoWrapper>
       </S.LogoSection>
+      <p>Handcrafted by me © 2021</p>
     </S.ContactContainer>
   );
 };
