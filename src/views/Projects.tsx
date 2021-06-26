@@ -20,10 +20,12 @@ const S: IStyled = {
   ProjectInfoBox: styled.div`
     display: flex;
     flex-direction: column;
+    padding: 2rem;
     color: #FAFAFA;
-    background-color: ${({theme})  => theme.type === 'light' ? 'rgb(20, 28, 58)' : theme.purp};
-    border-radius: 1rem;
+    background-color: ${({ theme }) => theme.type === 'light' ? 'rgb(20, 28, 58)' : theme.purp};
+    margin-bottom: -4rem;
     @media ${Device.tablet} {
+      border-radius: 1rem;
       padding: 4rem;
       position: relative;
       margin-top: -10rem;
@@ -35,6 +37,7 @@ const S: IStyled = {
     font-family: ${({ theme }) =>
       `${theme.fontPrimary}, ${theme.fontFallback}`};
     font-size: 2rem;
+    margin-bottom: 1rem;
     @media ${Device.laptop} {
       font-size: 2.5rem;
       margin-bottom: 2rem;
@@ -44,7 +47,7 @@ const S: IStyled = {
     font-weight: 500;
     font-family: ${({ theme }) =>
       `${theme.fontSecondary}, ${theme.fontFallback}`};
-    font-size: 2rem;
+    font-size: 1rem;
     @media ${Device.laptop} {
       font-size: 1.5rem;
     }
