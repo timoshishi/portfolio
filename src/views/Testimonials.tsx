@@ -25,8 +25,29 @@ const S: IStyled = {
     align-items: center;
     justify-content: center;
   `,
+  TestimonialHeader: styled.p`
+    font-size: 1.5rem;
+    font-family: ${({ theme }) =>
+      `${theme.fontPrimary}, ${theme.fontFallback}`};
+    font-weight: 600;
+    @media ${Device.tablet} {
+      font-size: 2rem;
+    }
+  `,
+  TestimonialSubheader: styled.p`
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-family: ${({ theme }) =>
+      `${theme.fontSecondary}, ${theme.fontFallback}`};
+    @media ${Device.tablet} {
+      font-size: 1.5rem;
+    }
+  `,
   TextBox: styled.div`
     width: 90%;
+    @media ${Device.tablet} {
+      margin-top: 2rem;
+    }
   `,
 };
 const Testimonials = ({ theme }: IProps) => {
@@ -40,8 +61,10 @@ const Testimonials = ({ theme }: IProps) => {
   return (
     <S.Container>
       <S.TextBox>
-        <h2>TESTIMONIALS</h2>
-        <p>People I've worked with have said some nice things...</p>
+        <S.TestimonialHeader>TESTIMONIALS</S.TestimonialHeader>
+        <S.TestimonialSubheader>
+          People I've worked with have said some nice things...
+        </S.TestimonialSubheader>
       </S.TextBox>
       <S.CardContainer>
         <TestimonialCard

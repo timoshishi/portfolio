@@ -17,11 +17,13 @@ const S: IStyled = {
     height: 100%;
     @media ${Device.tablet} {
       width: 70%;
-      margin-top: 5rem;
+      margin-top: 1rem;
       height: 30rem;
     }
   `,
   TestimonialName: styled.p`
+    margin-top: 1rem;
+    font-weight: 600;
     @media ${Device.tablet} {
       font-size: 1.3rem;
       font-family: ${({ theme }) =>
@@ -43,11 +45,10 @@ const S: IStyled = {
     margin-top: 2rem;
   `,
   TestimonialText: styled.p`
+    font-family: ${({ theme }) =>
+      `${theme.fontSecondary}, ${theme.fontFallback}`};
     @media ${Device.tablet} {
-      font-size: 1.8rem;
-      text-align: left;
-      font-family: ${({ theme }) =>
-        `${theme.fontSecondary}, ${theme.fontFallback}`};
+      font-size: 1.3rem;
     }
   `,
   SliderDot: styled.div<SliderProps>`
@@ -69,8 +70,12 @@ const S: IStyled = {
   `,
   PositionText: styled.p`
     font-size: 1.1rem;
-    margin-top: 1rem;
-    font-weight: 600;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    font-style: italic;
+    @media ${Device.tablet} {
+      margin-top: 0rem;
+    }
   `,
 };
 
