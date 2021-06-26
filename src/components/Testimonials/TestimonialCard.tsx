@@ -43,6 +43,9 @@ const S: IStyled = {
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
+    @media ${Device.tablet} {
+      width: 60%;
+    }
   `,
   TestimonialText: styled.p`
     font-family: ${({ theme }) =>
