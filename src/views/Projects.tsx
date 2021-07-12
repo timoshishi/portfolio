@@ -8,21 +8,24 @@ const S: IStyled = {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: ${({ theme }) => theme.type === 'light' ? theme.purp : theme.body};
+    background-color: ${({ theme }) =>
+      theme.type === 'light' ? theme.purp : theme.body};
     width: 100vw;
     margin-top: 2rem;
     margin-bottom: 2rem;
     @media ${Device.laptop} {
       margin-top: 20rem;
       width: 100vw;
+      height: 80vh;
     }
   `,
   ProjectInfoBox: styled.div`
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    color: #FAFAFA;
-    background-color: ${({ theme }) => theme.type === 'light' ? 'rgb(20, 28, 58)' : theme.purp};
+    color: #fafafa;
+    background-color: ${({ theme }) =>
+      theme.type === 'light' ? 'rgb(20, 28, 58)' : theme.purp};
     margin-bottom: -4rem;
     @media ${Device.tablet} {
       border-radius: 1rem;
@@ -61,7 +64,7 @@ const S: IStyled = {
     margin-top: 2rem;
     @media ${Device.laptop} {
       width: 80%;
-      margin-top: 4rem;
+      margin-top: 6rem;
     }
   `,
 };
@@ -72,9 +75,12 @@ const Projects = ({ theme }: IProps) => {
   return (
     <S.Wrapper id='projects'>
       <S.ProjectInfoBox>
-      <S.Header>My Recent Work</S.Header>
-      <S.AboutWork>Sometimes I build things for productivity, sometimes I build them just for kicks, sometimes for a little bit of both. No matter what, I always build to level up.</S.AboutWork>
-
+        <S.Header>My Recent Work</S.Header>
+        <S.AboutWork>
+          Sometimes I build things for productivity, sometimes I build them just
+          for kicks, sometimes for a little bit of both. No matter what, I
+          always build to level up.
+        </S.AboutWork>
       </S.ProjectInfoBox>
       <S.ProjectWrapper>
         {projectInfo.map((project, i) => (

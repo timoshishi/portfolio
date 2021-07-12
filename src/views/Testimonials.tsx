@@ -13,6 +13,7 @@ const S: IStyled = {
     align-items: center;
     flex-direction: column;
     min-height: 30rem;
+
     justify-content: space-between;
     @media ${Device.tablet} {
     }
