@@ -60,7 +60,7 @@ const Testimonials = ({ theme }: IProps) => {
     setTestimonial(testimonials[step]);
   }, [step]);
   return (
-    <S.Container>
+    <S.Container id='testimonials'>
       <S.TextBox>
         <S.TestimonialHeader>TESTIMONIALS</S.TestimonialHeader>
         <S.TestimonialSubheader>

@@ -51,10 +51,16 @@ const HamburgerMenu: React.FC<IProps> = ({ children, theme }) => {
           About
         </a>
         <a
-          href='#contact'
+          href='#testimonials'
           className='menu-item'
           onClick={() => setMenuOpen(false)}>
           Projects
+        </a>
+        <a
+          href='#footer'
+          className='menu-item'
+          onClick={() => setMenuOpen(false)}>
+          Testimonials
         </a>
       </Menu>
       <div id='page-wrap'>{children}</div>

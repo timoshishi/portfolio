@@ -75,21 +75,21 @@ const S = {
     }
   `,
   Copyright: styled.p`
-  color: #fafafa;
-      font-family: ${({ theme }) =>
+    color: #fafafa;
+    font-family: ${({ theme }) =>
       `${theme.fontSecondary}, ${theme.fontFallback}`};
-  opacity: 0.7;
-  font-size: 1rem;
-  font-weight: 300;
+    opacity: 0.7;
+    font-size: 1rem;
+    font-weight: 300;
   `,
   Mantra: styled.p`
     color: #fafafa;
-      font-family: ${({ theme }) =>
+    font-family: ${({ theme }) =>
       `${theme.fontSecondary}, ${theme.fontFallback}`};
-  opacity: 0.7;
-  font-size: 1.5rem;
-  font-weight: 300;
-  `
+    opacity: 0.7;
+    font-size: 1.5rem;
+    font-weight: 300;
+  `,
 };
 
 interface IProps {
@@ -97,11 +97,14 @@ interface IProps {
 }
 const Contact = ({ theme }: IProps) => {
   return (
-    <S.ContactContainer id='contact'>
-      <S.Mantra>Living, learning, & leveling up one day at a time.</S.Mantra>
-      <FooterLogos />
-      <S.Copyright>Handcrafted by me © 2021</S.Copyright>
-    </S.ContactContainer>
+    <>
+      <S.ContactContainer>
+        <S.Mantra>Living, learning, & leveling up one day at a time.</S.Mantra>
+        <FooterLogos />
+        <S.Copyright>Handcrafted by me © 2021</S.Copyright>
+      </S.ContactContainer>
+      <div id='footer'></div>
+    </>
   );
 };
 
