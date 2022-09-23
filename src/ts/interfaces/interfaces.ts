@@ -33,7 +33,6 @@ export interface IProject {
   image: string;
   description: string;
   githubUrl: string;
-  projectUrl?: string;
   projectThumb?: string;
 }
 

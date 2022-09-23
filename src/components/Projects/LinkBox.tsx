@@ -42,25 +42,8 @@ const S: IStyled = {
       max-width: 4rem;
     }
   `,
-  PuppyLogoLabel: styled.p`
-    color: #15202b;
-    margin-top: -0.3rem;
-    @media ${Device.laptop} {
-      margin-top: -0.2rem;
-      position: relative;
-      color: #fafafa;
-    }
-  `,
-  PuppyLogo: styled.img`
-    margin-top: 0.4rem;
-    max-height: 4.2rem;
-    @media ${Device.laptop} {
-      margin-top: 0.6rem;
-      max-width: 90%;
-    }
-  `,
   GHLogo: styled.img`
-    max-width: 5.2rem;
+    max-width: 5rem;
     margin-top: 0rem;
     @media ${Device.laptop} {
       max-width: 100%;
@@ -69,11 +52,12 @@ const S: IStyled = {
   `,
   GHLogoLabel: styled.p`
     color: #15202b;
-    margin-top: -0.8rem;
+    margin-top: 1rem;
     margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 400;
     @media ${Device.laptop} {
       margin-top: -0.7rem;
-
       color: #fafafa;
       position: relative;
     }
@@ -92,14 +76,6 @@ const LinkBox = ({ project }: IProps) => {
           <S.GHLogoLabel>Github</S.GHLogoLabel>
         </a>
       </S.LogoBox>
-      {project.projectUrl && (
-        <S.LogoBox>
-          <a href={project.projectUrl} target='blank'>
-            <S.PuppyLogo src={project.projectThumb} alt='puppy' />
-            <S.PuppyLogoLabel style={{}}>Website</S.PuppyLogoLabel>{' '}
-          </a>
-        </S.LogoBox>
-      )}
     </S.LogoContainer>
   );
 };

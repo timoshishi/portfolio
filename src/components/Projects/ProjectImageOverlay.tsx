@@ -42,7 +42,7 @@ const S: IStyled = {
     justify-content: space-between;
   `,
   Header: styled.h3`
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: ${({ theme }) => theme.fontPrimary};
     font-weight: 400;
     margin-bottom: 0.5rem;
@@ -54,7 +54,7 @@ const S: IStyled = {
   `,
   ProjectDesc: styled.p`
     font-family: ${({ theme }) => theme.fontSecondary};
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-align: left;
     @media ${Device.laptop} {
       font-weight: 600;
