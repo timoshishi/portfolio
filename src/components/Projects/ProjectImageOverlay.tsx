@@ -9,6 +9,7 @@ const S: IStyled = {
     background-color: #fafafa;
     border-radius: 0px 0px 5px 5px;
     max-width: 100%;
+    min-width: 100%;
     max-height: 20rem;
     top: 0;
     bottom: 0;
@@ -39,13 +40,14 @@ const S: IStyled = {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
     justify-content: space-between;
+    padding: 1rem;
   `,
   Header: styled.h3`
     font-size: 1.3rem;
     font-family: ${({ theme }) => theme.fontPrimary};
     font-weight: 400;
-    margin-bottom: 0.5rem;
     display: none;
     @media ${Device.laptop} {
       display: block;
