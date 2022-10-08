@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import { IProject, IStyled } from '../../ts/interfaces/interfaces';
 import { githublogo } from '../../assets/images/logos';
 import { Device } from '../../ts/enums/mediaBreakpoints';
+import { recordEvent } from '../../utils';
 
 const heartbeat = keyframes`
 {
@@ -68,10 +69,19 @@ interface IProps {
   project: IProject;
 }
 const LinkBox = ({ project }: IProps) => {
+  const onProjectLinkClick = () => {
+    recordEvent({
+      category: 'Project Link',
+      action: 'click',
+      label: project.title,
+      eventMetadata: JSON.stringify(project),
+    });
+  };
+
   return (
     <S.LogoContainer>
       <S.LogoBox>
-        <a href={project.githubUrl} target='blank'>
+        <a href={project.githubUrl} target='blank' onClick={onProjectLinkClick}>
           <S.GHLogo src={githublogo} alt='github' />
           <S.GHLogoLabel>Github</S.GHLogoLabel>
         </a>

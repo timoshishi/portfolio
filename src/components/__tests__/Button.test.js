@@ -9,6 +9,5 @@ it('renders child text introduction', () => {
 it('does not render text not given to it', () => {
   render(<Button>ClickHere</Button>);
   const hello = screen.queryByText('Hello');
-  console.log({ hello });
   expect(hello).toBeFalsy();
 });

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Device } from '../../ts/enums/mediaBreakpoints';
 import { ITheme } from '../../ts/interfaces/interfaces';
+
 const S = {
   ButtonLink: styled.a`
     border: 1.5px solid #1b1b1b;
@@ -55,6 +56,7 @@ interface IProps {
   theme: ITheme;
   url: string;
 }
+
 const Button: React.FC<IProps> = ({ theme, children, url }) => {
   return (
     <S.ButtonLink href={url} target='_blank' theme={theme}>
