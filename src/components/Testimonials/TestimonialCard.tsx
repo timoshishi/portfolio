@@ -26,8 +26,7 @@ const S: IStyled = {
     font-weight: 600;
     @media ${Device.tablet} {
       font-size: 1.3rem;
-      font-family: ${({ theme }) =>
-        `${theme.fontPrimary}, ${theme.fontFallback}`};
+      font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
     }
   `,
   ProfileImage: styled.img`
@@ -48,8 +47,7 @@ const S: IStyled = {
     }
   `,
   TestimonialText: styled.p`
-    font-family: ${({ theme }) =>
-      `${theme.fontSecondary}, ${theme.fontFallback}`};
+    font-family: ${({ theme }) => `${theme.fontSecondary}, ${theme.fontFallback}`};
     @media ${Device.tablet} {
       font-size: 1.3rem;
     }
@@ -58,8 +56,7 @@ const S: IStyled = {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background-color: ${({ theme, current }) =>
-      current ? theme.purp : 'rgba(117, 16, 247, 0.2)'};
+    background-color: ${({ theme, current }) => (current ? theme.purp : 'rgba(117, 16, 247, 0.2)')};
     &:hover {
       cursor: pointer;
     }

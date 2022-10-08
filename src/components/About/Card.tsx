@@ -29,8 +29,7 @@ const S: IStyled = {
   `,
   HeaderLabel: styled.p`
     font-size: 2rem;
-    font-family: ${({ theme: { fontPrimary, fontFallback } }) =>
-      `${fontPrimary}, ${fontFallback}`};
+    font-family: ${({ theme: { fontPrimary, fontFallback } }) => `${fontPrimary}, ${fontFallback}`};
     margin-bottom: 1.5rem;
     color: #363537;
     font-weight: 100;
@@ -54,8 +53,7 @@ const S: IStyled = {
     }
   `,
   DescriptionText: styled.p`
-    font-family: ${({ theme }) =>
-      `${theme.fontSecondary}, ${theme.fontFallback}`};
+    font-family: ${({ theme }) => `${theme.fontSecondary}, ${theme.fontFallback}`};
     color: black;
     font-size: 1.3rem;
     @media ${Device.laptop} {
@@ -80,11 +78,7 @@ const Card = ({ cardInfo, theme }: IProps) => {
       </S.DescriptionWrapper>
       <S.TechList>
         {cardInfo.tech.map((techInfo, i) => (
-          <TechItem
-            techInfo={techInfo}
-            key={`${techInfo.text}_${i}`}
-            theme={theme}
-          />
+          <TechItem techInfo={techInfo} key={`${techInfo.text}_${i}`} theme={theme} />
         ))}
       </S.TechList>
     </S.CardWrap>

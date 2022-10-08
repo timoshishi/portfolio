@@ -1,6 +1,5 @@
-import { tyler_profile, ali_profile, kelvin_profile } from '../assets/images/profile pictures'
-import { ITestimonial } from '../ts/interfaces/interfaces'
-
+import { tyler_profile, ali_profile, kelvin_profile } from '../assets/images/profile pictures';
+import { ITestimonial } from '../ts/interfaces/interfaces';
 
 const testimonials: ITestimonial[] = [
   {
@@ -13,16 +12,14 @@ const testimonials: ITestimonial[] = [
     name: 'Kelvin Davis',
     photoUrl: kelvin_profile,
     text: '"Tim has a strong work ethic and the ability to learn new technologies and apply them to creative and innovative projects. 100% sure the company that adds Tim Forest to their team will be getting A+ engineer and person."',
-    position: 'Software Engineer at POINT380'
+    position: 'Software Engineer at POINT380',
   },
   {
     name: 'Ali Rangwala',
     photoUrl: ali_profile,
     position: 'Software Engineer',
-    text: '"Tim is the rare combination of extremely competent, amazingly helpful, and pleasantly witty making him a one of a kind software engineer. Pick him up before it\'s too late, because he\'ll be doing great things."'
-  }
-  
-]
+    text: '"Tim is the rare combination of extremely competent, amazingly helpful, and pleasantly witty making him a one of a kind software engineer. Pick him up before it\'s too late, because he\'ll be doing great things."',
+  },
+];
 
-
-export default testimonials
+export default testimonials;

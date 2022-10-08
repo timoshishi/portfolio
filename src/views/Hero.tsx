@@ -77,10 +77,7 @@ const Hero = ({ theme }: IProps) => {
         </S.AvatarBox>
         <S.CompContainer>
           <S.CompWrapper>
-            <Computer
-              path={theme.contrast}
-              background={theme.contrastSecondary}
-            />
+            <Computer path={theme.contrast} background={theme.contrastSecondary} />
           </S.CompWrapper>
         </S.CompContainer>
       </S.ImageContainer>

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {initGA} from './utils'
+import { initGA } from './utils';
 
 initGA();
 

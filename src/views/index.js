@@ -5,4 +5,4 @@ import Projects from './Projects';
 import Home from './Home';
 import Testimonials from './Testimonials';
 
-export {Testimonials, Hero, About, Footer, Projects, Home };
+export { Testimonials, Hero, About, Footer, Projects, Home };

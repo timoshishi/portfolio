@@ -1,11 +1,5 @@
 import { pupperLogo } from '../assets/images/logos';
-import {
-  coverLetter,
-  sdc,
-  twiddler,
-  pupper,
-  productDetail,
-} from '../assets/images/projects';
+import { coverLetter, sdc, twiddler, pupper, productDetail } from '../assets/images/projects';
 
 export const projectInfo = [
   {
@@ -19,15 +13,13 @@ export const projectInfo = [
   {
     title: 'Write My Cover Letter',
     image: coverLetter,
-    description:
-      'Global npm script to automate cover letter writing using Node.js',
+    description: 'Global npm script to automate cover letter writing using Node.js',
     githubUrl: 'https://github.com/timoshishi/write-my-cover-letter',
   },
   {
     title: 'Twiddler',
     image: twiddler,
-    description:
-      'Front end clone of Twitter in dark mode utilizing ES6 JavaScript, jQuery and good old CSS',
+    description: 'Front end clone of Twitter in dark mode utilizing ES6 JavaScript, jQuery and good old CSS',
     githubUrl: 'https://github.com/timoshishi/twiddler',
   },
   {

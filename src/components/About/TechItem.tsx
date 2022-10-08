@@ -37,8 +37,7 @@ const S: IStyled = {
   `,
   LogoText: styled.p`
     font-size: 1.2rem;
-    font-family: ${({ theme }) =>
-      `${theme.fontPrimary}, ${theme.fontFallback}`};
+    font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
     font-weight: 400;
     color: #000;
     text-align: left;

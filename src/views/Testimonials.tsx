@@ -28,8 +28,7 @@ const S: IStyled = {
   `,
   TestimonialHeader: styled.p`
     font-size: 1.5rem;
-    font-family: ${({ theme }) =>
-      `${theme.fontPrimary}, ${theme.fontFallback}`};
+    font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
     font-weight: 600;
     @media ${Device.tablet} {
       font-size: 2rem;
@@ -38,8 +37,7 @@ const S: IStyled = {
   TestimonialSubheader: styled.p`
     font-size: 1rem;
     margin-top: 0.5rem;
-    font-family: ${({ theme }) =>
-      `${theme.fontSecondary}, ${theme.fontFallback}`};
+    font-family: ${({ theme }) => `${theme.fontSecondary}, ${theme.fontFallback}`};
     @media ${Device.tablet} {
       font-size: 1.5rem;
     }
@@ -53,9 +51,7 @@ const S: IStyled = {
 };
 const Testimonials = ({ theme }: IProps) => {
   const [step, setStep] = useState(1);
-  const [testimonial, setTestimonial] = useState<ITestimonial>(
-    testimonials[step],
-  );
+  const [testimonial, setTestimonial] = useState<ITestimonial>(testimonials[step]);
   useEffect(() => {
     setTestimonial(testimonials[step]);
   }, [step]);
@@ -63,17 +59,10 @@ const Testimonials = ({ theme }: IProps) => {
     <S.Container id='testimonials'>
       <S.TextBox>
         <S.TestimonialHeader>TESTIMONIALS</S.TestimonialHeader>
-        <S.TestimonialSubheader>
-          People I've worked with have said some nice things...
-        </S.TestimonialSubheader>
+        <S.TestimonialSubheader>People I've worked with have said some nice things...</S.TestimonialSubheader>
       </S.TextBox>
       <S.CardContainer>
-        <TestimonialCard
-          testimonial={testimonial}
-          theme={theme}
-          step={step}
-          setStep={setStep}
-        />
+        <TestimonialCard testimonial={testimonial} theme={theme} step={step} setStep={setStep} />
       </S.CardContainer>
     </S.Container>
   );

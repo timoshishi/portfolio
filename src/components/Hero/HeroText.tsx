@@ -29,8 +29,7 @@ const S: IStyled = {
     }
   `,
   SubHead: styled.p`
-    font-family: ${({ theme }) =>
-      `${theme.fontSecondary}, ${theme.fontFallback}`};
+    font-family: ${({ theme }) => `${theme.fontSecondary}, ${theme.fontFallback}`};
     font-size: 2rem;
     font-weight: 300;
     display: none;

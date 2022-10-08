@@ -26,8 +26,7 @@ const S: IStyled = {
   `,
   Header: styled.h2`
     font-weight: 500;
-    font-family: ${({ theme }) =>
-      `${theme.fontPrimary}, ${theme.fontFallback}`};
+    font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
     color: #fafafa;
     font-size: 2rem;
     @media ${Device.laptop} {
@@ -37,8 +36,7 @@ const S: IStyled = {
   `,
   AboutText: styled.p`
     font-weight: 300;
-    font-family: ${({ theme }) =>
-      `${theme.fontSecondary}, ${theme.fontFallback}`};
+    font-family: ${({ theme }) => `${theme.fontSecondary}, ${theme.fontFallback}`};
     margin-top: 1rem;
     color: #fafafa;
     font-size: 1.3rem;
@@ -57,15 +55,12 @@ const AboutWords = ({ theme }: IProps) => {
     <S.AboutParaContainer>
       <S.TextWrapper>
         <S.HeaderWrapper>
-          <S.Header theme={theme}>hello, i'm tim. </S.Header>{' '}
-          <S.Header theme={theme}>it's nice to meet you</S.Header>
+          <S.Header theme={theme}>hello, i'm tim. </S.Header> <S.Header theme={theme}>it's nice to meet you</S.Header>
         </S.HeaderWrapper>
         <S.AboutText theme={theme} id='about'>
-          I am a software engineer who prefers spaces over tabs, Vim over Emacs
-          and clean, reusable code. I work in JavaScript, Node, TypeScript and a
-          three piece suit. Before embarking on my journey as a Software
-          Engineer I was a chef, business owner and peripatetic lover of local
-          cuisine.
+          I am a software engineer who prefers spaces over tabs, Vim over Emacs and clean, reusable code. I work in
+          JavaScript, Node, TypeScript and a three piece suit. Before embarking on my journey as a Software Engineer I
+          was a chef, business owner and peripatetic lover of local cuisine.
         </S.AboutText>
       </S.TextWrapper>
     </S.AboutParaContainer>
