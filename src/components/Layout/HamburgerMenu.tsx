@@ -50,7 +50,7 @@ const HamburgerMenu: React.FC<IProps> = ({ children, theme }) => {
     recordEvent({
       category: 'Hamburger Menu Link',
       action: 'Click',
-      label: `Clicked: ${e.currentTarget.id}`,
+      label: `${e.currentTarget.id}`,
     });
   };
 
@@ -62,11 +62,13 @@ const HamburgerMenu: React.FC<IProps> = ({ children, theme }) => {
         outerContainerId={'App'}
         isOpen={isMenuOpen}
         onStateChange={(prevState: { isOpen: boolean }) => {
-          recordEvent({
-            category: 'Hamburger Menu',
-            action: 'state change',
-            label: `Hamburger menu state changed to: ${prevState.isOpen ? 'open' : 'closed'}`,
-          });
+          if (prevState.isOpen) {
+            recordEvent({
+              category: 'Hamburger Menu',
+              action: 'state change',
+              label: `Hamburger menu state changed to: ${prevState.isOpen ? 'open' : 'closed'}`,
+            });
+          }
           setMenuOpen(prevState.isOpen);
         }}
         styles={styles}

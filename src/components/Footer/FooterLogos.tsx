@@ -81,7 +81,7 @@ const onFooterLogoClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =
 const FooterLogos = () => (
   <S.LogoSection>
     {links.map(({ logoSrc, alt, id, href }) => (
-      <S.LogoWrapper>
+      <S.LogoWrapper key={id}>
         <a href={href} target='blank' id={id} onClick={onFooterLogoClick}>
           <S.Logo src={logoSrc} alt={alt} />
         </a>

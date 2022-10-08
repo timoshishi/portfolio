@@ -3,7 +3,6 @@ import ReactGA from 'react-ga';
 
 export const getUserKey = () => {
   const userKey = localStorage.getItem('userKey');
-  console.log({ userKey });
   if (userKey) {
     return userKey;
   } else {
@@ -21,6 +20,7 @@ export const initGA = () => {
       userId: getUserKey(),
     },
   });
+
   ReactGA.pageview(window.location.pathname + window.location.search);
 };
 

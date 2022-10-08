@@ -71,10 +71,9 @@ interface IProps {
 const LinkBox = ({ project }: IProps) => {
   const onProjectLinkClick = () => {
     recordEvent({
-      category: 'Project Link',
-      action: 'click',
+      category: 'Project Github Link',
+      action: 'Click',
       label: project.title,
-      eventMetadata: JSON.stringify(project),
     });
   };
 
