@@ -1,8 +1,7 @@
 export const cardInfo = {
   imgSrc: 'designer',
   title: 'Design',
-  description:
-    'I value simple structure, clean design patterns, and thoughtful interactions.',
+  description: 'I value simple structure, clean design patterns, and thoughtful interactions.',
   tech: [
     { thumb: 'css', text: 'CSS' },
     { thumb: 'html', text: 'HTML' },

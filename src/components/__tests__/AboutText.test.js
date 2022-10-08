@@ -4,9 +4,7 @@ import AboutText from '../About/AboutText';
 
 it('renders name introduction', () => {
   render(<AboutText />);
-  expect(
-    screen.getByText("hello, i'm tim. it's nice to meet you")
-  ).toBeInTheDocument();
+  expect(screen.getByText("hello, i'm tim. it's nice to meet you")).toBeInTheDocument();
 });
 it('renders about paragraph', () => {
   render(<AboutText />);

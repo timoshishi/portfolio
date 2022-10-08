@@ -3,6 +3,7 @@ import { linkedin, github } from '../../assets/images/logos';
 import EmailLogo from './EmailLogo';
 import { IStyled, ITheme } from '../../ts/interfaces/interfaces';
 import { Device } from '../../ts/enums/mediaBreakpoints';
+import { recordEvent } from '../../utils';
 
 const slideIn = keyframes`
 from {
@@ -78,15 +79,24 @@ interface IProps {
 }
 
 const ContactSlider = ({ theme }: IProps) => {
+  const onContactSliderClick = (e: React.MouseEvent<HTMLLinkElement, MouseEvent>) => {
+    const targetId = e.currentTarget.id;
+    recordEvent({
+      category: 'Contact Slider Link',
+      action: 'Click',
+      label: targetId,
+    });
+  };
+
   return (
     <S.ContactContainer>
       <S.LogoContainer>
-        <S.Link href='mailto:timfrrst@gmail.com' target='blank'>
+        <S.Link href='mailto:timfrrst@gmail.com' target='blank' id='email' onClick={onContactSliderClick}>
           <EmailLogo background={theme.color} />
         </S.Link>
       </S.LogoContainer>
       <S.LogoContainer>
-        <S.Link href='https://www.linkedin.com/in/timfrrst' target='blank'>
+        <S.Link href='https://www.linkedin.com/in/timfrrst' target='blank' id='linkedin' onClick={onContactSliderClick}>
           <S.Logo src={linkedin} alt='linkedin' />
         </S.Link>
       </S.LogoContainer>
@@ -95,8 +105,9 @@ const ContactSlider = ({ theme }: IProps) => {
           borderBottomLeftRadius: '5px',
           backgroundColor: '#363537',
           padding: '3px',
-        }}>
-        <S.Link href='https://www.github.com/timoshishi' target='blank'>
+        }}
+      >
+        <S.Link href='https://www.github.com/timoshishi' target='blank' id='github' onClick={onContactSliderClick}>
           <S.Logo src={github} alt='github' />
         </S.Link>
       </S.LogoContainer>

@@ -1,19 +1,32 @@
 import { useEffect, useState } from 'react';
-export const useDarkMode = (): [string, () => void, boolean] => {
-  const [theme, setTheme] = useState('light');
+import { recordEvent } from '../utils';
+import { Themes } from '../ts/types';
+
+export const useDarkMode = (): [Themes, () => void, boolean] => {
+  const [theme, setTheme] = useState<Themes>('light');
   const [mountedComponent, setMountedComponent] = useState(false);
-  const setMode = (mode: string) => {
+
+  const setMode = (mode: Themes) => {
     window.localStorage.setItem('theme', mode);
     setTheme(mode);
   };
+
   const themeToggler = () => {
-    theme === 'light' ? setMode('dark') : setMode('light');
+    const updatedThemeValue = theme === 'light' ? 'dark' : 'light';
+    recordEvent({
+      category: 'Color Theme',
+      action: 'click',
+      label: `${updatedThemeValue} mode`,
+    });
+    setMode(updatedThemeValue);
   };
+
   useEffect(() => {
-    const localTheme = window.localStorage.getItem('theme');
+    const localTheme = window.localStorage.getItem('theme') as Themes | null;
     localTheme ? setTheme(localTheme) : setMode('light');
     setMountedComponent(true);
   }, []);
+
   return [theme, themeToggler, mountedComponent];
 };
 

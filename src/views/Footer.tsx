@@ -25,8 +25,7 @@ const S = {
   `,
   Header: styled.h2`
     font-weight: 500;
-    font-family: ${({ theme }) =>
-      `${theme.fontPrimary}, ${theme.fontFallback}`};
+    font-family: ${({ theme }) => `${theme.fontPrimary}, ${theme.fontFallback}`};
     color: #fafafa;
     font-size: 2rem;
     margin-bottom: 3rem;
@@ -76,16 +75,14 @@ const S = {
   `,
   Copyright: styled.p`
     color: #fafafa;
-    font-family: ${({ theme }) =>
-      `${theme.fontSecondary}, ${theme.fontFallback}`};
+    font-family: ${({ theme }) => `${theme.fontSecondary}, ${theme.fontFallback}`};
     opacity: 0.7;
     font-size: 1rem;
     font-weight: 300;
   `,
   Mantra: styled.p`
     color: #fafafa;
-    font-family: ${({ theme }) =>
-      `${theme.fontSecondary}, ${theme.fontFallback}`};
+    font-family: ${({ theme }) => `${theme.fontSecondary}, ${theme.fontFallback}`};
     opacity: 0.7;
     font-size: 1.5rem;
     font-weight: 300;
@@ -101,7 +98,7 @@ const Contact = ({ theme }: IProps) => {
       <S.ContactContainer>
         <S.Mantra>Living, learning, & leveling up one day at a time.</S.Mantra>
         <FooterLogos />
-        <S.Copyright>Handcrafted by me © 2021</S.Copyright>
+        <S.Copyright>Handcrafted by me © {new Date().getFullYear()}</S.Copyright>
       </S.ContactContainer>
       <div id='footer'></div>
     </>

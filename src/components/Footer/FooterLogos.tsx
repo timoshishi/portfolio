@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
 import { linkedin, github, paperPlane } from '../../assets/images/logos';
 import styled from 'styled-components';
 import { Device } from '../../ts/enums/mediaBreakpoints';
 import { IStyled } from '../../ts/interfaces/interfaces';
-const S: IStyled = {
+import { recordEvent } from '../../utils';
 
+const S: IStyled = {
   LogoSection: styled.div`
     max-height: 15rem;
     margin: 2rem;
@@ -46,26 +47,47 @@ const S: IStyled = {
     }
   `,
 };
-const FooterLogos = () => {
-  return (
-        <S.LogoSection>
-        <S.LogoWrapper>
-          <a href='https://github.com/timoshishi' target='blank'>
-            <S.Logo src={github} alt='github' />
-          </a>
-        </S.LogoWrapper>
-        <S.LogoWrapper>
-          <a href='https://www.linkedin.com/in/timfrrst/' target='blank'>
-            <S.Logo src={linkedin} alt='linkedin' />
-          </a>
-        </S.LogoWrapper>
-        <S.LogoWrapper>
-          <a href='mailto:timfrrst@gmail.com' target='blank'>
-            <S.Logo src={paperPlane} alt='email' />
-          </a>
-        </S.LogoWrapper>
-      </S.LogoSection>
-  )
-}
 
-export default FooterLogos
+const links = [
+  {
+    logoSrc: github,
+    alt: 'github',
+    id: 'github',
+    href: 'https://github.com/timoshishi',
+  },
+  {
+    logoSrc: linkedin,
+    alt: 'linkedin',
+    id: 'linkedin',
+    href: 'https://www.linkedin.com/in/timfrrst/',
+  },
+  {
+    logoSrc: paperPlane,
+    alt: 'email',
+    id: 'email',
+    href: 'mailto:timfrrst@gmail.com',
+  },
+];
+
+const onFooterLogoClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const targetId = e.currentTarget.id;
+  recordEvent({
+    category: 'Footer Link',
+    action: 'Click',
+    label: targetId,
+  });
+};
+
+const FooterLogos = () => (
+  <S.LogoSection>
+    {links.map(({ logoSrc, alt, id, href }) => (
+      <S.LogoWrapper key={id}>
+        <a href={href} target='blank' id={id} onClick={onFooterLogoClick}>
+          <S.Logo src={logoSrc} alt={alt} />
+        </a>
+      </S.LogoWrapper>
+    ))}
+  </S.LogoSection>
+);
+
+export default FooterLogos;
