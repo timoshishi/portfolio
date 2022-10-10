@@ -24,21 +24,28 @@ export const initGA = () => {
         },
         trackingId: 'G-LR19JX3P72',
         gaOptions: {
-          userId: userKey,
+          user_id: userKey,
+        },
+      },
+      {
+        gtagOptions: {
+          user_id: userKey,
+        },
+        trackingId: 'G-CER5XHN12C',
+        gaOptions: {
+          user_id: userKey,
         },
       },
     ],
     {
       gaOptions: {
-        userId: userKey,
+        user_id: userKey,
+        legacyDimensionMetrics: true,
       },
     }
   );
-  ReactGA.set({
-    userId: userKey,
-    user_id: userKey,
-  });
-  ReactGA.pageview(window.location.pathname + window.location.search);
+
+  ReactGA.send('pageview');
 };
 
 export const recordEvent = ({
@@ -49,13 +56,11 @@ export const recordEvent = ({
 {
   category: string;
   action: string;
-  label: string;
-  // eventMetadata?: string;
+  label?: string;
 }) => {
   ReactGA.event({
     category,
     action,
     label,
-    // dimension1: eventMetadata,
   });
 };

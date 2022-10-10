@@ -48,8 +48,8 @@ const HamburgerMenu: React.FC<IProps> = ({ children, theme }) => {
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     setMenuOpen(false);
     recordEvent({
-      category: 'Hamburger Menu Link',
-      action: 'Click',
+      category: 'hamburger_menu_link',
+      action: 'click',
       label: `${e.currentTarget.id}`,
     });
   };

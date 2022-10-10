@@ -82,8 +82,8 @@ const ContactSlider = ({ theme }: IProps) => {
   const onContactSliderClick = (e: React.MouseEvent<HTMLLinkElement, MouseEvent>) => {
     const targetId = e.currentTarget.id;
     recordEvent({
-      category: 'Contact Slider Link',
-      action: 'Click',
+      category: 'contact_slider_click',
+      action: 'click',
       label: targetId,
     });
   };

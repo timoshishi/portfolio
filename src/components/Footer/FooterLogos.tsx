@@ -72,8 +72,8 @@ const links = [
 const onFooterLogoClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
   const targetId = e.currentTarget.id;
   recordEvent({
-    category: 'Footer Link',
-    action: 'Click',
+    category: 'footer_link_click',
+    action: 'click',
     label: targetId,
   });
 };
