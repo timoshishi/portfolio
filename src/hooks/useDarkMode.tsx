@@ -14,7 +14,7 @@ export const useDarkMode = (): [Themes, () => void, boolean] => {
   const themeToggler = () => {
     const updatedThemeValue = theme === 'light' ? 'dark' : 'light';
     recordEvent({
-      category: 'Color Theme',
+      category: 'user_theme',
       action: 'click',
       label: `${updatedThemeValue} mode`,
     });
