@@ -1,3 +1,4 @@
+import axios from 'axios';
 import ReactGA from 'react-ga4';
 import { v4 } from 'uuid';
 
@@ -48,19 +49,34 @@ export const initGA = () => {
   ReactGA.send('pageview');
 };
 
-export const recordEvent = ({
-  category,
-  action,
-  label,
-}: // eventMetadata,
-{
-  category: string;
-  action: string;
-  label?: string;
-}) => {
+export const recordEvent = ({ category, action, label }: { category: string; action: string; label?: string }) => {
   ReactGA.event({
     category,
     action,
     label,
+  });
+};
+
+export const adBlockTest = () => {
+  const AD_BLOCK_API = 'https://mb678rsg83.execute-api.us-east-1.amazonaws.com/blocked-user';
+  document.addEventListener('DOMContentLoaded', function () {
+    const test = document.createElement('div');
+    test.innerHTML = '&nbsp;';
+    test.className = 'ad-medium';
+    test.id = 'ad-medium';
+    document.body.appendChild(test);
+
+    window.setTimeout(() => {
+      if (test.offsetHeight === 0) {
+        axios(AD_BLOCK_API).catch();
+      } else {
+        recordEvent({
+          category: 'adblock',
+          action: 'page_visit',
+          label: 'no_adblock_detected',
+        });
+      }
+      test.remove();
+    }, 400);
   });
 };
