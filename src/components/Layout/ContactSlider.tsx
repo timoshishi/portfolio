@@ -91,7 +91,7 @@ const ContactSlider = ({ theme }: IProps) => {
   return (
     <S.ContactContainer>
       <S.LogoContainer>
-        <S.Link href='mailto:timfrrst@gmail.com' target='blank' id='email' onClick={onContactSliderClick}>
+        <S.Link href='mailto:portfolio@timforrest.dev' target='blank' id='email' onClick={onContactSliderClick}>
           <EmailLogo background={theme.color} />
         </S.Link>
       </S.LogoContainer>
