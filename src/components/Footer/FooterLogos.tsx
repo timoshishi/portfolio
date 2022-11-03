@@ -65,7 +65,7 @@ const links = [
     logoSrc: paperPlane,
     alt: 'email',
     id: 'email',
-    href: 'mailto:timfrrst@gmail.com',
+    href: 'mailto:portfolio@timforrest.dev',
   },
 ];
 
