@@ -2,6 +2,8 @@ import axios from 'axios';
 import ReactGA from 'react-ga4';
 import { v4 } from 'uuid';
 
+export const LAMBDA_API = 'https://mb678rsg83.execute-api.us-east-1.amazonaws.com/blocked-user';
+
 export const getUserKey = () => {
   const userKey = localStorage.getItem('userKey');
   if (userKey) {
@@ -58,7 +60,6 @@ export const recordEvent = ({ category, action, label }: { category: string; act
 };
 
 export const adBlockTest = () => {
-  const AD_BLOCK_API = 'https://mb678rsg83.execute-api.us-east-1.amazonaws.com/blocked-user';
   document.addEventListener('DOMContentLoaded', function () {
     const test = document.createElement('div');
     test.innerHTML = '&nbsp;';
@@ -68,8 +69,9 @@ export const adBlockTest = () => {
 
     window.setTimeout(() => {
       if (test.offsetHeight === 0) {
-        axios(AD_BLOCK_API).catch();
+        axios(LAMBDA_API).catch((_) => {});
       } else {
+        axios(LAMBDA_API).catch((_) => {});
         recordEvent({
           category: 'adblock',
           action: 'page_visit',
