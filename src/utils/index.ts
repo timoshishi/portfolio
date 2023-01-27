@@ -2,7 +2,7 @@ import axios from 'axios';
 import ReactGA from 'react-ga4';
 import { v4 } from 'uuid';
 
-export const LAMBDA_API = 'https://mb678rsg83.execute-api.us-east-1.amazonaws.com/blocked-user';
+export const LAMBDA_API = 'https://qbxjlxxseacrmeflz3sidnhdlq0pgzon.lambda-url.us-east-1.on.aws/';
 
 export const getUserKey = () => {
   const userKey = localStorage.getItem('userKey');
